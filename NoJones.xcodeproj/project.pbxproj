@@ -19,6 +19,9 @@
 		8124865D244E3FC10091CFA4 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8124865C244E3FC10091CFA4 /* Progress.storyboard */; };
 		81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124865F244E447C0091CFA4 /* ProgressViewController.swift */; };
 		81248662244E448E0091CFA4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81248661244E448E0091CFA4 /* DashboardViewController.swift */; };
+		81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248663244E4A980091CFA4 /* AddAddiction.storyboard */; };
+		81248666244E4AA60091CFA4 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248665244E4AA60091CFA4 /* Onboarding.storyboard */; };
+		81248668244E4AFD0091CFA4 /* AddictionDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		8124865C244E3FC10091CFA4 /* Progress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
 		8124865F244E447C0091CFA4 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		81248661244E448E0091CFA4 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		81248663244E4A980091CFA4 /* AddAddiction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAddiction.storyboard; sourceTree = "<group>"; };
+		81248665244E4AA60091CFA4 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddictionDetails.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 				81248658244E3F7D0091CFA4 /* TabBar.storyboard */,
 				8124865A244E3FB20091CFA4 /* Dashboard.storyboard */,
 				8124865C244E3FC10091CFA4 /* Progress.storyboard */,
+				81248665244E4AA60091CFA4 /* Onboarding.storyboard */,
+				81248663244E4A980091CFA4 /* AddAddiction.storyboard */,
+				81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,7 +273,10 @@
 				81248659244E3F7D0091CFA4 /* TabBar.storyboard in Resources */,
 				8124865D244E3FC10091CFA4 /* Progress.storyboard in Resources */,
 				81248631244E3CBE0091CFA4 /* Assets.xcassets in Resources */,
+				81248666244E4AA60091CFA4 /* Onboarding.storyboard in Resources */,
+				81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */,
 				8124865B244E3FB20091CFA4 /* Dashboard.storyboard in Resources */,
+				81248668244E4AFD0091CFA4 /* AddictionDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
