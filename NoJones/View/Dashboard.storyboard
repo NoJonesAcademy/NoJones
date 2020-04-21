@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bQU-Y7-jX2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xzl-TY-ew4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -21,29 +21,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRB-5j-hvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2768.1159420289855" y="41.517857142857139"/>
+            <point key="canvasLocation" x="3676.811594202899" y="41.517857142857139"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qRP-HA-Eyq">
+        <!--Dashboard-->
+        <scene sceneID="Qg0-hn-jZn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bQU-Y7-jX2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="1df-hd-Vha"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xzl-TY-ew4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="list.dash" catalog="system" landscapeImage="list.dash" selectedImage="list.dash" id="fsB-dz-b4F"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zWB-3d-dBz">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JMt-y8-Fmp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HRm-g2-kYl">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="Fjf-ht-pnv" kind="relationship" relationship="rootViewController" id="1Aq-x9-WRA"/>
+                        <segue destination="Fjf-ht-pnv" kind="relationship" relationship="rootViewController" id="B0L-yB-Ofd"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mOE-lb-Y9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhq-0L-dey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857.9710144927537" y="41.517857142857139"/>
+            <point key="canvasLocation" x="2766.666666666667" y="41.517857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="64" height="42"/>
+    </resources>
 </document>

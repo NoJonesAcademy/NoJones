@@ -113,12 +113,12 @@
 		81248623244E3CBB0091CFA4 /* NoJones */ = {
 			isa = PBXGroup;
 			children = (
-				8124865E244E42D00091CFA4 /* Controller */,
+				AE0A1B96244E5715008A8A57 /* Protocols */,
+				AE0A1B95244E570D008A8A57 /* Model */,
 				81248657244E3F2C0091CFA4 /* View */,
+				8124865E244E42D00091CFA4 /* Controller */,
 				81248624244E3CBB0091CFA4 /* AppDelegate.swift */,
 				81248626244E3CBB0091CFA4 /* SceneDelegate.swift */,
-				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
-				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
 				81248635244E3CBE0091CFA4 /* Info.plist */,
 				8124862D244E3CBB0091CFA4 /* NoJones.xcdatamodeld */,
 			);
@@ -152,6 +152,8 @@
 				81248665244E4AA60091CFA4 /* Onboarding.storyboard */,
 				81248663244E4A980091CFA4 /* AddAddiction.storyboard */,
 				81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */,
+				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
+				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +165,20 @@
 				81248661244E448E0091CFA4 /* DashboardViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE0A1B95244E570D008A8A57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE0A1B96244E5715008A8A57 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
