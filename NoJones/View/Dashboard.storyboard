@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dashboard View Controller-->
+        <!--Dashboard-->
         <scene sceneID="4ad-w2-tuK">
             <objects>
                 <viewController id="Fjf-ht-pnv" customClass="DashboardViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XoF-Jg-Vj6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fdc-dP-Tc0"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="Fdc-dP-Tc0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRB-5j-hvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,8 +30,8 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="list.dash" catalog="system" landscapeImage="list.dash" selectedImage="list.dash" id="fsB-dz-b4F"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JMt-y8-Fmp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JMt-y8-Fmp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

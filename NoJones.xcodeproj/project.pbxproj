@@ -161,8 +161,8 @@
 		8124865E244E42D00091CFA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
 				81248661244E448E0091CFA4 /* DashboardViewController.swift */,
+				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="buttonColor"/>
+                        <color key="selectedImageTintColor" name="buttonColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="XCK-94-FRN" kind="relationship" relationship="viewControllers" id="1bD-Zi-cqO"/>
@@ -45,4 +48,9 @@
             <point key="canvasLocation" x="273" y="242"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.10588235294117647" green="0.34509803921568627" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
