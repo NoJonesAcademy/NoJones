@@ -27,6 +27,8 @@ class ProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         setupViews()
         
         if let currentCalendar = currentCalendar {
@@ -49,10 +51,11 @@ class ProgressViewController: UIViewController {
     }
 }
 
-typealias CalendarDelegates = CVCalendarMenuViewDelegate & CVCalendarViewDelegate &
-CVCalendarViewAppearanceDelegate
+typealias CalendarDelegate = CVCalendarMenuViewDelegate &
+    CVCalendarViewDelegate &
+    CVCalendarViewAppearanceDelegate
 
-extension ProgressViewController: CalendarDelegates {
+extension ProgressViewController: CalendarDelegate {
     
     // MARK: Configuration Calendar
     

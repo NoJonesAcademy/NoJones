@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="wvP-At-rvP" customClass="ProgressViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3QP-4w-JyW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-Ci-hqA">
-                                <rect key="frame" x="0.0" y="96" width="375" height="855"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="655"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIy-kq-bGG" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="894"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="846.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4b-A0-CEE" customClass="CVCalendarMenuView" customModule="CVCalendar">
                                                 <rect key="frame" x="16" y="47" width="343" height="30"/>
@@ -36,7 +36,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agosto 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-W6-MgX">
                                                 <rect key="frame" x="0.0" y="16" width="375" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="buttonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2is-jf-IkB" customClass="CVCalendarView" customModule="CVCalendar">
@@ -50,19 +50,108 @@
                                                     <outlet property="calendarDelegate" destination="wvP-At-rvP" id="rHq-Cb-kBu"/>
                                                 </connections>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatisticas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-Fl-ef4">
+                                                <rect key="frame" x="16" y="385.5" width="92.5" height="21"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-Rr-hiq">
+                                                <rect key="frame" x="65" y="430.5" width="49" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYH-iK-idV">
+                                                <rect key="frame" x="267" y="430" width="43" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CF-dp-O44">
+                                                <rect key="frame" x="267" y="561" width="43" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh2-yH-AgM">
+                                                <rect key="frame" x="65.5" y="561.5" width="48" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dias        Sem vicios" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7z-ha-cGn">
+                                                <rect key="frame" x="34.5" y="486.5" width="110" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="gtJ-NJ-6iG"/>
+                                                    <constraint firstAttribute="height" constant="51" id="r6H-Kd-1bR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meses       Consecutivos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKO-u3-nQg">
+                                                <rect key="frame" x="34.5" y="617.5" width="110" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="5Yz-CL-c5Y"/>
+                                                    <constraint firstAttribute="height" constant="51" id="AU3-Bn-JnD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meses        á risca" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOp-F7-cCz">
+                                                <rect key="frame" x="233.5" y="617" width="110" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="TgA-yv-KG3"/>
+                                                    <constraint firstAttribute="width" constant="110" id="xJu-st-9f8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Média        Evitados/Dia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuf-Be-koW">
+                                                <rect key="frame" x="233.5" y="486" width="110" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="MZE-6E-2Lr"/>
+                                                    <constraint firstAttribute="width" constant="110" id="mol-N7-79E"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="buttonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="uwc-W6-MgX" firstAttribute="leading" secondItem="cIy-kq-bGG" secondAttribute="leading" id="25Y-xP-84o"/>
                                             <constraint firstItem="2is-jf-IkB" firstAttribute="leading" secondItem="cIy-kq-bGG" secondAttribute="leading" constant="16" id="9Ta-3K-q6g"/>
+                                            <constraint firstItem="0CF-dp-O44" firstAttribute="top" secondItem="Wuf-Be-koW" secondAttribute="bottom" constant="24" id="ELY-Rs-nHP"/>
+                                            <constraint firstItem="vYH-iK-idV" firstAttribute="top" secondItem="Izn-Fl-ef4" secondAttribute="bottom" constant="23.5" id="ErM-d3-JXT"/>
+                                            <constraint firstItem="HKO-u3-nQg" firstAttribute="centerX" secondItem="sh2-yH-AgM" secondAttribute="centerX" id="Fx1-Sw-scI"/>
                                             <constraint firstItem="p4b-A0-CEE" firstAttribute="leading" secondItem="cIy-kq-bGG" secondAttribute="leading" constant="16" id="G2y-SE-RfE"/>
+                                            <constraint firstAttribute="bottom" secondItem="vOp-F7-cCz" secondAttribute="bottom" constant="178.5" id="G6g-QX-UQy"/>
+                                            <constraint firstItem="vOp-F7-cCz" firstAttribute="centerX" secondItem="0CF-dp-O44" secondAttribute="centerX" id="LRV-NJ-fEU"/>
+                                            <constraint firstItem="HKO-u3-nQg" firstAttribute="top" secondItem="sh2-yH-AgM" secondAttribute="bottom" constant="8" id="Lw6-21-mr7"/>
+                                            <constraint firstItem="0CF-dp-O44" firstAttribute="centerX" secondItem="Wuf-Be-koW" secondAttribute="centerX" id="MwA-RV-lk5"/>
+                                            <constraint firstAttribute="trailing" secondItem="vYH-iK-idV" secondAttribute="trailing" constant="65" id="PgK-DH-KS6"/>
                                             <constraint firstItem="2is-jf-IkB" firstAttribute="top" secondItem="p4b-A0-CEE" secondAttribute="bottom" constant="8" id="SQz-LZ-XLx"/>
+                                            <constraint firstItem="8FX-Rr-hiq" firstAttribute="top" secondItem="Izn-Fl-ef4" secondAttribute="bottom" constant="24" id="Uuq-0M-YKK"/>
                                             <constraint firstItem="p4b-A0-CEE" firstAttribute="top" secondItem="uwc-W6-MgX" secondAttribute="bottom" constant="8" id="Y38-5b-PUq"/>
                                             <constraint firstAttribute="trailing" secondItem="p4b-A0-CEE" secondAttribute="trailing" constant="16" id="ZRg-5S-EeH"/>
-                                            <constraint firstAttribute="bottom" secondItem="2is-jf-IkB" secondAttribute="bottom" constant="516.5" id="ZU8-S5-puf"/>
+                                            <constraint firstItem="Izn-Fl-ef4" firstAttribute="leading" secondItem="2is-jf-IkB" secondAttribute="leading" id="ZY3-P4-a0J"/>
                                             <constraint firstItem="uwc-W6-MgX" firstAttribute="top" secondItem="cIy-kq-bGG" secondAttribute="top" constant="16" id="ao3-2F-wqx"/>
+                                            <constraint firstItem="sh2-yH-AgM" firstAttribute="centerX" secondItem="F7z-ha-cGn" secondAttribute="centerX" id="boU-q8-yKD"/>
+                                            <constraint firstItem="F7z-ha-cGn" firstAttribute="top" secondItem="8FX-Rr-hiq" secondAttribute="bottom" constant="8" id="ihh-lR-1a5"/>
+                                            <constraint firstItem="Wuf-Be-koW" firstAttribute="top" secondItem="vYH-iK-idV" secondAttribute="bottom" constant="8" id="jLC-4R-6pf"/>
                                             <constraint firstAttribute="trailing" secondItem="uwc-W6-MgX" secondAttribute="trailing" id="kUg-ME-h9Q"/>
+                                            <constraint firstItem="sh2-yH-AgM" firstAttribute="top" secondItem="F7z-ha-cGn" secondAttribute="bottom" constant="24" id="lQB-da-sRr"/>
+                                            <constraint firstItem="Wuf-Be-koW" firstAttribute="centerX" secondItem="vYH-iK-idV" secondAttribute="centerX" id="mi4-fR-Ix2"/>
+                                            <constraint firstItem="8FX-Rr-hiq" firstAttribute="leading" secondItem="cIy-kq-bGG" secondAttribute="leading" constant="65" id="nFU-QA-LzV"/>
+                                            <constraint firstItem="Izn-Fl-ef4" firstAttribute="top" secondItem="2is-jf-IkB" secondAttribute="bottom" constant="8" id="rQe-bo-SKh"/>
                                             <constraint firstAttribute="trailing" secondItem="2is-jf-IkB" secondAttribute="trailing" constant="16" id="rqT-yB-XR0"/>
+                                            <constraint firstAttribute="bottom" secondItem="HKO-u3-nQg" secondAttribute="bottom" constant="178" id="sSk-nc-SuP"/>
+                                            <constraint firstItem="F7z-ha-cGn" firstAttribute="centerX" secondItem="8FX-Rr-hiq" secondAttribute="centerX" id="xAZ-QZ-rvK"/>
+                                            <constraint firstItem="vOp-F7-cCz" firstAttribute="top" secondItem="0CF-dp-O44" secondAttribute="bottom" constant="8" id="yE3-SV-B4w"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -88,8 +177,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xj1-NQ-2Tl"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Progresso" id="CUv-Rx-lQa"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <navigationItem key="navigationItem" title="Progresso" largeTitleDisplayMode="always" id="CUv-Rx-lQa"/>
+                    <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="calendarView" destination="2is-jf-IkB" id="xqU-oi-idd"/>
                         <outlet property="menuView" destination="p4b-A0-CEE" id="Pxl-Ty-Hpp"/>
@@ -98,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boP-9u-TrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.5999999999999" y="147.52623688155924"/>
+            <point key="canvasLocation" x="1574" y="58"/>
         </scene>
         <!--Progresso-->
         <scene sceneID="C6V-Oj-2P5">
@@ -125,6 +214,9 @@
         <image name="progressIcon" width="25" height="22.5"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
