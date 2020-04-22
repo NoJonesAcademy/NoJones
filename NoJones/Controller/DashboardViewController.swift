@@ -10,27 +10,30 @@ import UIKit
 
 class DashboardViewController: UIViewController, UITableViewDataSource {
 
-    var addictions = [String]()
-//    var addictions = ["Addiction",
-//    "Addiction",
-//    "Addiction",
-//    "Addiction",]
+//    var addictions = [String]()
+    var addictions = ["Addiction",
+    "Addiction",
+    "Addiction",
+    "Addiction"]
     
-
-    @IBOutlet weak var noAddictionsImage: UIImageView!
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var userAge: UILabel!
+ 
+    
+    @IBOutlet weak var addAddictionButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         if addictions.isEmpty {
+            tableView.isScrollEnabled = false
             tableView.backgroundColor = .none
             tableView.separatorStyle = .none
-        } else {
-            noAddictionsImage.isHidden = true
         }
-        
-        tableView.isHidden = false
         tableView.rowHeight = 70
         
                 
