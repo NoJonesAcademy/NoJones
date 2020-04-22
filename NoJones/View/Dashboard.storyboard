@@ -47,7 +47,7 @@
         <scene sceneID="Qg0-hn-jZn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xzl-TY-ew4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="list.dash" catalog="system" landscapeImage="list.dash" selectedImage="list.dash" id="fsB-dz-b4F"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboardIcon" landscapeImage="dashboardIcon" selectedImage="dashboardIcon" id="fsB-dz-b4F"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JMt-y8-Fmp">
@@ -65,7 +65,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list.dash" catalog="system" width="64" height="42"/>
+        <image name="dashboardIcon" width="24.5" height="17"/>
         <namedColor name="buttonColor">
             <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
