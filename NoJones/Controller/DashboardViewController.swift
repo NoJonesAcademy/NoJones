@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DashboardViewController: UIViewController {
     
     var addictions = [
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
@@ -60,8 +60,9 @@ class DashboardViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     
-    var didTapSomeImage = false
-    
+}
+
+extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func setProfileImage() {
         self.profileImage.isUserInteractionEnabled = true
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(switchUserPhoto))
@@ -70,7 +71,6 @@ class DashboardViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @objc func switchUserPhoto() {
-        didTapSomeImage = false
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
@@ -79,12 +79,9 @@ class DashboardViewController: UIViewController, UIImagePickerControllerDelegate
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
-        if didTapSomeImage == false {
-            self.profileImage.image = image
-        }
+        self.profileImage.image = image
         dismiss(animated: true)
     }
-    
 }
 
 
