@@ -18,9 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noAddictions" translatesAutoresizingMaskIntoConstraints="NO" id="JE6-x2-FSV">
-                                <rect key="frame" x="68" y="419" width="247" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noAddictions" translatesAutoresizingMaskIntoConstraints="NO" id="JE6-x2-FSV">
+                                <rect key="frame" x="63.5" y="418" width="248" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="if4-EU-M5d"/>
+                                    <constraint firstAttribute="width" secondItem="JE6-x2-FSV" secondAttribute="height" multiplier="247:199" id="pnV-x8-eGR"/>
+                                </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1SI-Oc-F5y">
                                 <rect key="frame" x="0.0" y="107" width="375" height="571"/>
@@ -148,8 +151,10 @@
                         <constraints>
                             <constraint firstItem="1SI-Oc-F5y" firstAttribute="trailing" secondItem="G3o-Ji-K8A" secondAttribute="trailing" id="1hR-7h-Nk4"/>
                             <constraint firstItem="1SI-Oc-F5y" firstAttribute="leading" secondItem="G3o-Ji-K8A" secondAttribute="leading" id="7jh-xI-Dmb"/>
+                            <constraint firstItem="JE6-x2-FSV" firstAttribute="centerX" secondItem="G3o-Ji-K8A" secondAttribute="centerX" id="eYs-AF-WPN"/>
                             <constraint firstItem="1SI-Oc-F5y" firstAttribute="top" secondItem="G3o-Ji-K8A" secondAttribute="top" id="irN-dk-8u7"/>
                             <constraint firstAttribute="bottom" secondItem="1SI-Oc-F5y" secondAttribute="bottom" id="qWm-7x-WFG"/>
+                            <constraint firstItem="JE6-x2-FSV" firstAttribute="bottom" secondItem="G3o-Ji-K8A" secondAttribute="bottom" id="smN-Ul-SIg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G3o-Ji-K8A"/>
                     </view>
