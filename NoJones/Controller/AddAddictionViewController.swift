@@ -29,6 +29,18 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
        return addictionData[row]
     }
     
+    
+    @objc func dismissModal (){
+        self.navigationController?.dismiss(animated: true, completion: {})
+        //self.navigationController?
+    }
+    
+    @objc func saveData(){
+        print(addictionNameTextField.text ?? "Vazio")
+        print(newHabitTextField.text ?? "Vazio")
+        print(addictionPicker.selectedRow(inComponent: 0))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +50,11 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         self.addictionPicker.dataSource = self
         addictionData = ["Cigarros","Drogas","Jogos"]
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissModal))
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveData))
     }
+    
     
     func configueTextFields(){
         
