@@ -8,17 +8,22 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-
-//    var addictions = [String]()
-    var addictions = [Addiction(name: "Cigarro", days: 0, type: "Cronico")]
+    var addictions = [
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico")
+    ]
+    
     var achievements = [
-    Achievement(image: UIImage(named: "achievement1"), name: "Welcome"),
-    Achievement(image: UIImage(named: "achievement2-disable"), name: "Welcome"),
-    Achievement(image: UIImage(named: "achievement3-disable"), name: "OneDay"),
-    Achievement(image: UIImage(named: "achievement4-disable"), name: "SevenDays"),
-    Achievement(image: UIImage(named: "achievement5-disable"), name: "OneMonth")
+        Achievement(image: UIImage(named: "achievement1"), name: "Welcome"),
+        Achievement(image: UIImage(named: "achievement2-disable"), name: "OneDay"),
+        Achievement(image: UIImage(named: "achievement3-disable"), name: "SevenDays"),
+        Achievement(image: UIImage(named: "achievement4-disable"), name: "OneMonth"),
+        Achievement(image: UIImage(named: "achievement5-disable"), name: "OneYear")
     ]
     
     @IBOutlet weak var profileImage: UIImageView!
@@ -40,10 +45,44 @@ class DashboardViewController: UIViewController {
         }
         tableView.rowHeight = 70
         
+        
         collectionView.register(AchievementCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
         tableView.dataSource = self
         
+        
+        profileImage.layer.masksToBounds = false
+        profileImage.contentMode = .scaleAspectFill
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        profileImage.clipsToBounds = true
+        setProfileImage()
+        
+    }
+    
+    
+    var didTapSomeImage = false
+    
+    func setProfileImage() {
+        self.profileImage.isUserInteractionEnabled = true
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(switchUserPhoto))
+        singleTap.numberOfTouchesRequired = 1
+        self.profileImage.addGestureRecognizer(singleTap)
+    }
+    
+    @objc func switchUserPhoto() {
+        didTapSomeImage = false
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+        if didTapSomeImage == false {
+            self.profileImage.image = image
+        }
+        dismiss(animated: true)
     }
     
 }
