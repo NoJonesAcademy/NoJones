@@ -49,6 +49,18 @@ class ProgressViewController: UIViewController {
         menuView.backgroundColor = .none
         calendarView.backgroundColor = .none
     }
+    
+    // MARK: Buttons Actions
+    
+    @IBAction func rightArrowButton(_ sender: UIButton) {
+        calendarView.loadNextView()
+    }
+    
+    @IBAction func leftArrowButton(_ sender: Any) {
+        calendarView.loadPreviousView()
+    }
+    
+    
 }
 
 typealias CalendarDelegate = CVCalendarMenuViewDelegate &
