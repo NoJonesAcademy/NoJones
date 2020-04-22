@@ -4,45 +4,107 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Progresso-->
+        <!--Calendar Appearance Delegate-->
         <scene sceneID="7vv-JE-RpH">
             <objects>
                 <viewController id="wvP-At-rvP" customClass="ProgressViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3QP-4w-JyW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3x-Gg-HZ2">
-                                <rect key="frame" x="0.0" y="116" width="375" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-Ci-hqA">
+                                <rect key="frame" x="0.0" y="96" width="375" height="855"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIy-kq-bGG" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="894"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4b-A0-CEE" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                                <rect key="frame" x="16" y="47" width="343" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="cby-YK-Fb1"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="menuViewDelegate" destination="wvP-At-rvP" id="sDO-fR-i7i"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agosto 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-W6-MgX">
+                                                <rect key="frame" x="0.0" y="16" width="375" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2is-jf-IkB" customClass="CVCalendarView" customModule="CVCalendar">
+                                                <rect key="frame" x="16" y="85" width="343" height="292.5"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2is-jf-IkB" secondAttribute="height" multiplier="34:29" id="jQC-Tk-e9v"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="calendarAppearanceDelegate" destination="wvP-At-rvP" id="fXf-jX-ft4"/>
+                                                    <outlet property="calendarDelegate" destination="wvP-At-rvP" id="rHq-Cb-kBu"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="uwc-W6-MgX" firstAttribute="leading" secondItem="cIy-kq-bGG" secondAttribute="leading" id="25Y-xP-84o"/>
+                                            <constraint firstItem="2is-jf-IkB" firstAttribute="leading" secondItem="cIy-kq-bGG" secondAttribute="leading" constant="16" id="9Ta-3K-q6g"/>
+                                            <constraint firstItem="p4b-A0-CEE" firstAttribute="leading" secondItem="cIy-kq-bGG" secondAttribute="leading" constant="16" id="G2y-SE-RfE"/>
+                                            <constraint firstItem="2is-jf-IkB" firstAttribute="top" secondItem="p4b-A0-CEE" secondAttribute="bottom" constant="8" id="SQz-LZ-XLx"/>
+                                            <constraint firstItem="p4b-A0-CEE" firstAttribute="top" secondItem="uwc-W6-MgX" secondAttribute="bottom" constant="8" id="Y38-5b-PUq"/>
+                                            <constraint firstAttribute="trailing" secondItem="p4b-A0-CEE" secondAttribute="trailing" constant="16" id="ZRg-5S-EeH"/>
+                                            <constraint firstAttribute="bottom" secondItem="2is-jf-IkB" secondAttribute="bottom" constant="516.5" id="ZU8-S5-puf"/>
+                                            <constraint firstItem="uwc-W6-MgX" firstAttribute="top" secondItem="cIy-kq-bGG" secondAttribute="top" constant="16" id="ao3-2F-wqx"/>
+                                            <constraint firstAttribute="trailing" secondItem="uwc-W6-MgX" secondAttribute="trailing" id="kUg-ME-h9Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="2is-jf-IkB" secondAttribute="trailing" constant="16" id="rqT-yB-XR0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ctT-LT-Rla"/>
+                                    <constraint firstItem="cIy-kq-bGG" firstAttribute="top" secondItem="zZX-Ci-hqA" secondAttribute="top" id="0YC-sr-AZr"/>
+                                    <constraint firstItem="cIy-kq-bGG" firstAttribute="height" secondItem="zZX-Ci-hqA" secondAttribute="height" priority="250" id="8FM-HI-3b3"/>
+                                    <constraint firstItem="cIy-kq-bGG" firstAttribute="width" secondItem="zZX-Ci-hqA" secondAttribute="width" id="DrW-Rw-Sua"/>
+                                    <constraint firstAttribute="trailing" secondItem="cIy-kq-bGG" secondAttribute="trailing" id="GVa-TL-FWH"/>
+                                    <constraint firstItem="cIy-kq-bGG" firstAttribute="leading" secondItem="zZX-Ci-hqA" secondAttribute="leading" id="Pnv-Xv-SiC"/>
+                                    <constraint firstAttribute="bottom" secondItem="cIy-kq-bGG" secondAttribute="bottom" id="b8u-Oc-fL6"/>
                                 </constraints>
-                            </view>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eaw-k2-joI"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="EIz-cR-v0G"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="w3x-Gg-HZ2" firstAttribute="top" secondItem="Xj1-NQ-2Tl" secondAttribute="top" constant="20" id="Kbf-S3-9s6"/>
-                            <constraint firstItem="w3x-Gg-HZ2" firstAttribute="leading" secondItem="Xj1-NQ-2Tl" secondAttribute="leading" id="Ucd-Pl-Eca"/>
-                            <constraint firstItem="Xj1-NQ-2Tl" firstAttribute="trailing" secondItem="w3x-Gg-HZ2" secondAttribute="trailing" id="lDh-ab-9Qc"/>
+                            <constraint firstItem="Xj1-NQ-2Tl" firstAttribute="trailing" secondItem="zZX-Ci-hqA" secondAttribute="trailing" id="9Sj-Iz-sVh"/>
+                            <constraint firstItem="Xj1-NQ-2Tl" firstAttribute="top" secondItem="zZX-Ci-hqA" secondAttribute="top" id="Ly2-Gj-an4"/>
+                            <constraint firstItem="zZX-Ci-hqA" firstAttribute="leading" secondItem="Xj1-NQ-2Tl" secondAttribute="leading" id="WGN-in-Xbf"/>
+                            <constraint firstItem="zZX-Ci-hqA" firstAttribute="bottom" secondItem="Xj1-NQ-2Tl" secondAttribute="bottom" id="wBk-id-hb2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xj1-NQ-2Tl"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Progresso" id="SNX-Sy-kxM"/>
+                    <navigationItem key="navigationItem" title="Progresso" id="CUv-Rx-lQa"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="calendarView" destination="2is-jf-IkB" id="xqU-oi-idd"/>
+                        <outlet property="menuView" destination="p4b-A0-CEE" id="Pxl-Ty-Hpp"/>
+                        <outlet property="monthLabel" destination="uwc-W6-MgX" id="3Xe-DB-1sH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boP-9u-TrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1689.8550724637682" y="-1.3392857142857142"/>
+            <point key="canvasLocation" x="1621.5999999999999" y="147.52623688155924"/>
         </scene>
         <!--Progresso-->
         <scene sceneID="C6V-Oj-2P5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LLO-EG-hgw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Progresso" image="calendar" catalog="system" landscapeImage="calendar" selectedImage="calendar" id="lTM-q0-Wbq"/>
+                    <tabBarItem key="tabBarItem" title="Progresso" image="I" landscapeImage="calendar" catalog="system" id="lTM-q0-Wbq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ee9-Xv-mAd">
@@ -60,6 +122,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="I" width="16" height="16"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
