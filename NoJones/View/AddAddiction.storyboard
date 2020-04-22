@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,14 +16,64 @@
                     <view key="view" contentMode="scaleToFill" id="UjU-V3-dAD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Vício" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-gy-Jjf">
+                                <rect key="frame" x="16" y="68" width="113" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Vício" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlI-18-nj0">
+                                <rect key="frame" x="16" y="345" width="113" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbD-Iw-Mng">
+                                <rect key="frame" x="16" y="377" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThN-if-JJj">
+                                <rect key="frame" x="0.0" y="100" width="375" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar novo hábito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-ne-u2m">
+                                <rect key="frame" x="16" y="441" width="148" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZR-eD-Kc8">
+                                <rect key="frame" x="16" y="473" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ThN-if-JJj" firstAttribute="trailing" secondItem="lJw-Jo-qwg" secondAttribute="trailing" id="0Ru-ph-efp"/>
+                            <constraint firstItem="Xel-ne-u2m" firstAttribute="top" secondItem="dbD-Iw-Mng" secondAttribute="bottom" constant="30" id="2ml-cZ-wUE"/>
+                            <constraint firstItem="dbD-Iw-Mng" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="6HM-ii-4oV"/>
+                            <constraint firstItem="YlI-18-nj0" firstAttribute="top" secondItem="ThN-if-JJj" secondAttribute="bottom" constant="29" id="8ig-Fg-9c7"/>
+                            <constraint firstItem="ThN-if-JJj" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" id="8qd-Gv-XjT"/>
+                            <constraint firstItem="PZR-eD-Kc8" firstAttribute="top" secondItem="Xel-ne-u2m" secondAttribute="bottom" constant="8" id="BZO-Qy-gE3"/>
+                            <constraint firstItem="lJw-Jo-qwg" firstAttribute="trailing" secondItem="dbD-Iw-Mng" secondAttribute="trailing" constant="16" id="Mlq-hB-bn9"/>
+                            <constraint firstItem="lJw-Jo-qwg" firstAttribute="trailing" secondItem="PZR-eD-Kc8" secondAttribute="trailing" constant="16" id="W1s-Pf-UtI"/>
+                            <constraint firstItem="Xel-ne-u2m" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="cu9-sN-D7L"/>
+                            <constraint firstItem="YlI-18-nj0" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="egc-rt-57x"/>
+                            <constraint firstItem="ThN-if-JJj" firstAttribute="top" secondItem="Jm4-gy-Jjf" secondAttribute="bottom" constant="8" id="fCz-lE-0O9"/>
+                            <constraint firstItem="PZR-eD-Kc8" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="gfB-uU-mxN"/>
+                            <constraint firstItem="Jm4-gy-Jjf" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="lFV-pd-MM0"/>
+                            <constraint firstItem="dbD-Iw-Mng" firstAttribute="top" secondItem="YlI-18-nj0" secondAttribute="bottom" constant="8" id="njJ-cd-gdf"/>
+                            <constraint firstItem="Jm4-gy-Jjf" firstAttribute="top" secondItem="lJw-Jo-qwg" secondAttribute="top" constant="24" id="poY-LS-Osf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lJw-Jo-qwg"/>
                     </view>
                     <navigationItem key="navigationItem" id="omL-qD-hAA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yof-Kw-szb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143.4782608695652" y="89.732142857142847"/>
+            <point key="canvasLocation" x="1143.2" y="89.505247376311857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yiB-LT-KQW">
@@ -43,4 +94,9 @@
             <point key="canvasLocation" x="233.33333333333334" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
