@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xzl-TY-ew4">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,8 +14,18 @@
             <objects>
                 <viewController id="Fjf-ht-pnv" customClass="DashboardViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p2C-Rb-FQ1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-Ij-Ruz">
+                                <rect key="frame" x="334" y="321" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="buttonColor"/>
+                                <connections>
+                                    <segue destination="i39-0x-ee7" kind="presentation" id="66u-fg-H4g"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XoF-Jg-Vj6"/>
                     </view>
@@ -24,15 +35,23 @@
             </objects>
             <point key="canvasLocation" x="3676.811594202899" y="41.517857142857139"/>
         </scene>
+        <!--AddAddiction-->
+        <scene sceneID="iaj-Tc-xcK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddAddiction" id="i39-0x-ee7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCn-la-IcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4329" y="40"/>
+        </scene>
         <!--Dashboard-->
         <scene sceneID="Qg0-hn-jZn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xzl-TY-ew4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="list.dash" catalog="system" landscapeImage="list.dash" selectedImage="list.dash" id="fsB-dz-b4F"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboardIcon" landscapeImage="dashboardIcon" selectedImage="dashboardIcon" id="fsB-dz-b4F"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JMt-y8-Fmp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -46,6 +65,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list.dash" catalog="system" width="64" height="42"/>
+        <image name="dashboardIcon" width="24.5" height="17"/>
+        <namedColor name="buttonColor">
+            <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
