@@ -13,7 +13,6 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
     
     @IBOutlet weak var addictionPicker: UIPickerView!
     var addictionData:[String] = [String]()
-    
     @IBOutlet weak var addictionNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
     
@@ -26,19 +25,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-       return addictionData[row]
-    }
-    
-    
-    @objc func dismissModal (){
-        self.navigationController?.dismiss(animated: true, completion: {})
-        //self.navigationController?
-    }
-    
-    @objc func saveData(){
-        print(addictionNameTextField.text ?? "Vazio")
-        print(newHabitTextField.text ?? "Vazio")
-        print(addictionPicker.selectedRow(inComponent: 0))
+        return addictionData[row]
     }
     
     override func viewDidLoad() {
@@ -55,21 +42,29 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveData))
     }
     
-    
     func configueTextFields(){
         
         self.addictionNameTextField.delegate = self
         self.newHabitTextField.delegate = self
         
         
-       self.addictionNameTextField.layer.borderWidth  = 2
-       self.addictionNameTextField.layer.cornerRadius = 8
-       self.addictionNameTextField.layer.borderColor = .init(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
+        self.addictionNameTextField.layer.borderWidth  = 2
+        self.addictionNameTextField.layer.cornerRadius = 8
+        self.addictionNameTextField.layer.borderColor = .init(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
        
-       self.newHabitTextField.layer.borderWidth  = 2
-       self.newHabitTextField.layer.cornerRadius = 8
-       self.newHabitTextField.layer.borderColor = .init(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
+        self.newHabitTextField.layer.borderWidth  = 2
+        self.newHabitTextField.layer.cornerRadius = 8
+        self.newHabitTextField.layer.borderColor = .init(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
     }
     
-
+    @objc func dismissModal (){
+        self.navigationController?.dismiss(animated: true, completion: {})
+        //self.navigationController?
+    }
+    
+    @objc func saveData(){
+        print(addictionNameTextField.text ?? "Vazio")
+        print(newHabitTextField.text ?? "Vazio")
+        print(addictionPicker.selectedRow(inComponent: 0))
+    }
 }
