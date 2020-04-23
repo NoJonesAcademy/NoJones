@@ -38,7 +38,6 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
 
-        //crete the slides and add them
         var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
 
         for index in 0..<titles.count {
@@ -47,7 +46,6 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
 
             let slide = UIView(frame: frame)
 
-            //subviews
             let imageView = UIImageView.init(image: UIImage.init(named: imgs[index]))
             imageView.frame = CGRect(x:37, y:92, width:311, height:219)
             imageView.contentMode = .scaleAspectFit
@@ -72,13 +70,10 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
 
         }
 
-        //set width of scrollview to accomodate all the slides
         scrollView.contentSize = CGSize(width: scrollWidth * CGFloat(titles.count), height: scrollHeight)
 
-        //disable vertical scroll/bounce
         self.scrollView.contentSize.height = 1.0
-
-        //initial state
+        
         pageControl.numberOfPages = titles.count
         pageControl.currentPage = 0
 
