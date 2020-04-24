@@ -10,9 +10,11 @@ import UIKit
 
 class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
     
-    @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet var nextButton: UIButton!
-    @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     var scrollWidth: CGFloat! = 0.0
     var scrollHeight: CGFloat! = 0.0
@@ -79,10 +81,6 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
 
     }
     
-    @IBAction func pageChanged(_ sender: Any) {
-        scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
-    }
-
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         setIndiactorForCurrentPage()
     }
@@ -90,10 +88,42 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
     func setIndiactorForCurrentPage()  {
         let page = (scrollView?.contentOffset.x)!/scrollWidth
         pageControl?.currentPage = Int(page)
+        if pageControl.currentPage == 2 {
+            nextButton.setTitle("Skip", for: .normal)
+        }
+        else{
+            nextButton.setTitle("Next", for: .normal)
+        }
+    }
+    
+    @IBAction func skipPage(_ sender: Any) {
+        // Change storyboard
+    }
+    
+    @IBAction func pageChanged(_ sender: Any) {
+        scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
     }
     
     @IBAction func nextPage(_ sender: Any) {
+        if nextButton.currentTitle == "Skip" {
+            // Change storyboard
+        }
+        else {
+            pageControl.currentPage = pageControl.currentPage + 1
+            scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
+            if pageControl.currentPage == 2 {
+                nextButton.setTitle("Skip", for: .normal)
+            }
+        }
+            
+    }
+    
+    @IBAction func previousPage(_ sender: Any) {
+        pageControl.currentPage = pageControl.currentPage - 1
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
+        if pageControl.currentPage != 2 {
+            nextButton.setTitle("Next", for: .normal)
+        }
     }
 
 }

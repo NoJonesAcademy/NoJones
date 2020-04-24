@@ -25,28 +25,49 @@
                                 <state key="normal" title="Avançar">
                                     <color key="titleColor" name="BackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextPage:" destination="NFy-DR-hwo" eventType="touchUpInside" id="gcu-PR-6Nz"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" id="wy6-ue-SQD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="570"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="489"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LmX-mB-3w6">
                                 <rect key="frame" x="87" y="623" width="200" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" name="secondaryColor"/>
+                                <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" name="buttonColor"/>
                                 <connections>
                                     <action selector="pageChanged:" destination="NFy-DR-hwo" eventType="valueChanged" id="oat-qV-is4"/>
                                 </connections>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-oO-m6v">
+                                <rect key="frame" x="22" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="previousPage:" destination="NFy-DR-hwo" eventType="touchUpInside" id="3hB-Wb-TgY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xni-BU-Rdh">
+                                <rect key="frame" x="321" y="44" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skipPage:" destination="NFy-DR-hwo" eventType="touchUpInside" id="B5q-IH-uOs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iLQ-FT-qwE"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="6m6-oO-m6v" id="aCs-bi-2gB"/>
                         <outlet property="nextButton" destination="Gsg-NW-NeW" id="cOD-eJ-hLI"/>
                         <outlet property="pageControl" destination="LmX-mB-3w6" id="rxk-iq-g9n"/>
                         <outlet property="scrollView" destination="wy6-ue-SQD" id="xWI-Ru-q3b"/>
+                        <outlet property="skipButton" destination="Xni-BU-Rdh" id="cuw-b0-WY6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbm-Sx-Wu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -60,9 +81,6 @@
         </namedColor>
         <namedColor name="buttonColor">
             <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="secondaryColor">
-            <color red="0.42399999499320984" green="0.60799998044967651" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
