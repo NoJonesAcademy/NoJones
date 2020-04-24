@@ -24,6 +24,7 @@
 		81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248663244E4A980091CFA4 /* AddAddiction.storyboard */; };
 		81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248665244E4AA60091CFA4 /* OnBoarding.storyboard */; };
 		81248668244E4AFD0091CFA4 /* AddictionDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */; };
+		AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */; };
 		BFB461EAB00EB3074AEBC038 /* Pods_NoJones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10413357CE4E7821F737B79B /* Pods_NoJones.framework */; };
 		C5DF32B559391958122E49C7 /* Pods_NoJonesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		81248665244E4AA60091CFA4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddictionDetails.storyboard; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddictionViewController.swift; sourceTree = "<group>"; };
 		CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoJonesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7C321F9E4039BE64D1D274 /* Pods-NoJonesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.release.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				81248661244E448E0091CFA4 /* DashboardViewController.swift */,
+				AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */,
 				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
 				7CDB288124508525001A8467 /* OnBoardingViewController.swift */,
 			);
@@ -473,6 +476,7 @@
 				81248662244E448E0091CFA4 /* DashboardViewController.swift in Sources */,
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
+				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,12 +644,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A46XCK2VP;
 				INFOPLIST_FILE = NoJones/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NoJones.NoJones;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicius.NoJones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -658,12 +664,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A46XCK2VP;
 				INFOPLIST_FILE = NoJones/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NoJones.NoJones;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicius.NoJones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
