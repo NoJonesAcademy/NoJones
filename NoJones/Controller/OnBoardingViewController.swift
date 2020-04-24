@@ -102,6 +102,13 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
     
     @IBAction func pageChanged(_ sender: Any) {
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
+        
+        if pageControl.currentPage == 2 {
+            nextButton.setTitle("Skip", for: .normal)
+        }
+        else{
+            nextButton.setTitle("Next", for: .normal)
+        }
     }
     
     @IBAction func nextPage(_ sender: Any) {
