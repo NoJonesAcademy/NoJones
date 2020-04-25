@@ -22,10 +22,6 @@
 		81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248663244E4A980091CFA4 /* AddAddiction.storyboard */; };
 		81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248665244E4AA60091CFA4 /* OnBoarding.storyboard */; };
 		81248668244E4AFD0091CFA4 /* AddictionDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */; };
-		AE32589424539B210089FA35 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE32589324539B210089FA35 /* Dashboard.storyboard */; };
-		AE32589624539B350089FA35 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32589524539B350089FA35 /* DashboardViewController.swift */; };
-		AE32589924539B3F0089FA35 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32589724539B3F0089FA35 /* Achievement.swift */; };
-		AE32589A24539B3F0089FA35 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32589824539B3F0089FA35 /* Addiction.swift */; };
 		AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */; };
 		BFB461EAB00EB3074AEBC038 /* Pods_NoJones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10413357CE4E7821F737B79B /* Pods_NoJones.framework */; };
 		C5DF32B559391958122E49C7 /* Pods_NoJonesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */; };
@@ -76,10 +72,6 @@
 		81248665244E4AA60091CFA4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddictionDetails.storyboard; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE32589324539B210089FA35 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboard.storyboard; path = ../../../../Desktop/Dashboard.storyboard; sourceTree = "<group>"; };
-		AE32589524539B350089FA35 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = ../../../../Desktop/DashboardViewController.swift; sourceTree = "<group>"; };
-		AE32589724539B3F0089FA35 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = ../../../../Desktop/Achievement.swift; sourceTree = "<group>"; };
-		AE32589824539B3F0089FA35 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addiction.swift; path = ../../../../Desktop/Addiction.swift; sourceTree = "<group>"; };
 		AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddictionViewController.swift; sourceTree = "<group>"; };
 		CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoJonesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7C321F9E4039BE64D1D274 /* Pods-NoJonesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.release.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				81248658244E3F7D0091CFA4 /* TabBar.storyboard */,
-				AE32589324539B210089FA35 /* Dashboard.storyboard */,
 				8124865C244E3FC10091CFA4 /* Progress.storyboard */,
 				81248665244E4AA60091CFA4 /* OnBoarding.storyboard */,
 				81248663244E4A980091CFA4 /* AddAddiction.storyboard */,
@@ -209,7 +200,6 @@
 		8124865E244E42D00091CFA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AE32589524539B350089FA35 /* DashboardViewController.swift */,
 				AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */,
 				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
 				7CDB288124508525001A8467 /* OnBoardingViewController.swift */,
@@ -220,8 +210,6 @@
 		AE0A1B95244E570D008A8A57 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AE32589724539B3F0089FA35 /* Achievement.swift */,
-				AE32589824539B3F0089FA35 /* Addiction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -345,7 +333,6 @@
 				81248634244E3CBE0091CFA4 /* LaunchScreen.storyboard in Resources */,
 				81248659244E3F7D0091CFA4 /* TabBar.storyboard in Resources */,
 				8124865D244E3FC10091CFA4 /* Progress.storyboard in Resources */,
-				AE32589424539B210089FA35 /* Dashboard.storyboard in Resources */,
 				81248631244E3CBE0091CFA4 /* Assets.xcassets in Resources */,
 				81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */,
 				81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */,
@@ -478,12 +465,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
-				AE32589624539B350089FA35 /* DashboardViewController.swift in Sources */,
-				AE32589A24539B3F0089FA35 /* Addiction.swift in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
-				AE32589924539B3F0089FA35 /* Achievement.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 			);
@@ -659,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicius.NoJones;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NoJones.NoJones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,7 +663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicius.NoJones;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NoJones.NoJones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
