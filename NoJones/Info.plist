@@ -36,7 +36,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>OnBoarding</string>
+					<string>TabBar</string>
 				</dict>
 			</array>
 		</dict>

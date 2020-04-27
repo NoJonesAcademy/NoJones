@@ -12,7 +12,7 @@ import UIKit
 class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var addictionPicker: UIPickerView!
-    var addictionData:[String] = [String]()
+    var addictionData = [String]()
     @IBOutlet weak var addictionNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
     
@@ -42,7 +42,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveData))
     }
     
-    func configueTextFields(){
+    func configueTextFields() {
         
         self.addictionNameTextField.delegate = self
         self.newHabitTextField.delegate = self
@@ -57,7 +57,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         self.newHabitTextField.layer.borderColor = .init(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
     }
     
-    @objc func dismissModal (){
+    @objc func dismissModal () {
         self.navigationController?.dismiss(animated: true, completion: {})
         //self.navigationController?
     }

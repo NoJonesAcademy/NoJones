@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0EE6005F129CABBDAB7B5F85 /* Pods_NoJones_NoJonesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EE235A9AF9118B59D90D8F /* Pods_NoJones_NoJonesUITests.framework */; };
 		7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB288124508525001A8467 /* OnBoardingViewController.swift */; };
+		810A61FF245700DF00E98DF4 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A61FD245700DF00E98DF4 /* Addiction.swift */; };
+		810A6200245700DF00E98DF4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A61FE245700DF00E98DF4 /* Achievement.swift */; };
+		810A6202245700F300E98DF4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810A6201245700F300E98DF4 /* Dashboard.storyboard */; };
+		810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A62032457011400E98DF4 /* DashboardViewController.swift */; };
 		81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81248624244E3CBB0091CFA4 /* AppDelegate.swift */; };
 		81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81248626244E3CBB0091CFA4 /* SceneDelegate.swift */; };
 		8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8124862D244E3CBB0091CFA4 /* NoJones.xcdatamodeld */; };
@@ -52,6 +56,10 @@
 		4567A5930D61A7B1E165E6D1 /* Pods-NoJones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.release.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.release.xcconfig"; sourceTree = "<group>"; };
 		58927E0B460B73A9CDED4FF3 /* Pods-NoJones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.debug.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.debug.xcconfig"; sourceTree = "<group>"; };
 		7CDB288124508525001A8467 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		810A61FD245700DF00E98DF4 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addiction.swift; path = NoJones/Addiction.swift; sourceTree = SOURCE_ROOT; };
+		810A61FE245700DF00E98DF4 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = NoJones/Achievement.swift; sourceTree = SOURCE_ROOT; };
+		810A6201245700F300E98DF4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		810A62032457011400E98DF4 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		81248621244E3CBB0091CFA4 /* NoJones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoJones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81248624244E3CBB0091CFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81248626244E3CBB0091CFA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +199,7 @@
 				81248665244E4AA60091CFA4 /* OnBoarding.storyboard */,
 				81248663244E4A980091CFA4 /* AddAddiction.storyboard */,
 				81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */,
+				810A6201245700F300E98DF4 /* Dashboard.storyboard */,
 				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
 				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
 			);
@@ -200,6 +209,7 @@
 		8124865E244E42D00091CFA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				810A62032457011400E98DF4 /* DashboardViewController.swift */,
 				AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */,
 				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
 				7CDB288124508525001A8467 /* OnBoardingViewController.swift */,
@@ -210,6 +220,8 @@
 		AE0A1B95244E570D008A8A57 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				810A61FE245700DF00E98DF4 /* Achievement.swift */,
+				810A61FD245700DF00E98DF4 /* Addiction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +345,7 @@
 				81248634244E3CBE0091CFA4 /* LaunchScreen.storyboard in Resources */,
 				81248659244E3F7D0091CFA4 /* TabBar.storyboard in Resources */,
 				8124865D244E3FC10091CFA4 /* Progress.storyboard in Resources */,
+				810A6202245700F300E98DF4 /* Dashboard.storyboard in Resources */,
 				81248631244E3CBE0091CFA4 /* Assets.xcassets in Resources */,
 				81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */,
 				81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */,
@@ -464,10 +477,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810A61FF245700DF00E98DF4 /* Addiction.swift in Sources */,
+				810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */,
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
+				810A6200245700DF00E98DF4 /* Achievement.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 			);
