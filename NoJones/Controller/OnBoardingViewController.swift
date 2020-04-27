@@ -55,14 +55,14 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
             let txt1 = UILabel.init(frame: CGRect(x:0, y:341, width:375, height:24))
             txt1.textAlignment = .center
             txt1.font = UIFont(name: "AppleSDGothicNeo-Regular" , size: 22)
-            txt1.textColor = .blue
+            txt1.textColor = .black
             txt1.text = titles[index]
 
             let txt2 = UILabel.init(frame: CGRect(x:41, y:381, width:292, height:88))
             txt2.textAlignment = .center
             txt2.numberOfLines = 7
             txt2.font = UIFont(name: "AppleSDGothicNeo-Light", size: 17)
-            txt2.textColor = .blue
+            txt2.textColor = .black
             txt2.text = descs[index]
 
             slide.addSubview(imageView)
@@ -89,7 +89,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
         let page = (scrollView?.contentOffset.x)!/scrollWidth
         pageControl?.currentPage = Int(page)
         if pageControl.currentPage == 2 {
-            nextButton.setTitle("Skip", for: .normal)
+            nextButton.setTitle("Start", for: .normal)
         }
         else{
             nextButton.setTitle("Next", for: .normal)
@@ -104,7 +104,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
         
         if pageControl.currentPage == 2 {
-            nextButton.setTitle("Skip", for: .normal)
+            nextButton.setTitle("Start", for: .normal)
         }
         else{
             nextButton.setTitle("Next", for: .normal)
@@ -112,14 +112,14 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
     }
     
     @IBAction func nextPage(_ sender: Any) {
-        if nextButton.currentTitle == "Skip" {
+        if nextButton.currentTitle == "Start" {
             // Change storyboard
         }
         else {
             pageControl.currentPage = pageControl.currentPage + 1
             scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
             if pageControl.currentPage == 2 {
-                nextButton.setTitle("Skip", for: .normal)
+                nextButton.setTitle("Start", for: .normal)
             }
         }
             
