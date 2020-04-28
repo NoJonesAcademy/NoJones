@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="JWr-98-XYA" userLabel="ContentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="308"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-4O-kGo">
@@ -106,34 +106,17 @@
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habitos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eal-4C-yKR">
-                                            <rect key="frame" x="16" y="280" width="62" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-SK-NQD">
-                                            <rect key="frame" x="334" y="278.5" width="25" height="24"/>
-                                            <color key="tintColor" name="buttonColor"/>
-                                            <connections>
-                                                <segue destination="i39-0x-ee7" kind="presentation" id="NTf-Jc-dzh"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="BackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="Lza-4O-kGo" firstAttribute="top" secondItem="JWr-98-XYA" secondAttribute="top" constant="24" id="4rC-7K-Rel"/>
                                         <constraint firstAttribute="trailing" secondItem="6CU-bo-goa" secondAttribute="trailing" id="Cag-1j-dCf"/>
-                                        <constraint firstItem="Eal-4C-yKR" firstAttribute="top" secondItem="6CU-bo-goa" secondAttribute="bottom" constant="24" id="DP6-7k-EQp"/>
                                         <constraint firstItem="fcq-sx-tJ1" firstAttribute="top" secondItem="Lza-4O-kGo" secondAttribute="bottom" constant="24" id="E5d-1z-hpt"/>
                                         <constraint firstItem="CzL-TX-pzF" firstAttribute="leading" secondItem="Lza-4O-kGo" secondAttribute="trailing" constant="16" id="Fnw-D0-nSU"/>
-                                        <constraint firstItem="Wj1-SK-NQD" firstAttribute="centerY" secondItem="Eal-4C-yKR" secondAttribute="centerY" id="JkN-cc-agU"/>
                                         <constraint firstItem="6CU-bo-goa" firstAttribute="top" secondItem="fcq-sx-tJ1" secondAttribute="bottom" constant="8" id="POo-4O-3BK"/>
                                         <constraint firstItem="6CU-bo-goa" firstAttribute="leading" secondItem="JWr-98-XYA" secondAttribute="leading" constant="16" id="UAP-lD-j0s"/>
                                         <constraint firstItem="CzL-TX-pzF" firstAttribute="top" secondItem="JWr-98-XYA" secondAttribute="top" constant="42" id="UZI-1J-eOC"/>
-                                        <constraint firstAttribute="trailing" secondItem="Wj1-SK-NQD" secondAttribute="trailing" constant="16" id="Wfb-rY-MKs"/>
                                         <constraint firstItem="cyR-En-g3z" firstAttribute="top" secondItem="CzL-TX-pzF" secondAttribute="bottom" constant="6" id="bzK-Me-wgf"/>
-                                        <constraint firstItem="Eal-4C-yKR" firstAttribute="leading" secondItem="JWr-98-XYA" secondAttribute="leading" constant="16" id="cvt-9s-O7r"/>
                                         <constraint firstItem="fcq-sx-tJ1" firstAttribute="leading" secondItem="JWr-98-XYA" secondAttribute="leading" constant="16" id="lNE-WM-JcI"/>
                                         <constraint firstItem="cyR-En-g3z" firstAttribute="leading" secondItem="Lza-4O-kGo" secondAttribute="trailing" constant="16" id="nqf-0a-djb"/>
                                         <constraint firstItem="Lza-4O-kGo" firstAttribute="leading" secondItem="JWr-98-XYA" secondAttribute="leading" constant="16" id="oql-la-yGY"/>
@@ -152,12 +135,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="Fdc-dP-Tc0"/>
                     <connections>
-                        <outlet property="addAddictionButton" destination="Wj1-SK-NQD" id="gh3-0Y-vjg"/>
                         <outlet property="collectionView" destination="6CU-bo-goa" id="o0X-Mn-hU5"/>
                         <outlet property="profileImage" destination="Lza-4O-kGo" id="15z-91-As8"/>
                         <outlet property="tableView" destination="1SI-Oc-F5y" id="eaD-JL-93B"/>
                         <outlet property="userAge" destination="cyR-En-g3z" id="yKy-k7-XwH"/>
                         <outlet property="username" destination="CzL-TX-pzF" id="fuF-m1-7Kt"/>
+                        <segue destination="uJ5-qa-DFE" kind="presentation" identifier="addAddictionSegue" id="MKa-AS-n5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRB-5j-hvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,12 +148,12 @@
             <point key="canvasLocation" x="3668" y="40.029985007496258"/>
         </scene>
         <!--AddAddiction-->
-        <scene sceneID="iaj-Tc-xcK">
+        <scene sceneID="Sgu-0X-Y4N">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddAddiction" id="i39-0x-ee7" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vCn-la-IcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AddAddiction" id="uJ5-qa-DFE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUG-sY-OB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4329" y="40"/>
+            <point key="canvasLocation" x="4281" y="40"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="Qg0-hn-jZn">
@@ -198,9 +181,6 @@
         <image name="profileImage" width="121" height="121"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="buttonColor">
-            <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

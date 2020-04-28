@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HabitsSection" id="iN0-l3-epB" customClass="HabitsSectionHeader" customModule="NoJones" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83K-cp-knk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                    <color key="backgroundColor" name="BackgroundColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-jV-mKr">
+                    <rect key="frame" x="16" y="5.5" width="382" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="BdY-Es-IfP"/>
+                        <constraint firstAttribute="width" constant="382" id="Wiq-pr-Y5Q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yce-kx-5m0">
+                    <rect key="frame" x="373" y="4" width="25" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="0Sh-dn-Zgl"/>
+                        <constraint firstAttribute="width" constant="25" id="KHi-Xq-jmQ"/>
+                    </constraints>
+                    <color key="tintColor" name="buttonColor"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="BackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZrL-jV-mKr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="504-VQ-sgQ"/>
+                <constraint firstItem="yce-kx-5m0" firstAttribute="centerY" secondItem="ZrL-jV-mKr" secondAttribute="centerY" id="79w-J2-Bda"/>
+                <constraint firstAttribute="trailing" secondItem="83K-cp-knk" secondAttribute="trailing" id="8dP-Nm-6kY"/>
+                <constraint firstItem="83K-cp-knk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qex-AX-plq"/>
+                <constraint firstItem="83K-cp-knk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="S0c-SW-FUs"/>
+                <constraint firstAttribute="trailing" secondItem="yce-kx-5m0" secondAttribute="trailing" constant="16" id="Wtz-rU-0Bv"/>
+                <constraint firstItem="ZrL-jV-mKr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Yzg-s3-YHx"/>
+                <constraint firstAttribute="bottom" secondItem="83K-cp-knk" secondAttribute="bottom" id="yRj-hX-eUH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addAddictionButton" destination="yce-kx-5m0" id="OCS-jp-I9J"/>
+                <outlet property="section" destination="ZrL-jV-mKr" id="wuf-SS-YAi"/>
+            </connections>
+            <point key="canvasLocation" x="112" y="152"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
