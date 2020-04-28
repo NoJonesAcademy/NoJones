@@ -213,7 +213,7 @@
                                     <constraint firstItem="cIy-kq-bGG" firstAttribute="width" secondItem="zZX-Ci-hqA" secondAttribute="width" id="DrW-Rw-Sua"/>
                                     <constraint firstAttribute="trailing" secondItem="cIy-kq-bGG" secondAttribute="trailing" id="GVa-TL-FWH"/>
                                     <constraint firstItem="cIy-kq-bGG" firstAttribute="leading" secondItem="zZX-Ci-hqA" secondAttribute="leading" id="Pnv-Xv-SiC"/>
-                                    <constraint firstAttribute="bottom" secondItem="cIy-kq-bGG" secondAttribute="bottom" id="b8u-Oc-fL6"/>
+                                    <constraint firstAttribute="bottom" secondItem="cIy-kq-bGG" secondAttribute="bottom" constant="50" id="b8u-Oc-fL6"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="eaw-k2-joI"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="EIz-cR-v0G"/>
