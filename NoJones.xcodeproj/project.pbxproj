@@ -25,7 +25,8 @@
 		81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124865F244E447C0091CFA4 /* ProgressViewController.swift */; };
 		81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248663244E4A980091CFA4 /* AddAddiction.storyboard */; };
 		81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248665244E4AA60091CFA4 /* OnBoarding.storyboard */; };
-		81248668244E4AFD0091CFA4 /* AddictionDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */; };
+		81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */; };
+		81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */; };
 		AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */; };
 		BFB461EAB00EB3074AEBC038 /* Pods_NoJones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10413357CE4E7821F737B79B /* Pods_NoJones.framework */; };
 		C5DF32B559391958122E49C7 /* Pods_NoJonesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */; };
@@ -56,8 +57,8 @@
 		4567A5930D61A7B1E165E6D1 /* Pods-NoJones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.release.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.release.xcconfig"; sourceTree = "<group>"; };
 		58927E0B460B73A9CDED4FF3 /* Pods-NoJones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.debug.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.debug.xcconfig"; sourceTree = "<group>"; };
 		7CDB288124508525001A8467 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		810A61FD245700DF00E98DF4 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addiction.swift; path = NoJones/Addiction.swift; sourceTree = SOURCE_ROOT; };
-		810A61FE245700DF00E98DF4 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = NoJones/Achievement.swift; sourceTree = SOURCE_ROOT; };
+		810A61FD245700DF00E98DF4 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addiction.swift; path = NoJones/Model/Addiction.swift; sourceTree = SOURCE_ROOT; };
+		810A61FE245700DF00E98DF4 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = NoJones/Model/Achievement.swift; sourceTree = SOURCE_ROOT; };
 		810A6201245700F300E98DF4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		810A62032457011400E98DF4 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		81248621244E3CBB0091CFA4 /* NoJones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoJones.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +79,8 @@
 		8124865F244E447C0091CFA4 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		81248663244E4A980091CFA4 /* AddAddiction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAddiction.storyboard; sourceTree = "<group>"; };
 		81248665244E4AA60091CFA4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
-		81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddictionDetails.storyboard; sourceTree = "<group>"; };
+		81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitDetails.storyboard; sourceTree = "<group>"; };
+		81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddictionViewController.swift; sourceTree = "<group>"; };
 		CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoJonesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,8 +163,8 @@
 		81248623244E3CBB0091CFA4 /* NoJones */ = {
 			isa = PBXGroup;
 			children = (
-				AE0A1B96244E5715008A8A57 /* Protocols */,
-				AE0A1B95244E570D008A8A57 /* Model */,
+				81DA37F42458BB6D00BE804E /* Protocols */,
+				81DA37F32458BB4D00BE804E /* Model */,
 				81248657244E3F2C0091CFA4 /* View */,
 				8124865E244E42D00091CFA4 /* Controller */,
 				81248624244E3CBB0091CFA4 /* AppDelegate.swift */,
@@ -198,7 +200,7 @@
 				8124865C244E3FC10091CFA4 /* Progress.storyboard */,
 				81248665244E4AA60091CFA4 /* OnBoarding.storyboard */,
 				81248663244E4A980091CFA4 /* AddAddiction.storyboard */,
-				81248667244E4AFD0091CFA4 /* AddictionDetails.storyboard */,
+				81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */,
 				810A6201245700F300E98DF4 /* Dashboard.storyboard */,
 				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
 				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
@@ -209,6 +211,7 @@
 		8124865E244E42D00091CFA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */,
 				810A62032457011400E98DF4 /* DashboardViewController.swift */,
 				AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */,
 				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
@@ -217,7 +220,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		AE0A1B95244E570D008A8A57 /* Model */ = {
+		81DA37F32458BB4D00BE804E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				810A61FE245700DF00E98DF4 /* Achievement.swift */,
@@ -226,7 +229,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AE0A1B96244E5715008A8A57 /* Protocols */ = {
+		81DA37F42458BB6D00BE804E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -349,7 +352,7 @@
 				81248631244E3CBE0091CFA4 /* Assets.xcassets in Resources */,
 				81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */,
 				81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */,
-				81248668244E4AFD0091CFA4 /* AddictionDetails.storyboard in Resources */,
+				81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +488,7 @@
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				810A6200245700DF00E98DF4 /* Achievement.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
+				81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
