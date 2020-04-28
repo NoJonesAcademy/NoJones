@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-181.59999999999999" y="252.32383808095955"/>
         </scene>
-        <!--TabBar-->
+        <!--InitialScreen-->
         <scene sceneID="nrk-Ul-UHA">
             <objects>
-                <viewControllerPlaceholder storyboardName="TabBar" id="mIR-Dk-eu4" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="InitialScreen" id="mIR-Dk-eu4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ZcP-NP-46P"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGb-JX-qt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
