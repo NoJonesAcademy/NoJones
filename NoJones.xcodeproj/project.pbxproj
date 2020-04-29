@@ -178,8 +178,6 @@
 				81248657244E3F2C0091CFA4 /* View */,
 				8124865E244E42D00091CFA4 /* Controller */,
 				81248624244E3CBB0091CFA4 /* AppDelegate.swift */,
-				819D4DD5245A1608005D07E8 /* Achievement.swift */,
-				819D4DD3245A1601005D07E8 /* Addiction.swift */,
 				81248626244E3CBB0091CFA4 /* SceneDelegate.swift */,
 				81248635244E3CBE0091CFA4 /* Info.plist */,
 				8124862D244E3CBB0091CFA4 /* NoJones.xcdatamodeld */,
@@ -240,6 +238,8 @@
 		81DA37F32458BB4D00BE804E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				819D4DD3245A1601005D07E8 /* Addiction.swift */,
+				819D4DD5245A1608005D07E8 /* Achievement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,7 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */,
-				810A61FF245700DF00E98DF4 /* Addiction.swift in Sources */,
 				810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */,
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
