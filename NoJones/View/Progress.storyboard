@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LLO-EG-hgw">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-Ci-hqA">
-                                <rect key="frame" x="0.0" y="96" width="375" height="655"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="611"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIy-kq-bGG" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="799"/>
@@ -45,7 +45,7 @@
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatisticas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-Fl-ef4">
-                                                <rect key="frame" x="16" y="338" width="92.5" height="21"/>
+                                                <rect key="frame" x="16" y="338" width="92.666666666666671" height="21"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -57,25 +57,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYH-iK-idV">
-                                                <rect key="frame" x="267" y="382.5" width="43" height="48"/>
+                                                <rect key="frame" x="267" y="382.66666666666663" width="43" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="textColor" name="buttonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CF-dp-O44">
-                                                <rect key="frame" x="267" y="513.5" width="43" height="48"/>
+                                                <rect key="frame" x="267" y="513.66666666666663" width="43" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="textColor" name="buttonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh2-yH-AgM">
-                                                <rect key="frame" x="65.5" y="514" width="48" height="48"/>
+                                                <rect key="frame" x="65.666666666666671" y="514" width="48" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="textColor" name="buttonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dias        Sem vicios" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7z-ha-cGn">
-                                                <rect key="frame" x="34.5" y="439" width="110" height="51"/>
+                                                <rect key="frame" x="34.666666666666657" y="439" width="110" height="51"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="gtJ-NJ-6iG"/>
                                                     <constraint firstAttribute="height" constant="51" id="r6H-Kd-1bR"/>
@@ -85,7 +85,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meses       Consecutivos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKO-u3-nQg">
-                                                <rect key="frame" x="34.5" y="570" width="110" height="51"/>
+                                                <rect key="frame" x="34.666666666666657" y="570" width="110" height="51"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="5Yz-CL-c5Y"/>
                                                     <constraint firstAttribute="height" constant="51" id="AU3-Bn-JnD"/>
@@ -95,7 +95,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meses        á risca" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOp-F7-cCz">
-                                                <rect key="frame" x="233.5" y="569.5" width="110" height="51"/>
+                                                <rect key="frame" x="233.66666666666663" y="569.66666666666663" width="110" height="51"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="51" id="TgA-yv-KG3"/>
                                                     <constraint firstAttribute="width" constant="110" id="xJu-st-9f8"/>
@@ -105,7 +105,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Média        Evitados/Dia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuf-Be-koW">
-                                                <rect key="frame" x="233.5" y="438.5" width="110" height="51"/>
+                                                <rect key="frame" x="233.66666666666663" y="438.66666666666663" width="110" height="51"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="51" id="MZE-6E-2Lr"/>
                                                     <constraint firstAttribute="width" constant="110" id="mol-N7-79E"/>
@@ -225,7 +225,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ee9-Xv-mAd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -240,10 +240,10 @@
     </scenes>
     <resources>
         <image name="arrow_left_disable" width="62" height="60"/>
-        <image name="arrow_left_enable" width="62.5" height="61"/>
+        <image name="arrow_left_enable" width="62.333332061767578" height="60.666667938232422"/>
         <image name="arrow_right_disable" width="62" height="60"/>
-        <image name="arrow_right_enable" width="62.5" height="61"/>
-        <image name="progressIcon" width="25" height="22.5"/>
+        <image name="arrow_right_enable" width="62.333332061767578" height="60.666667938232422"/>
+        <image name="progressIcon" width="25" height="22.666666030883789"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
