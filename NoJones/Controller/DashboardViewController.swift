@@ -2,15 +2,22 @@
 //  DashboardViewController.swift
 //  NoJones
 //
-//  Created by VInicius Mesquita on 20/04/20.
+//  Created by Albert Rayneer on 20/04/20.
 //  Copyright © 2020 NoJones. All rights reserved.
 //
 
 import UIKit
 
+
 class DashboardViewController: UIViewController {
     
+    //MARK: Collection and Table Data from Model
     var addictions = [
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
+        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
@@ -26,44 +33,44 @@ class DashboardViewController: UIViewController {
         Achievement(image: UIImage(named: "achievement5-disable"), name: "OneYear")
     ]
     
+    //MARK: IBOutlets
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userAge: UILabel!
- 
-    
-    @IBOutlet weak var addAddictionButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        if addictions.isEmpty {
-            tableView.isScrollEnabled = false
-            tableView.backgroundColor = .none
-            tableView.separatorStyle = .none
-        }
-        tableView.rowHeight = 70
         
-        
-        collectionView.register(AchievementCell.self, forCellWithReuseIdentifier: "achievementCell")
+        collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
+
+        setupTableView()
+        setupProfileImage()
+        
+    }
+    
+    //MARK: Table View Properties
+    func setupTableView() {
+        tableView.rowHeight = 70
         tableView.dataSource = self
-        
-        
+        tableView.delegate = self
+        let sectionNib = UINib(nibName: HabitsSectionHeader.xibName, bundle: nil)
+        tableView.register(sectionNib, forHeaderFooterViewReuseIdentifier: HabitsSectionHeader.identifier)
+    }
+}
+
+
+//MARK: Profile Image Picker Extension
+extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func setupProfileImage() {
         profileImage.layer.masksToBounds = false
         profileImage.contentMode = .scaleAspectFill
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.clipsToBounds = true
-        setProfileImage()
-        
-    }
-    
-}
-
-extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func setProfileImage() {
-        self.profileImage.isUserInteractionEnabled = true
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(switchUserPhoto))
         singleTap.numberOfTouchesRequired = 1
         self.profileImage.addGestureRecognizer(singleTap)
@@ -84,7 +91,8 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
 }
 
 
-extension DashboardViewController: UITableViewDataSource {
+//MARK: Table View Delegate and Data Source
+extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addictions.count
@@ -95,19 +103,73 @@ extension DashboardViewController: UITableViewDataSource {
         
         cell.textLabel?.text = addictions[indexPath.row].name
         cell.detailTextLabel?.text = addictions[indexPath.row].type
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    //Section Header Height
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    //Section Header View
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HabitsSectionHeader.identifier) as! HabitsSectionHeader
+        header.section.text = "Hábitos"
+        header.addAddictionButton.addTarget(self, action: #selector(addAddiction), for: .touchUpInside)
+        
+        return header
+    }
+    //Add Addiction Action Button
+    @objc func addAddiction() {
+        performSegue(withIdentifier: "addAddictionSegue", sender: nil)
+
+        //Insert new Row
+//        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
+//        addictions.insert(newAddiction, at: 0)
+//        tableView.beginUpdates()
+//        let indexPath = IndexPath(row: 0, section: 0)
+//        tableView.insertRows(at: [indexPath], with: .left)
+//        tableView.endUpdates()
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let doneAction = UIContextualAction(style: .normal, title: "Feito"){ (_, _, success) in
+            print("Habito feito")
+            success(true)
+        }
+        doneAction.backgroundColor = UIColor(named: "buttonColor")
+        let configure = UISwipeActionsConfiguration(actions: [doneAction])
+        configure.performsFirstActionWithFullSwipe = false
+        return configure
+    }
+    //Deleting Cells
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        tableView.beginUpdates()
+        addictions.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .right)
+        tableView.endUpdates()
+    }
+
 }
 
 
-extension DashboardViewController: UICollectionViewDataSource {
+//MARK: Collection View Delegate and Data Source
+extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return achievements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCollectionViewCell
         
         cell.achievement = self.achievements[indexPath.row]
         
@@ -116,37 +178,3 @@ extension DashboardViewController: UICollectionViewDataSource {
 }
 
 
-class AchievementCell: UICollectionViewCell {
-    
-    var achievement: Achievement? {
-        didSet {
-            guard let achievement = achievement else { return }
-            background.image = achievement.image
-        }
-    }
-    
-    fileprivate let background: UIImageView = {
-       let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 8
-        return imageView
-    }()
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        contentView.addSubview(background)
-        
-        background.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        background.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        background.trailingAnchor.constraint(equalTo: contentView.trailingAnchor ).isActive = true
-        background.bottomAnchor.constraint(equalTo: contentView.bottomAnchor ).isActive = true
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
