@@ -39,7 +39,12 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissModal))
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveData))
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "buttonColor")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveData))
+        
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "buttonColor")
+
     }
     
     func configueTextFields() {

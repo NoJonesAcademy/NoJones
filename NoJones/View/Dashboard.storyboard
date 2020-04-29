@@ -11,7 +11,7 @@
         <!--Dashboard-->
         <scene sceneID="4ad-w2-tuK">
             <objects>
-                <viewController id="Fjf-ht-pnv" customClass="DashboardViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Fjf-ht-pnv" customClass="DashboardViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZK2-Gx-49t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -20,9 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="JWr-98-XYA" userLabel="ContentView">
-
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
-
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" highlightedImage="profileImageHighlighted" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-4O-kGo">
@@ -62,10 +60,8 @@
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
-
                                             <cells/>
                                         </collectionView>
-
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Lza-4O-kGo" firstAttribute="top" secondItem="JWr-98-XYA" secondAttribute="top" constant="24" id="4rC-7K-Rel"/>
@@ -100,6 +96,7 @@
                         <outlet property="userAge" destination="cyR-En-g3z" id="yKy-k7-XwH"/>
                         <outlet property="username" destination="CzL-TX-pzF" id="fuF-m1-7Kt"/>
                         <segue destination="uJ5-qa-DFE" kind="presentation" identifier="addAddictionSegue" id="MKa-AS-n5s"/>
+                        <segue destination="Q9D-FH-Szh" kind="show" identifier="detailSegue" id="Uei-Mu-N4n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRB-5j-hvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -112,7 +109,7 @@
                 <viewControllerPlaceholder storyboardName="AddAddiction" id="uJ5-qa-DFE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUG-sY-OB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4281" y="40"/>
+            <point key="canvasLocation" x="4280" y="-61"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="Qg0-hn-jZn">
@@ -133,6 +130,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhq-0L-dey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2766.666666666667" y="41.517857142857139"/>
+        </scene>
+        <!--HabitDetails-->
+        <scene sceneID="pBz-9A-acF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HabitDetails" id="Q9D-FH-Szh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2gB-2I-SnE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSP-Ac-O3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4272" y="168"/>
         </scene>
     </scenes>
     <resources>

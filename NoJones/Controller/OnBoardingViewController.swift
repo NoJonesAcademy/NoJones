@@ -35,6 +35,8 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
         self.view.layoutIfNeeded()
         viewDidLayoutSubviews()
         
+        nextButton.layer.cornerRadius = 8
+        
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
@@ -55,14 +57,14 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
             let txt1 = UILabel.init(frame: CGRect(x:0, y:341, width:375, height:24))
             txt1.textAlignment = .center
             txt1.font = UIFont(name: "AppleSDGothicNeo-Regular" , size: 22)
-            txt1.textColor = .black
+            txt1.textColor = UIColor(named: "buttonColor")
             txt1.text = titles[index]
 
             let txt2 = UILabel.init(frame: CGRect(x:41, y:381, width:292, height:88))
             txt2.textAlignment = .center
             txt2.numberOfLines = 7
             txt2.font = UIFont(name: "AppleSDGothicNeo-Light", size: 17)
-            txt2.textColor = .black
+            txt2.textColor = UIColor(named: "buttonColor")
             txt2.text = descs[index]
 
             slide.addSubview(imageView)
