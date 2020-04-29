@@ -12,4 +12,5 @@ struct Addiction {
     var name: String?
     var days: Int?
     var type: String?
+    var done: Bool?
 }
