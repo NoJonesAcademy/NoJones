@@ -172,6 +172,8 @@
 				81248657244E3F2C0091CFA4 /* View */,
 				8124865E244E42D00091CFA4 /* Controller */,
 				81248624244E3CBB0091CFA4 /* AppDelegate.swift */,
+				819D4DD5245A1608005D07E8 /* Achievement.swift */,
+				819D4DD3245A1601005D07E8 /* Addiction.swift */,
 				81248626244E3CBB0091CFA4 /* SceneDelegate.swift */,
 				81248635244E3CBE0091CFA4 /* Info.plist */,
 				8124862D244E3CBB0091CFA4 /* NoJones.xcdatamodeld */,
@@ -229,8 +231,6 @@
 		81DA37F32458BB4D00BE804E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				819D4DD5245A1608005D07E8 /* Achievement.swift */,
-				819D4DD3245A1601005D07E8 /* Addiction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
