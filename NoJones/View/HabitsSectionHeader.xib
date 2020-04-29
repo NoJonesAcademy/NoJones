@@ -16,7 +16,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83K-cp-knk">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
-                    <color key="backgroundColor" name="BackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-jV-mKr">
                     <rect key="frame" x="16" y="5.5" width="382" height="21"/>
@@ -37,7 +37,6 @@
                     <color key="tintColor" name="buttonColor"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" name="BackgroundColor"/>
             <constraints>
                 <constraint firstItem="ZrL-jV-mKr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="504-VQ-sgQ"/>
                 <constraint firstItem="yce-kx-5m0" firstAttribute="centerY" secondItem="ZrL-jV-mKr" secondAttribute="centerY" id="79w-J2-Bda"/>
@@ -57,9 +56,6 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="BackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="buttonColor">
             <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

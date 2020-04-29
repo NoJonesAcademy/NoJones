@@ -2,11 +2,12 @@
 //  DashboardViewController.swift
 //  NoJones
 //
-//  Created by VInicius Mesquita on 20/04/20.
+//  Created by Albert Rayneer on 20/04/20.
 //  Copyright © 2020 NoJones. All rights reserved.
 //
 
 import UIKit
+
 
 class DashboardViewController: UIViewController {
     
@@ -51,6 +52,7 @@ class DashboardViewController: UIViewController {
         
     }
     
+    //MARK: Table View Properties
     func setupTableView() {
         tableView.rowHeight = 70
         tableView.dataSource = self
@@ -60,6 +62,7 @@ class DashboardViewController: UIViewController {
     }
 }
 
+
 //MARK: Profile Image Picker Extension
 extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -68,8 +71,6 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
         profileImage.contentMode = .scaleAspectFill
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.clipsToBounds = true
-        
-        self.profileImage.isUserInteractionEnabled = true
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(switchUserPhoto))
         singleTap.numberOfTouchesRequired = 1
         self.profileImage.addGestureRecognizer(singleTap)
@@ -89,7 +90,8 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
     }
 }
 
-//MARK: Table View Delegate and Data SourceY
+
+//MARK: Table View Delegate and Data Source
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,13 +118,20 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HabitsSectionHeader.identifier) as! HabitsSectionHeader
         header.section.text = "Hábitos"
-        header.addAddictionButton.addTarget(self, action: #selector(addAddiction), for: .allTouchEvents)
+        header.addAddictionButton.addTarget(self, action: #selector(addAddiction), for: .touchUpInside)
         
         return header
     }
-    //AddAddictionAction
-    @objc func addAddiction(_ sender: UIButton!) {
-        performSegue(withIdentifier: "addAddictionSegue", sender: nil)
+    //Add Addiction Action Button
+    @objc func addAddiction() {
+//        performSegue(withIdentifier: "addAddictionSegue", sender: nil)
+        //FIXME: MOCK
+        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
+        addictions.insert(newAddiction, at: 0)
+        tableView.beginUpdates()
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexPath], with: .left)
+        tableView.endUpdates()
     }
     
     //Deleting Cells
@@ -138,8 +147,10 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
 
 }
 
+
 //MARK: Collection View Delegate and Data Source
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return achievements.count
     }
