@@ -103,6 +103,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.textLabel?.text = addictions[indexPath.row].name
         cell.detailTextLabel?.text = addictions[indexPath.row].type
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
@@ -112,7 +113,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Section Header Height
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 32
+        return 40
     }
     //Section Header View
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -124,16 +125,28 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Add Addiction Action Button
     @objc func addAddiction() {
-//        performSegue(withIdentifier: "addAddictionSegue", sender: nil)
-        //FIXME: MOCK
-        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
-        addictions.insert(newAddiction, at: 0)
-        tableView.beginUpdates()
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .left)
-        tableView.endUpdates()
+        performSegue(withIdentifier: "addAddictionSegue", sender: nil)
+
+        //Insert new Row
+//        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
+//        addictions.insert(newAddiction, at: 0)
+//        tableView.beginUpdates()
+//        let indexPath = IndexPath(row: 0, section: 0)
+//        tableView.insertRows(at: [indexPath], with: .left)
+//        tableView.endUpdates()
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let doneAction = UIContextualAction(style: .normal, title: "Feito"){ (_, _, success) in
+            print("Habito feito")
+            success(true)
+        }
+        doneAction.backgroundColor = UIColor(named: "buttonColor")
+        let configure = UISwipeActionsConfiguration(actions: [doneAction])
+        configure.performsFirstActionWithFullSwipe = false
+        return configure
+    }
     //Deleting Cells
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete

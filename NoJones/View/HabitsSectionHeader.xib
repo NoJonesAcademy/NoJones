@@ -11,15 +11,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="HabitsSection" id="iN0-l3-epB" customClass="HabitsSectionHeader" customModule="NoJones" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83K-cp-knk">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-jV-mKr">
-                    <rect key="frame" x="16" y="5.5" width="382" height="21"/>
+                    <rect key="frame" x="16" y="9.5" width="382" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="BdY-Es-IfP"/>
                         <constraint firstAttribute="width" constant="382" id="Wiq-pr-Y5Q"/>
@@ -29,7 +29,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yce-kx-5m0">
-                    <rect key="frame" x="373" y="4" width="25" height="24"/>
+                    <rect key="frame" x="373" y="8" width="25" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="0Sh-dn-Zgl"/>
                         <constraint firstAttribute="width" constant="25" id="KHi-Xq-jmQ"/>
