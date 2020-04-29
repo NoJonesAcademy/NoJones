@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-Ci-hqA">
-                                <rect key="frame" x="0.0" y="96" width="375" height="655"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="606"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIy-kq-bGG" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="655"/>
@@ -183,7 +183,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Izn-Fl-ef4" firstAttribute="top" secondItem="2is-jf-IkB" secondAttribute="bottom" constant="8" id="0QH-49-8lR"/>
                                             <constraint firstAttribute="trailing" secondItem="ttU-7u-j9T" secondAttribute="trailing" constant="33" id="0ek-uv-zdG"/>
@@ -206,7 +206,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="cIy-kq-bGG" firstAttribute="top" secondItem="zZX-Ci-hqA" secondAttribute="top" id="0YC-sr-AZr"/>
                                     <constraint firstItem="cIy-kq-bGG" firstAttribute="height" secondItem="zZX-Ci-hqA" secondAttribute="height" priority="250" id="8FM-HI-3b3"/>
@@ -219,7 +219,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="EIz-cR-v0G"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Xj1-NQ-2Tl" firstAttribute="trailing" secondItem="zZX-Ci-hqA" secondAttribute="trailing" id="9Sj-Iz-sVh"/>
                             <constraint firstItem="Xj1-NQ-2Tl" firstAttribute="top" secondItem="zZX-Ci-hqA" secondAttribute="top" id="Ly2-Gj-an4"/>
@@ -228,7 +228,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xj1-NQ-2Tl"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Progresso" largeTitleDisplayMode="always" id="CUv-Rx-lQa"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="calendarView" destination="2is-jf-IkB" id="xqU-oi-idd"/>
@@ -267,9 +269,6 @@
         <image name="arrow_right_disable" width="62" height="60"/>
         <image name="arrow_right_enable" width="62.333332061767578" height="60.666667938232422"/>
         <image name="progressIcon" width="25" height="22.666666030883789"/>
-        <namedColor name="BackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="buttonColor">
             <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
