@@ -174,7 +174,7 @@
     </scenes>
     <resources>
         <image name="dashboardIcon" width="24.5" height="17"/>
-        <image name="noAddictions" width="22" height="43"/>
+        <image name="noAddictions" width="342.5" height="674"/>
         <image name="profileImage" width="684" height="684"/>
         <image name="profileImageHighlighted" width="684" height="684"/>
     </resources>

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: InitialScreenViewController {
     
     //MARK: Collection and Table Data from Model
     var addictions = [
@@ -71,6 +71,12 @@ class DashboardViewController: UIViewController {
         tableView.register(sectionNib, forHeaderFooterViewReuseIdentifier: HabitsSectionHeader.identifier)
         
         noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 160 : 0
+        profileImage.layer.masksToBounds = false
+        profileImage.contentMode = .scaleAspectFill
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        profileImage.clipsToBounds = true
+        //setProfileImage()
+        username.text = userData.string(forKey: "userName")
     }
 }
 
