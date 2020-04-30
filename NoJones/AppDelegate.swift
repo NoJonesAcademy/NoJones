@@ -13,9 +13,30 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let flag = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if flag.bool(forKey: "bool") != true{
+                  
+                  let storyboard = UIStoryboard(name: "OnBoarding", bundle: .main)
+                  let viewController = storyboard.instantiateInitialViewController() as? OnBoardingViewController
+                  
+                  flag.set(true, forKey: "bool")
+                  
+                  let navigationController = UINavigationController(rootViewController: viewController!)
+                  window?.rootViewController = navigationController
+                  window?.makeKeyAndVisible()
+                  
+              } else if flag.string(forKey: "userName") == nil {
+                  let storyboard = UIStoryboard(name: "InitialScreen", bundle: .main)
+                  let viewController = storyboard.instantiateInitialViewController() as? InitialScreenViewController
+                  
+                  let navigationController = UINavigationController(rootViewController: viewController!)
+                  window?.rootViewController = navigationController
+                  window?.makeKeyAndVisible()
+              }
         return true
     }
 
