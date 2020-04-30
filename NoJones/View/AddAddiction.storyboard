@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fde-gt-BtO">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +13,7 @@
             <objects>
                 <viewController id="FjU-Oh-UbZ" customClass="AddAddictionViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UjU-V3-dAD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidade de Medida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-gy-Jjf">
@@ -32,18 +31,22 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar novo hábito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-ne-u2m">
                                 <rect key="frame" x="16" y="153.5" width="124" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-0c-ONN">
+
                                 <rect key="frame" x="16" y="95.5" width="343" height="34"/>
+
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wkU-wi-h2p">
+
                                 <rect key="frame" x="16" y="181" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThN-if-JJj">
                                 <rect key="frame" x="0.0" y="437.5" width="375" height="216"/>
@@ -71,7 +74,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="48k-Aw-A52" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="09l-hl-xJl"/>
                             <constraint firstItem="ThN-if-JJj" firstAttribute="trailing" secondItem="lJw-Jo-qwg" secondAttribute="trailing" id="0Ru-ph-efp"/>
@@ -90,7 +93,7 @@
                             <constraint firstItem="lJw-Jo-qwg" firstAttribute="trailing" secondItem="48k-Aw-A52" secondAttribute="trailing" constant="16" id="aMC-pn-rxK"/>
                             <constraint firstItem="Xel-ne-u2m" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="cu9-sN-D7L"/>
                             <constraint firstItem="YlI-18-nj0" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="egc-rt-57x"/>
-                            <constraint firstItem="ThN-if-JJj" firstAttribute="top" secondItem="Jm4-gy-Jjf" secondAttribute="bottom" constant="8" id="fCz-lE-0O9"/>
+                            <constraint firstItem="ThN-if-JJj" firstAttribute="top" secondItem="Jm4-gy-Jjf" secondAttribute="bottom" id="fCz-lE-0O9"/>
                             <constraint firstItem="lJw-Jo-qwg" firstAttribute="trailing" secondItem="wkU-wi-h2p" secondAttribute="trailing" constant="16" id="lCB-n2-Qih"/>
                             <constraint firstItem="Jm4-gy-Jjf" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="lFV-pd-MM0"/>
                             <constraint firstItem="zd0-Sr-wly" firstAttribute="leading" secondItem="lJw-Jo-qwg" secondAttribute="leading" constant="16" id="pIa-23-vST"/>
@@ -120,7 +123,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fde-gt-BtO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bIY-44-Esq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -133,9 +136,4 @@
             <point key="canvasLocation" x="233.33333333333334" y="89.732142857142847"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="BackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

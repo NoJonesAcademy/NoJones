@@ -1,6 +1,0 @@
-framework module Pods_NoJones_NoJonesUITests {
-  umbrella header "Pods-NoJones-NoJonesUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

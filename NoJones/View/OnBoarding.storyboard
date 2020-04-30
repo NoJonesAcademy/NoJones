@@ -25,15 +25,14 @@
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-NW-NeW">
-                                <rect key="frame" x="127.5" y="562" width="120" height="44"/>
+                                <rect key="frame" x="115.5" y="562" width="144" height="44"/>
                                 <color key="backgroundColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="hcJ-aN-m4B"/>
-                                    <constraint firstAttribute="width" constant="120" id="tOu-RG-XK8"/>
+                                    <constraint firstAttribute="width" constant="144" id="tOu-RG-XK8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Avançar">
-                                    <color key="titleColor" name="BackgroundColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage:" destination="NFy-DR-hwo" eventType="touchUpInside" id="gcu-PR-6Nz"/>
@@ -49,17 +48,21 @@
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-oO-m6v">
                                 <rect key="frame" x="16" y="24" width="34" height="22"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
                                 <connections>
                                     <action selector="previousPage:" destination="NFy-DR-hwo" eventType="touchUpInside" id="ZgW-u0-LiC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xni-BU-Rdh">
                                 <rect key="frame" x="329" y="20" width="30" height="30"/>
-                                <state key="normal" title="Skip"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" name="buttonColor"/>
+                                </state>
                                 <connections>
                                     <action selector="skipPage:" destination="NFy-DR-hwo" eventType="touchUpInside" id="B5q-IH-uOs"/>
-                                    <segue destination="mIR-Dk-eu4" kind="presentation" modalPresentationStyle="fullScreen" id="DNl-cw-3ln"/>
+                                    <segue destination="mIR-Dk-eu4" kind="presentation" modalPresentationStyle="fullScreen" id="HXl-Xk-UWR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="-181.59999999999999" y="252.32383808095955"/>
         </scene>
-        <!--TabBar-->
+        <!--InitialScreen-->
         <scene sceneID="nrk-Ul-UHA">
             <objects>
-                <viewControllerPlaceholder storyboardName="TabBar" id="mIR-Dk-eu4" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="InitialScreen" id="mIR-Dk-eu4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ZcP-NP-46P"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGb-JX-qt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,9 +104,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="BackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="buttonColor">
             <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

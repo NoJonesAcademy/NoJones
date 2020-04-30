@@ -16,26 +16,28 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var monthLabel: UILabel!
     private var currentCalendar: Calendar?
     
+    
     override func awakeFromNib() {
-        let timeZoneBias = 480 // (UTC+08:00)
-        currentCalendar = Calendar(identifier: .gregorian)
-        currentCalendar?.locale = Locale(identifier: "fr_FR")
-        if let timeZone = TimeZone(secondsFromGMT: -timeZoneBias * 60) {
-            currentCalendar?.timeZone = timeZone
+        if let currentCalendar = currentCalendar {
+            let month = CVDate(date: Date(), calendar: currentCalendar).month - 1
+            let year = CVDate(date: Date(), calendar: currentCalendar).year
+            
+            let monthCapitalized = currentCalendar.monthSymbols[month].capitalized
+            monthLabel.text = "\(monthCapitalized)  \(year)"
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
-        setupViews()
+        setupCalendarViews()
         
-        if let currentCalendar = currentCalendar {
-            monthLabel.text = CVDate(date: Date(), calendar: currentCalendar).globalDescription
-
-        }
+        self.calendarView.calendarAppearanceDelegate = self
         
+        self.calendarView.animatorDelegate = self
+        
+        self.menuView.menuViewDelegate = self
+        
+        self.calendarView.calendarDelegate = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,7 +47,11 @@ class ProgressViewController: UIViewController {
     }
 
 
-    func setupViews() {
+    func setupCalendarViews() {
+        currentCalendar = Calendar.current
+        currentCalendar!.locale = Locale(identifier: "pt_BR")
+        menuView.calendar = currentCalendar!
+        
         menuView.backgroundColor = .none
         calendarView.backgroundColor = .none
     }
@@ -63,11 +69,9 @@ class ProgressViewController: UIViewController {
     
 }
 
-typealias CalendarDelegate = CVCalendarMenuViewDelegate &
-    CVCalendarViewDelegate &
-    CVCalendarViewAppearanceDelegate
+typealias CalendarDelegates = CVCalendarMenuViewDelegate & CVCalendarViewDelegate
 
-extension ProgressViewController: CalendarDelegate {
+extension ProgressViewController: CalendarDelegates {
     
     // MARK: Configuration Calendar
     
@@ -75,19 +79,25 @@ extension ProgressViewController: CalendarDelegate {
     
     func firstWeekday() -> Weekday { return .sunday }
     
+    func shouldShowWeekdaysOut() -> Bool { true }
+    
     func presentedDateUpdated(_ date: CVDate) {
-        self.monthLabel.text = date.globalDescription
+        let year = date.year
+        let monthCapitalized = currentCalendar!.monthSymbols[date.month - 1].capitalized
+        self.monthLabel.text = "\(monthCapitalized)  \(year)"
     }
     
-    func shouldShowWeekdaysOut() -> Bool {
-        true
-    }
+    
+    
+    
+    
+}
+
+extension ProgressViewController: CVCalendarViewAppearanceDelegate {
     
     // MARK: Appearance Calendar
     
     func dayLabelWeekdayDisabledColor() -> UIColor { return .lightGray }
        
     func dayOfWeekTextColor() -> UIColor { return .gray }
-    
-    
 }
