@@ -17,13 +17,14 @@ class InitialScreenViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField?.delegate = self
     }
     
     @IBAction func saveData(_ sender: Any) {
         if nameTextField.text == "" {
             nameTextField.layer.borderWidth = 1.0
             nameTextField.layer.borderColor = UIColor.red.cgColor
-            
         }
         else {
             performSegue(withIdentifier: "segue", sender: nil)
@@ -33,3 +34,11 @@ class InitialScreenViewController: UIViewController{
     }
 }
 
+extension InitialScreenViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        
+        return true
+    }
+}

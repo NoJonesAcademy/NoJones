@@ -75,6 +75,7 @@ class DashboardViewController: InitialScreenViewController {
         profileImage.contentMode = .scaleAspectFill
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.clipsToBounds = true
+        
         //setProfileImage()
         username.text = userData.string(forKey: "userName")
     }
