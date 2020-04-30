@@ -57,6 +57,7 @@ class DashboardViewController: UIViewController {
         profileImage.clipsToBounds = true
         setProfileImage()
         
+        //username.text = userData.string(forKey: "userName")
     }
     
 }
