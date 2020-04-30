@@ -23,50 +23,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-w7-eRh">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QuI-v9-uXt">
-                                                <rect key="frame" x="94" y="91" width="169.5" height="20"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-E3-gvC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20.000000000000028"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="G0Q-QX-W6g"/>
-                                                            <constraint firstAttribute="height" constant="19.999999999999972" id="wvr-6G-DLJ"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Dias em Sequência" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjw-bL-UxM">
-                                                        <rect key="frame" x="28" y="0.0" width="141.5" height="20"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-Ma-TtN">
-                                                <rect key="frame" x="42" y="16" width="291" height="50"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="onboarding3" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-pC-EPB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="S3S-PG-DaN"/>
-                                                            <constraint firstAttribute="width" constant="50" id="WeK-Ri-yLU"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hábito concorrente: Fazer Exercicios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-Ph-9eB">
-                                                        <rect key="frame" x="54" y="16.5" width="237" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatisticas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4p-50-G8G">
-                                                <rect key="frame" x="42" y="213" width="92.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="lNu-D1-yGe">
-                                                <rect key="frame" x="44" y="270" width="297" height="238"/>
+                                                <rect key="frame" x="44" y="295" width="297" height="238"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-v8-QFO">
                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="238"/>
@@ -164,24 +122,24 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatisticas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4p-50-G8G">
+                                                <rect key="frame" x="19" y="238" width="92.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgx-MQ-wTY">
-                                                <rect key="frame" x="30" y="132" width="315" height="61"/>
+                                                <rect key="frame" x="12" y="20" width="351" height="178"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bHx-sv-rWM">
-                                                        <rect key="frame" x="22" y="18" width="271" height="25"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHx-sv-rWM">
+                                                        <rect key="frame" x="0.5" y="54" width="350" height="70"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3y-de-RJM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-qe-U2M">
-                                                                        <rect key="frame" x="5" y="5" width="15" height="15"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    </imageView>
-                                                                </subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7E4-8d-pAG" customClass="DayWeekCustomView" customModule="NoJones" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
                                                                 <color key="backgroundColor" name="secondaryColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="25" id="C1m-lj-v1L"/>
-                                                                    <constraint firstAttribute="height" constant="25" id="apA-V1-7nU"/>
+                                                                    <constraint firstAttribute="height" constant="70" id="CFX-qn-Ykh"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="aCI-wY-5kf"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -189,69 +147,113 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0s-4B-mRO">
-                                                                <rect key="frame" x="41" y="0.0" width="25" height="25"/>
-                                                                <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="UeG-EF-fzO">
-                                                                        <rect key="frame" x="5" y="5" width="15" height="15"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    </imageView>
-                                                                </subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYX-h1-sev" customClass="DayWeekCustomView" customModule="NoJones" customModuleProvider="target">
+                                                                <rect key="frame" x="50" y="0.0" width="50" height="70"/>
                                                                 <color key="backgroundColor" name="secondaryColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="erk-3l-iBI"/>
-                                                                    <constraint firstAttribute="width" constant="25" id="sLE-9v-eka"/>
+                                                                    <constraint firstAttribute="height" constant="70" id="BT0-Mp-Xi2"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="FOO-Uj-mn0"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <real key="value" value="12.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XX3-aO-Wse">
-                                                                <rect key="frame" x="82" y="0.0" width="25" height="25"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3y-de-RJM" customClass="DayWeekCustomView" customModule="NoJones" customModuleProvider="target">
+                                                                <rect key="frame" x="100" y="0.0" width="50" height="70"/>
                                                                 <color key="backgroundColor" name="secondaryColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="25" id="7mQ-6F-k2u"/>
-                                                                    <constraint firstAttribute="height" constant="25" id="xhu-DI-3CJ"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="C1m-lj-v1L"/>
+                                                                    <constraint firstAttribute="height" constant="70" id="apA-V1-7nU"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <real key="value" value="12.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-Es-R7Y">
-                                                                <rect key="frame" x="123" y="0.0" width="25" height="25"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-zX-Z6T" customClass="DayWeekCustomView" customModule="NoJones" customModuleProvider="target">
+                                                                <rect key="frame" x="150" y="0.0" width="50" height="70"/>
                                                                 <color key="backgroundColor" name="secondaryColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="NHK-Nu-2KM"/>
-                                                                    <constraint firstAttribute="width" constant="25" id="SAB-CU-Yhn"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="RE7-qs-su1"/>
+                                                                    <constraint firstAttribute="height" constant="70" id="xac-mi-Twq"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <real key="value" value="12.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdi-Ad-bsD">
-                                                                <rect key="frame" x="164" y="0.0" width="25" height="25"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4c-2h-ZMa" customClass="DayWeekCustomView" customModule="NoJones" customModuleProvider="target">
+                                                                <rect key="frame" x="200" y="0.0" width="50" height="70"/>
                                                                 <color key="backgroundColor" name="secondaryColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="25" id="8EX-yt-lQl"/>
-                                                                    <constraint firstAttribute="height" constant="25" id="PUc-e3-5kG"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="i2O-eJ-Bzh"/>
+                                                                    <constraint firstAttribute="height" constant="70" id="zHf-RH-GL7"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <real key="value" value="12.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ril-qn-0Iq">
-                                                                <rect key="frame" x="205" y="0.0" width="25" height="25"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKI-f6-2hF" customClass="DayWeekCustomView" customModule="NoJones" customModuleProvider="target">
+                                                                <rect key="frame" x="250" y="0.0" width="50" height="70"/>
                                                                 <color key="backgroundColor" name="secondaryColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="25" id="0ju-r1-WAg"/>
-                                                                    <constraint firstAttribute="height" constant="25" id="ztQ-hP-vQq"/>
+                                                                    <constraint firstAttribute="height" constant="70" id="KuK-dA-TzV"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="V13-c3-U6f"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <real key="value" value="12.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T56-QJ-Twj">
-                                                                <rect key="frame" x="246" y="0.0" width="25" height="25"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Jy-Pa-bU4" customClass="DayWeekCustomView" customModule="NoJones" customModuleProvider="target">
+                                                                <rect key="frame" x="300" y="0.0" width="50" height="70"/>
                                                                 <color key="backgroundColor" name="secondaryColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="IZz-Bz-RFY"/>
-                                                                    <constraint firstAttribute="width" constant="25" id="IyN-Hm-5DW"/>
+                                                                    <constraint firstAttribute="height" constant="70" id="esk-cQ-U9X"/>
+                                                                    <constraint firstAttribute="width" constant="50" id="ptC-LK-b8l"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <real key="value" value="12.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QuI-v9-uXt">
+                                                        <rect key="frame" x="91" y="24" width="169.5" height="20"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-E3-gvC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20.000000000000028"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="G0Q-QX-W6g"/>
+                                                                    <constraint firstAttribute="height" constant="19.999999999999972" id="wvr-6G-DLJ"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Dias em Sequência" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjw-bL-UxM">
+                                                                <rect key="frame" x="28" y="0.0" width="141.5" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="bHx-sv-rWM" secondAttribute="bottom" constant="18" id="Gh9-5e-VAj"/>
-                                                    <constraint firstItem="bHx-sv-rWM" firstAttribute="centerX" secondItem="rgx-MQ-wTY" secondAttribute="centerX" id="mfb-re-Adl"/>
+                                                    <constraint firstItem="bHx-sv-rWM" firstAttribute="top" secondItem="QuI-v9-uXt" secondAttribute="bottom" constant="10" id="Z42-TF-Zcg"/>
+                                                    <constraint firstItem="bHx-sv-rWM" firstAttribute="centerX" secondItem="QuI-v9-uXt" secondAttribute="centerX" id="d9W-pT-TTn"/>
+                                                    <constraint firstItem="bHx-sv-rWM" firstAttribute="centerY" secondItem="rgx-MQ-wTY" secondAttribute="centerY" id="hER-fX-j3s"/>
+                                                    <constraint firstItem="QuI-v9-uXt" firstAttribute="centerX" secondItem="rgx-MQ-wTY" secondAttribute="centerX" id="w5k-Sz-h2V"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -268,24 +270,20 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="Hdc-Ma-TtN" firstAttribute="centerX" secondItem="Hgc-w7-eRh" secondAttribute="centerX" id="2yu-zR-SAW"/>
-                                            <constraint firstItem="rgx-MQ-wTY" firstAttribute="leading" secondItem="Hgc-w7-eRh" secondAttribute="leading" constant="30" id="470-Dp-qIJ"/>
                                             <constraint firstAttribute="trailing" secondItem="lNu-D1-yGe" secondAttribute="trailing" constant="34" id="6Fy-91-1OA"/>
+                                            <constraint firstItem="rgx-MQ-wTY" firstAttribute="top" secondItem="Hgc-w7-eRh" secondAttribute="top" constant="20" id="6Wh-Hk-ArP"/>
                                             <constraint firstItem="lNu-D1-yGe" firstAttribute="top" secondItem="Y4p-50-G8G" secondAttribute="bottom" constant="36.5" id="87e-CJ-MC4"/>
+                                            <constraint firstItem="Y4p-50-G8G" firstAttribute="leading" secondItem="Hgc-w7-eRh" secondAttribute="leading" constant="19" id="8oE-jj-mjT"/>
                                             <constraint firstItem="lNu-D1-yGe" firstAttribute="leading" secondItem="Hgc-w7-eRh" secondAttribute="leading" constant="44" id="POm-5K-gSN"/>
-                                            <constraint firstItem="rgx-MQ-wTY" firstAttribute="centerX" secondItem="Hgc-w7-eRh" secondAttribute="centerX" id="Y65-tG-3gN"/>
-                                            <constraint firstItem="QuI-v9-uXt" firstAttribute="centerX" secondItem="Hgc-w7-eRh" secondAttribute="centerX" constant="-8.75" id="ae1-R1-Wjt"/>
-                                            <constraint firstItem="rgx-MQ-wTY" firstAttribute="top" secondItem="QuI-v9-uXt" secondAttribute="bottom" constant="21" id="bpi-8r-nyC"/>
-                                            <constraint firstItem="Hdc-Ma-TtN" firstAttribute="top" secondItem="Hgc-w7-eRh" secondAttribute="top" constant="16" id="gth-Eo-znt"/>
-                                            <constraint firstItem="Y4p-50-G8G" firstAttribute="top" secondItem="Hgc-w7-eRh" secondAttribute="top" constant="213" id="jOW-Vl-JiK"/>
-                                            <constraint firstItem="QuI-v9-uXt" firstAttribute="top" secondItem="Hdc-Ma-TtN" secondAttribute="bottom" constant="25" id="rDu-hk-kVg"/>
-                                            <constraint firstItem="Y4p-50-G8G" firstAttribute="leading" secondItem="Hdc-Ma-TtN" secondAttribute="leading" id="wJf-mi-Eb4"/>
-                                            <constraint firstItem="Y4p-50-G8G" firstAttribute="top" secondItem="rgx-MQ-wTY" secondAttribute="bottom" constant="20" id="x9l-ny-Jh4"/>
+                                            <constraint firstItem="Y4p-50-G8G" firstAttribute="top" secondItem="rgx-MQ-wTY" secondAttribute="bottom" constant="40" id="crJ-iu-1Na"/>
+                                            <constraint firstItem="rgx-MQ-wTY" firstAttribute="leading" secondItem="Hgc-w7-eRh" secondAttribute="leading" constant="12" id="dmJ-gJ-IV6"/>
+                                            <constraint firstAttribute="trailing" secondItem="rgx-MQ-wTY" secondAttribute="trailing" constant="12" id="fnU-1d-gH0"/>
+                                            <constraint firstAttribute="bottom" secondItem="lNu-D1-yGe" secondAttribute="bottom" constant="134" id="ziT-pC-MXs"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Hgc-w7-eRh" firstAttribute="height" secondItem="oUC-BH-u4G" secondAttribute="height" id="8D5-mJ-yks"/>
+                                    <constraint firstItem="Hgc-w7-eRh" firstAttribute="height" secondItem="oUC-BH-u4G" secondAttribute="height" priority="250" id="8D5-mJ-yks"/>
                                     <constraint firstAttribute="bottom" secondItem="Hgc-w7-eRh" secondAttribute="bottom" constant="20" symbolic="YES" id="DXE-jx-ogo"/>
                                     <constraint firstItem="Hgc-w7-eRh" firstAttribute="top" secondItem="oUC-BH-u4G" secondAttribute="top" id="SQk-tF-ggv"/>
                                     <constraint firstItem="Hgc-w7-eRh" firstAttribute="width" secondItem="oUC-BH-u4G" secondAttribute="width" id="kNb-cn-wWS"/>
@@ -308,6 +306,7 @@
                     <navigationItem key="navigationItem" id="KOG-7d-xfP"/>
                     <connections>
                         <outlet property="borderView" destination="rgx-MQ-wTY" id="3X4-D5-hxH"/>
+                        <outlet property="scrollView" destination="oUC-BH-u4G" id="ha8-BG-tCR"/>
                         <outlet property="stackView" destination="bHx-sv-rWM" id="FXF-cZ-ogs"/>
                     </connections>
                 </viewController>
@@ -317,9 +316,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" width="97.5" height="91.5"/>
         <image name="flame" width="83" height="107"/>
-        <image name="onboarding3" width="198" height="196.5"/>
         <namedColor name="buttonColor">
             <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

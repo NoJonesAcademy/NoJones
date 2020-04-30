@@ -10,12 +10,14 @@ import UIKit
 
 class HabitDetailsViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var borderView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.scrollView.contentOffset = .zero;
         configureViews()
     }
     
