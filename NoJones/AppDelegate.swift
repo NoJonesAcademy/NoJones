@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+    
+
         if flag.bool(forKey: "bool") != true{
                   
                   let storyboard = UIStoryboard(name: "OnBoarding", bundle: .main)
@@ -33,8 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                   let storyboard = UIStoryboard(name: "InitialScreen", bundle: .main)
                   let viewController = storyboard.instantiateInitialViewController() as? InitialScreenViewController
                   
-                  let navigationController = UINavigationController(rootViewController: viewController!)
-                  window?.rootViewController = navigationController
+                window?.rootViewController = viewController
                   window?.makeKeyAndVisible()
               }
         return true
