@@ -94,7 +94,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveData:" destination="51r-HV-lRm" eventType="touchUpInside" id="uIe-Ft-TGq"/>
-                                    <segue destination="obP-fI-qgT" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="AE5-2a-wYD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -225,6 +224,7 @@
                     <connections>
                         <outlet property="bornDate" destination="rU0-tt-59l" id="3oU-JW-dX2"/>
                         <outlet property="nameTextField" destination="zFs-bv-dQP" id="bNY-SL-E6r"/>
+                        <segue destination="obP-fI-qgT" kind="presentation" identifier="segue" modalPresentationStyle="fullScreen" id="UCV-mo-JYO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdT-Hd-oJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

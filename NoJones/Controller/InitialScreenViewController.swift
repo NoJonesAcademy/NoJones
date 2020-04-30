@@ -20,8 +20,16 @@ class InitialScreenViewController: UIViewController{
     }
     
     @IBAction func saveData(_ sender: Any) {
-        userData.set(nameTextField.text, forKey: "userName")
-        userData.set(bornDate.date, forKey: "bornDate")
+        if nameTextField.text == "" {
+            nameTextField.layer.borderWidth = 1.0
+            nameTextField.layer.borderColor = UIColor.red.cgColor
+            
+        }
+        else {
+            performSegue(withIdentifier: "segue", sender: nil)
+            userData.set(nameTextField.text, forKey: "userName")
+            userData.set(bornDate.date, forKey: "bornDate")
+        }
     }
 }
 
