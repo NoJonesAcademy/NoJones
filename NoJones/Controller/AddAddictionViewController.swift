@@ -8,8 +8,8 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
-class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
+
+class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var addictionPicker: UIPickerView!
     @IBOutlet weak var addictionNameTextField: UITextField!
@@ -50,31 +50,6 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
 
     }
     
-    func configueTextFields() {
-        
-        self.addictionNameTextField.delegate = self
-        self.newHabitTextField.delegate = self
-        self.fellingsBeforeTextField.delegate = self
-        self.feelingsAfterTextField.delegate = self
-        
-        let textFieldBorderColor = CGColor(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
-        
-        self.addictionNameTextField.layer.borderWidth  = 2
-        self.addictionNameTextField.layer.cornerRadius = 8
-        self.addictionNameTextField.layer.borderColor = textFieldBorderColor
-       
-        self.newHabitTextField.layer.borderWidth  = 2
-        self.newHabitTextField.layer.cornerRadius = 8
-        self.newHabitTextField.layer.borderColor = textFieldBorderColor
-        
-        self.fellingsBeforeTextField.layer.borderWidth  = 2
-        self.fellingsBeforeTextField.layer.cornerRadius = 8
-        self.fellingsBeforeTextField.layer.borderColor = textFieldBorderColor
-        
-        self.feelingsAfterTextField.layer.borderWidth  = 2
-        self.feelingsAfterTextField.layer.cornerRadius = 8
-        self.feelingsAfterTextField.layer.borderColor = textFieldBorderColor
-    }
     
     @objc func dismissModal () {
         self.navigationController?.dismiss(animated: true, completion: {})
@@ -88,4 +63,44 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         print(feelingsAfterTextField.text ?? "Vazio")
         print(addictionPicker.selectedRow(inComponent: 0))
     }
+}
+
+
+extension AddAddictionViewController: UITextFieldDelegate {
+    
+    func configueTextFields() {
+        
+        self.addictionNameTextField.delegate = self
+        self.newHabitTextField.delegate = self
+        self.fellingsBeforeTextField.delegate = self
+        self.feelingsAfterTextField.delegate = self
+        self.newHabitTextField.tag = 0
+                
+        self.addictionNameTextField.layer.borderWidth  = 2
+        self.addictionNameTextField.layer.cornerRadius = 8
+        self.addictionNameTextField.tag = 1
+       
+        self.newHabitTextField.layer.borderWidth  = 2
+        self.newHabitTextField.layer.cornerRadius = 8
+        self.newHabitTextField.tag = 2
+        
+        self.fellingsBeforeTextField.layer.borderWidth  = 2
+        self.fellingsBeforeTextField.layer.cornerRadius = 8
+        self.fellingsBeforeTextField.tag = 3
+        
+        self.feelingsAfterTextField.layer.borderWidth  = 2
+        self.feelingsAfterTextField.layer.cornerRadius = 8
+        self.feelingsAfterTextField.tag = 4
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
 }
