@@ -29,6 +29,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
             
+        } else if flag.string(forKey: "userName") == nil {
+            let storyboard = UIStoryboard(name: "InitialScreen", bundle: .main)
+            let viewController = storyboard.instantiateInitialViewController() as? InitialScreenViewController
+            
+            let navigationController = UINavigationController(rootViewController: viewController!)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
         }
 
     }
