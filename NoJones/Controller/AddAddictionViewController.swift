@@ -12,9 +12,12 @@ import UIKit
 class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var addictionPicker: UIPickerView!
-    var addictionData = [String]()
     @IBOutlet weak var addictionNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
+    @IBOutlet weak var fellingsBeforeTextField: UITextField!
+    @IBOutlet weak var feelingsAfterTextField: UITextField!
+    
+    var addictionData = [String]()
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -35,7 +38,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         
         self.addictionPicker.delegate = self
         self.addictionPicker.dataSource = self
-        addictionData = ["Cigarros","Drogas","Jogos"]
+        addictionData = ["Vezes ao Dia","Minutos","Horas"]
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissModal))
 
@@ -51,15 +54,26 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
         
         self.addictionNameTextField.delegate = self
         self.newHabitTextField.delegate = self
+        self.fellingsBeforeTextField.delegate = self
+        self.feelingsAfterTextField.delegate = self
         
+        let textFieldBorderColor = CGColor(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
         
         self.addictionNameTextField.layer.borderWidth  = 2
         self.addictionNameTextField.layer.cornerRadius = 8
-        self.addictionNameTextField.layer.borderColor = .init(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
+        self.addictionNameTextField.layer.borderColor = textFieldBorderColor
        
         self.newHabitTextField.layer.borderWidth  = 2
         self.newHabitTextField.layer.cornerRadius = 8
-        self.newHabitTextField.layer.borderColor = .init(srgbRed: 27/255, green: 88/255, blue: 166/255, alpha: 1)
+        self.newHabitTextField.layer.borderColor = textFieldBorderColor
+        
+        self.fellingsBeforeTextField.layer.borderWidth  = 2
+        self.fellingsBeforeTextField.layer.cornerRadius = 8
+        self.fellingsBeforeTextField.layer.borderColor = textFieldBorderColor
+        
+        self.feelingsAfterTextField.layer.borderWidth  = 2
+        self.feelingsAfterTextField.layer.cornerRadius = 8
+        self.feelingsAfterTextField.layer.borderColor = textFieldBorderColor
     }
     
     @objc func dismissModal () {
@@ -70,6 +84,8 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIText
     @objc func saveData(){
         print(addictionNameTextField.text ?? "Vazio")
         print(newHabitTextField.text ?? "Vazio")
+        print(fellingsBeforeTextField.text ?? "Vazio")
+        print(feelingsAfterTextField.text ?? "Vazio")
         print(addictionPicker.selectedRow(inComponent: 0))
     }
 }
