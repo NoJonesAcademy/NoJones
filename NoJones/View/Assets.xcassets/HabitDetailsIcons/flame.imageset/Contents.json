@@ -2,22 +2,25 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Light-M.png",
+      "filename" : "Light-M-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Light-M@2x.png",
+      "filename" : "Light-M@2x-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Light-M@3x.png",
+      "filename" : "Light-M@3x-1.png",
       "scale" : "3x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }

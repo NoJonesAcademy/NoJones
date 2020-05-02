@@ -87,10 +87,6 @@ extension ProgressViewController: CalendarDelegates {
         self.monthLabel.text = "\(monthCapitalized)  \(year)"
     }
     
-    
-    
-    
-    
 }
 
 extension ProgressViewController: CVCalendarViewAppearanceDelegate {
