@@ -12,35 +12,38 @@ struct AppRouter {
     
     var window: UIWindow?
     
-    func createRouteByState(with window: UIWindow?) {
+    init(window: UIWindow?) {
+        self.window = window
+        createRouteByState()
+    }
+    
+    func createRouteByState() {
         
         UserDefaultsManager.verifyState { (state) in
-            
-            guard let window = window else { return }
-            
+                        
             switch state {
             case .firstLogin:
-                sendToOnboard(with: window)
+                sendToOnboard()
             case .alreadyLogged:
-                sendToDashboard(with: window)
+                sendToDashboard()
             }
             
         }
     }
     
-    private func sendToOnboard(with window: UIWindow) {
+    private func sendToOnboard() {
         let storyboard = UIStoryboard(name: "OnBoarding", bundle: .main)
         let viewController = storyboard.instantiateInitialViewController() as? OnBoardingViewController
 
-        window.rootViewController = viewController
-        window.makeKeyAndVisible()
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
     }
     
-    private func sendToDashboard(with window: UIWindow) {
+    private func sendToDashboard() {
         let storyboard = UIStoryboard(name: "InitialScreen", bundle: .main)
         let viewController = storyboard.instantiateInitialViewController() as? InitialScreenViewController
-        window.rootViewController = viewController
-        window.makeKeyAndVisible()
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
     }
 
     

@@ -19,23 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if flag.bool(forKey: "bool") != true, systemVersion! <= 12.9 {
+        
+        if let systemVersion = systemVersion {
             
-            let storyboard = UIStoryboard(name: "OnBoarding", bundle: .main)
-            let viewController = storyboard.instantiateInitialViewController() as? OnBoardingViewController
+            if systemVersion <= 12.9 {
+                _ = AppRouter.init(window: window)
+            }
             
-            flag.set(true, forKey: "bool")
-            
-            let navigationController = UINavigationController(rootViewController: viewController!)
-            window?.rootViewController = navigationController
-            window?.makeKeyAndVisible()
-    
-        } else if flag.string(forKey: "userName") == nil {
-            let storyboard = UIStoryboard(name: "InitialScreen", bundle: .main)
-            let viewController = storyboard.instantiateInitialViewController() as? InitialScreenViewController
-            
-            window?.rootViewController = viewController
-            window?.makeKeyAndVisible()
         }
         return true
     }
