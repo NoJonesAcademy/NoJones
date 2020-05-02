@@ -76,8 +76,11 @@ class DashboardViewController: InitialScreenViewController {
         profileImage.clipsToBounds = true
         
         //setProfileImage()
-         let userData = UserDefaults.standard
-        username.text = userData.string(forKey: "userName")
+        
+        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName) {
+            self.username.text = userName
+        }
+        
     }
 }
 
