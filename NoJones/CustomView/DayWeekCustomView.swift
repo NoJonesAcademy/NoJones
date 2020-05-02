@@ -8,11 +8,24 @@
 
 import UIKit
 
-class DayWeekCustomView: UIView {
+public class DayWeekCustomView: UIView {
     
-    @IBOutlet weak var CircleView: UIView!
-    @IBOutlet weak var dayWeek: UILabel!
-    
+    @IBOutlet weak private var circleView: UIView!
+    @IBOutlet weak public var imageMark: UIImageView!
+    @IBOutlet weak public var dayWeek: UILabel!
+
+//    @IBInspectable public var day: String = "Day" {
+//        didSet {
+//            dayWeek.text = day
+//        }
+//    }
+//
+//    @IBInspectable public var image: UIImage? = UIImage(named: "") {
+//        didSet {
+//            guard let image = image else { return }
+//            imageMark.image = image
+//        }
+//    }
     
     var contentView: UIView?
     var xibName = "DayWeekCustomView"
@@ -21,7 +34,16 @@ class DayWeekCustomView: UIView {
         super.init(coder: aDecoder)
         
         setupXib()
+        self.contentView?.backgroundColor = UIColor(named: "buttonColor")
+        self.contentView?.layer.cornerRadius = 6
+        circleView.layer.cornerRadius = circleView.frame.height / 2
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
+    
     
     private func setupXib() {
         guard let view = loadViewFromNib() else {
@@ -31,7 +53,6 @@ class DayWeekCustomView: UIView {
         self.addSubview(view)
         contentView = view
     }
-    
     
     func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
