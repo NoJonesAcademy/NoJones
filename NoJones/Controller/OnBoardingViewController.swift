@@ -115,7 +115,10 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate{
     
     @IBAction func nextPage(_ sender: Any) {
         if nextButton.currentTitle == "Start" {
-            // Change storyboard
+
+            //  Foi criada uma segue na OnBoarding para a InitialScreen com o
+            //  idenficador chamado segue
+           performSegue(withIdentifier: "segue", sender: nil)
         }
         else {
             pageControl.currentPage = pageControl.currentPage + 1

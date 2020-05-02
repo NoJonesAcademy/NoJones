@@ -77,6 +77,35 @@
                                         <constraint firstItem="Lza-4O-kGo" firstAttribute="leading" secondItem="JWr-98-XYA" secondAttribute="leading" constant="16" id="oql-la-yGY"/>
                                     </constraints>
                                 </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="lY6-py-j8k">
+                                    <rect key="frame" x="0.0" y="276" width="320" height="160"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noAddictions" translatesAutoresizingMaskIntoConstraints="NO" id="mrO-t4-ZuR">
+                                            <rect key="frame" x="40" y="8" width="240" height="99"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="2ZZ-UF-a2X"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comece a combater um mal hábito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkH-HJ-3Dc">
+                                            <rect key="frame" x="95" y="115" width="130" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="XFK-yW-Dpg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="KkH-HJ-3Dc" secondAttribute="bottom" constant="8" id="BhL-4g-yzd"/>
+                                        <constraint firstItem="KkH-HJ-3Dc" firstAttribute="centerX" secondItem="lY6-py-j8k" secondAttribute="centerX" id="ISf-Yd-kwe"/>
+                                        <constraint firstItem="mrO-t4-ZuR" firstAttribute="top" secondItem="lY6-py-j8k" secondAttribute="top" constant="8" id="TDR-GI-0FW"/>
+                                        <constraint firstAttribute="bottom" secondItem="mrO-t4-ZuR" secondAttribute="bottom" constant="53" id="hdD-kd-caX"/>
+                                        <constraint firstItem="mrO-t4-ZuR" firstAttribute="centerX" secondItem="KkH-HJ-3Dc" secondAttribute="centerX" id="kic-Vg-NeT"/>
+                                        <constraint firstItem="KkH-HJ-3Dc" firstAttribute="top" secondItem="mrO-t4-ZuR" secondAttribute="bottom" constant="8" id="per-dD-f7d"/>
+                                    </constraints>
+                                </view>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -91,6 +120,7 @@
                     <navigationItem key="navigationItem" title="Dashboard" id="Fdc-dP-Tc0"/>
                     <connections>
                         <outlet property="collectionView" destination="6CU-bo-goa" id="o0X-Mn-hU5"/>
+                        <outlet property="noAddictionMessage" destination="lY6-py-j8k" id="pAR-J8-eQP"/>
                         <outlet property="profileImage" destination="Lza-4O-kGo" id="15z-91-As8"/>
                         <outlet property="tableView" destination="1SI-Oc-F5y" id="eaD-JL-93B"/>
                         <outlet property="userAge" destination="cyR-En-g3z" id="yKy-k7-XwH"/>
@@ -101,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRB-5j-hvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3668" y="40.029985007496258"/>
+            <point key="canvasLocation" x="3667.5" y="40"/>
         </scene>
         <!--AddAddiction-->
         <scene sceneID="Sgu-0X-Y4N">
@@ -144,6 +174,7 @@
     </scenes>
     <resources>
         <image name="dashboardIcon" width="24.5" height="17"/>
+        <image name="noAddictions" width="342.5" height="674"/>
         <image name="profileImage" width="684" height="684"/>
         <image name="profileImageHighlighted" width="684" height="684"/>
     </resources>
