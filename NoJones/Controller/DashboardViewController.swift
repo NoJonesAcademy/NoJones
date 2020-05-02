@@ -46,8 +46,6 @@ class DashboardViewController: InitialScreenViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
@@ -61,7 +59,6 @@ class DashboardViewController: InitialScreenViewController {
 
         setupTableView()
         setupProfileImage()
-        
     }
     
     //MARK: Table View Properties
@@ -177,6 +174,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
         addictions.remove(at: indexPath.row)

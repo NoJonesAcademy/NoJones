@@ -31,8 +31,7 @@ class InitialScreenViewController: UIViewController{
         }
         else {
             performSegue(withIdentifier: "segue", sender: nil)
-            guard let name = nameTextField.text, let bornDate = bornDate?.date else { return }
-            UserDefaultsManager.setUser(name: name, bornDate: bornDate)
+            UserDefaultsManager.setUser(name: nameTextField.text, bornDate: bornDate?.date)
         }
     }
 }

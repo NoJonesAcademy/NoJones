@@ -18,19 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        UserDefaultsManager.verifyState { (state) in
-            
-            guard let window = window else { return }
-            
-            switch state {
-            case .firstLogin:
-                AppRouter.sendToOnboard(with: window)
-            case .alreadyLogged:
-                AppRouter.sendToDashboard(with: window)
-            }
-            
-        }
-
+        let appRoute = AppRouter()
+        appRoute.createRouteByState(with: window)
+        
     }
     @available(iOS 13.0, *)
     func sceneDidDisconnect(_ scene: UIScene) {

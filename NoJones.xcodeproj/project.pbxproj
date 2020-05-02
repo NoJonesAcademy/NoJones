@@ -30,6 +30,7 @@
 		819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD3245A1601005D07E8 /* Addiction.swift */; };
 		819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD5245A1608005D07E8 /* Achievement.swift */; };
 		81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */; };
+		81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25D245DE83400F63DD3 /* AppRouter.swift */; };
 		81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */; };
 		81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */; };
 		AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */; };
@@ -92,6 +93,7 @@
 		819D4DD3245A1601005D07E8 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		819D4DD5245A1608005D07E8 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		81ABC25D245DE83400F63DD3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
 		81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeekCustomView.swift; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		81248623244E3CBB0091CFA4 /* NoJones */ = {
 			isa = PBXGroup;
 			children = (
+				81ABC25F245DE83C00F63DD3 /* Router */,
 				81ABC25A245DCF2200F63DD3 /* Manager */,
 				81F3A597245B25E0008BE5F1 /* CustomView */,
 				81DA37F42458BB6D00BE804E /* Protocols */,
@@ -250,6 +253,14 @@
 				81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		81ABC25F245DE83C00F63DD3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				81ABC25D245DE83400F63DD3 /* AppRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		81DA37F32458BB4D00BE804E /* Model */ = {
@@ -535,6 +546,7 @@
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
 				81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */,
+				81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */,
 				81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 				AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */,
