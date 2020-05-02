@@ -56,7 +56,8 @@ struct UserDefaultsManager {
         }
     }
     
-    func setUser(name: String, bornDate: String) {
+    static func setUser(name: String, bornDate: Date) {
          UserDefaults.standard.set(name, forKey: UserDefaultsKey.userName.rawValue)
+        UserDefaults.standard.set(bornDate, forKey: UserDefaultsKey.bornDate.rawValue)
      }
 }

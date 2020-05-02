@@ -46,6 +46,8 @@ class DashboardViewController: InitialScreenViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
@@ -77,6 +79,7 @@ class DashboardViewController: InitialScreenViewController {
         profileImage.clipsToBounds = true
         
         //setProfileImage()
+         let userData = UserDefaults.standard
         username.text = userData.string(forKey: "userName")
     }
 }
