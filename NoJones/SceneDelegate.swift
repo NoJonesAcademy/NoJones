@@ -11,29 +11,24 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let flag = UserDefaults.standard
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        if flag.bool(forKey: "bool") != true{
+        
+        UserDefaultsManager.verifyState { (state) in
             
-            let storyboard = UIStoryboard(name: "OnBoarding", bundle: .main)
-            let viewController = storyboard.instantiateInitialViewController() as? OnBoardingViewController
+            guard let window = window else { return }
             
-            flag.set(true, forKey: "bool")
+            switch state {
+            case .firstLogin:
+                AppRouter.sendToOnboard(with: window)
+            case .alreadyLogged:
+                AppRouter.sendToDashboard(with: window)
+            }
             
-            window?.rootViewController = viewController
-            window?.makeKeyAndVisible()
-            
-        } else if flag.string(forKey: "userName") == nil {
-            let storyboard = UIStoryboard(name: "InitialScreen", bundle: .main)
-            let viewController = storyboard.instantiateInitialViewController() as? InitialScreenViewController
-            
-            window?.rootViewController = viewController
-            window?.makeKeyAndVisible()
         }
 
     }
