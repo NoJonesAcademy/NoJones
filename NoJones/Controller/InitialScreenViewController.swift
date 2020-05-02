@@ -12,9 +12,7 @@ class InitialScreenViewController: UIViewController{
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var bornDate: UIDatePicker!
-    
-    let userData = UserDefaults.standard
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,8 +31,7 @@ class InitialScreenViewController: UIViewController{
         }
         else {
             performSegue(withIdentifier: "segue", sender: nil)
-            userData.set(nameTextField.text, forKey: "userName")
-            userData.set(bornDate.date, forKey: "bornDate")
+            UserDefaultsManager.setUser(name: nameTextField.text, bornDate: bornDate?.date)
         }
     }
 }

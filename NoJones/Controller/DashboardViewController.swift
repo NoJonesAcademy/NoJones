@@ -59,7 +59,6 @@ class DashboardViewController: InitialScreenViewController {
 
         setupTableView()
         setupProfileImage()
-        
     }
     
     //MARK: Table View Properties
@@ -77,7 +76,11 @@ class DashboardViewController: InitialScreenViewController {
         profileImage.clipsToBounds = true
         
         //setProfileImage()
-        username.text = userData.string(forKey: "userName")
+        
+        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName) {
+            self.username.text = userName
+        }
+        
     }
 }
 
@@ -174,6 +177,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
         addictions.remove(at: indexPath.row)
