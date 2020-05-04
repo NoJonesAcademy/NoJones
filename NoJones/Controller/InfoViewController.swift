@@ -14,6 +14,15 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let layout = UICollectionViewFlowLayout()
+        collectionView.frame.width
+        let width = collectionView.frame.width/2 - 10
+        let height = collectionView.frame.height/2 - 50
+        
+        layout.itemSize = CGSize(width: width, height: height)
+        
+        collectionView.collectionViewLayout = layout
 
         collectionView.register(InfoCollectionViewCell.nib(), forCellWithReuseIdentifier: "InfoCollectionCell")
         
