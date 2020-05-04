@@ -25,6 +25,7 @@ class UserProfileViewController: UIViewController {
 
         userName.text = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         
+        userName.delegate = self
         setUserImage()
         setupProfileImage()
         
@@ -81,4 +82,15 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         self.profileImage.image = image
         dismiss(animated: true)
     }
+}
+
+extension UserProfileViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        UserDefaultsManager.setUserName(name: textField.text)
+        textField.resignFirstResponder()
+         
+         return true
+     }
+    
 }

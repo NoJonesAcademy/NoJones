@@ -42,6 +42,9 @@ class DashboardViewController: InitialScreenViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
+        setTitle()
+
         showImage(true)
     }
     
@@ -60,13 +63,10 @@ class DashboardViewController: InitialScreenViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         
         collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
         
-        
-        setTitle()
         setupTableView()
         setupUI()
     }
