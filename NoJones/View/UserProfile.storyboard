@@ -75,4 +75,5 @@
             <point key="canvasLocation" x="-231.8840579710145" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="buttonColor"/>
 </document>
