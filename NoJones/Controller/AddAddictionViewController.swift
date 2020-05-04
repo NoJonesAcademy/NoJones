@@ -88,6 +88,7 @@ extension AddAddictionViewController: UITextFieldDelegate {
     
     func customTextField(textField: UITextField) {
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 8, height: 2.0))
+        textField.autocorrectionType = .no
         textField.leftView = leftView
         textField.leftViewMode = .always
         textField.delegate = self

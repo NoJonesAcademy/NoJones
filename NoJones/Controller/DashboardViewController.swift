@@ -59,6 +59,8 @@ class DashboardViewController: InitialScreenViewController {
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarItem.title = "My Title"
+
        
         collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
@@ -67,10 +69,10 @@ class DashboardViewController: InitialScreenViewController {
             if let height = changes.newValue?.height {
                 if height > 44.0 {
                     //Large Title
-                    self.title = "Olá, \(self.userName!)"
+                    self.navigationItem.title = "Olá, \(self.userName!)"
                 } else {
                     //Small Title
-                    self.title = "Dashboard"
+                    self.navigationItem.title = "Dashboard"
                 }
             }
         })

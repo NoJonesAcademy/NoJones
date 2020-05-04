@@ -23,7 +23,7 @@ class UserProfileViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
 
-//        userName = UserDefaultsManager.fetch()
+        userName.text = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         
         setUserImage()
         setupProfileImage()

@@ -31,13 +31,13 @@
                                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-0c-ONN">
                                                 <rect key="frame" x="16" y="36" width="343" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="DFc-u9-Em4"/>
+                                                    <constraint firstAttribute="height" constant="44" id="DFc-u9-Em4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar novo hábito substituto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-ne-u2m">
-                                                <rect key="frame" x="16" y="88" width="343" height="20"/>
+                                                <rect key="frame" x="16" y="96" width="343" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -45,13 +45,13 @@
                                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wkU-wi-h2p">
                                                 <rect key="frame" x="16" y="124" width="343" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="W1M-bo-55Z"/>
+                                                    <constraint firstAttribute="height" constant="44" id="W1M-bo-55Z"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se sente antes do hábito ruim?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGV-70-fjR">
-                                                <rect key="frame" x="16" y="168" width="343" height="20"/>
+                                                <rect key="frame" x="16" y="184" width="343" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -59,13 +59,13 @@
                                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="To1-ae-qnu">
                                                 <rect key="frame" x="16" y="212" width="343" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="opl-5W-KLi"/>
+                                                    <constraint firstAttribute="height" constant="44" id="opl-5W-KLi"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se sente após o hábito ruim?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd0-Sr-wly">
-                                                <rect key="frame" x="16" y="248" width="343" height="20"/>
+                                                <rect key="frame" x="16" y="272" width="343" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -73,19 +73,19 @@
                                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="48k-Aw-A52">
                                                 <rect key="frame" x="16" y="300" width="343" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="fWD-5M-ocy"/>
+                                                    <constraint firstAttribute="height" constant="44" id="fWD-5M-ocy"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidade de Medida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-gy-Jjf">
-                                                <rect key="frame" x="16" y="328" width="343" height="19.5"/>
+                                                <rect key="frame" x="16" y="360" width="343" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThN-if-JJj">
-                                                <rect key="frame" x="0.0" y="347.5" width="375" height="120"/>
+                                                <rect key="frame" x="0.0" y="379.5" width="375" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="R2M-pB-mwf"/>
                                                 </constraints>
