@@ -9,16 +9,24 @@
 import UIKit
 
 class InfoCollectionViewCell: UICollectionViewCell {
+    
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var text: UILabel!
+     @IBOutlet weak var opacityLayerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.sizeToFit()
         // Initialization code
     }
     
-    public func configure(with image: UIImage){
-        //backgroundImage.image = image
-        self.layer.borderWidth = 2
+    public func configure(image: UIImage, text: String){
+        backgroundImage.image = image
+        self.text.text = text
         self.layer.cornerRadius = 15
+        backgroundImage.layer.cornerRadius = 15
+        opacityLayerView.layer.cornerRadius=15
     }
 
     static func nib() -> UINib {

@@ -11,16 +11,29 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var knowAppImage: UIImageView!
+    @IBOutlet weak var saibaMaisView: UIView!
+    @IBOutlet weak var opacityLayerView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
         let layout = UICollectionViewFlowLayout()
-        collectionView.frame.width
+       
         let width = collectionView.frame.width/2 - 10
-        let height = collectionView.frame.height/2 - 50
+        let height = collectionView.frame.height/2 - 5
+        
+        
+        print(width)
+        print(collectionView.frame.width)
+        
+        
         
         layout.itemSize = CGSize(width: width, height: height)
+        layout.minimumInteritemSpacing = CGFloat(0)
+        //layout.minimumLineSpacing = CGFloat(0)
+        
         
         collectionView.collectionViewLayout = layout
 
@@ -28,6 +41,12 @@ class InfoViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        opacityLayerView.layer.cornerRadius = 15
+        knowAppImage.layer.cornerRadius = 15
+        knowAppImage.image = #imageLiteral(resourceName: "onboarding1")
+        
+        saibaMaisView.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
     
@@ -52,7 +71,7 @@ extension InfoViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoCollectionCell", for: indexPath) as! InfoCollectionViewCell
         
-        cell.configure(with: #imageLiteral(resourceName: "achievement2-disable"))
+        cell.configure(image: #imageLiteral(resourceName: "achievement3-enable"), text: "Esta funcionando muito bem")
         
         return cell
     }
