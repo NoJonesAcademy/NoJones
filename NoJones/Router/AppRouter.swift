@@ -45,7 +45,5 @@ struct AppRouter {
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
-
-    
     
 }

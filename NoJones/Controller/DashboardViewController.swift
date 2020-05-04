@@ -77,7 +77,7 @@ class DashboardViewController: InitialScreenViewController {
         
         //setProfileImage()
         
-        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName) {
+        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .bornDate) {
             self.username.text = userName
         }
         
