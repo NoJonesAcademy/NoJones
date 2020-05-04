@@ -32,9 +32,12 @@ class DashboardViewController: InitialScreenViewController {
     
     //MARK: IBOutlets
     private var profileImageView = UIImageView(image: UIImage(named: "profileImage")!.withRenderingMode(.alwaysTemplate))
+    private var userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
+    var observer: NSKeyValueObservation?
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,11 +50,30 @@ class DashboardViewController: InitialScreenViewController {
         showImage(false)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backButton = UIBarButtonItem()
+        backButton.title = "Dashboard"
+        navigationItem.backBarButtonItem = backButton
+    }
+    
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
+        
+        self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
+            if let height = changes.newValue?.height {
+                if height > 44.0 {
+                    //Large Title
+                    self.title = "Olá, \(self.userName!)"
+                } else {
+                    //Small Title
+                    self.title = "Dashboard"
+                }
+            }
+        })
         
         setupTableView()
         setupUI()
@@ -167,33 +189,6 @@ extension DashboardViewController {
     }
 }
 
-
-//MARK: Profile Image Picker Extension
-//extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//
-//    func setupProfileImage() {
-//        profileImage.layer.masksToBounds = false
-//        profileImage.contentMode = .scaleAspectFill
-//        profileImage.layer.cornerRadius = profileImage.frame.height / 2
-//        profileImage.clipsToBounds = true
-//        let singleTap = UITapGestureRecognizer(target: self, action: #selector(switchUserPhoto))
-//        singleTap.numberOfTouchesRequired = 1
-//        self.profileImage.addGestureRecognizer(singleTap)
-//    }
-//
-//    @objc func switchUserPhoto() {
-//        let picker = UIImagePickerController()
-//        picker.allowsEditing = true
-//        picker.delegate = self
-//        present(picker, animated: true)
-//    }
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        guard let image = info[.editedImage] as? UIImage else { return }
-//        self.profileImage.image = image
-//        dismiss(animated: true)
-//    }
-//}
 
 
 //MARK: Table View Delegate and Data Source

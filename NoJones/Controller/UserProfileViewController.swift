@@ -11,24 +11,31 @@ import ParallaxHeader
 
 class UserProfileViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    let image = UIImage(named: "profileImage")
+    let profileImage = UIImageView()
     
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userAge: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
 
+//        userName = UserDefaultsManager.fetch()
+        
         setUserImage()
+        setupProfileImage()
         
     }
     
     func setUserImage() {
-        let image = UIImage(named: "profileImage")
-        let imageView = UIImageView()
+        self.profileImage.backgroundColor = .systemGray
+        self.profileImage.image = image
+        self.profileImage.contentMode = .scaleAspectFill
         
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFill
-        
-        scrollView.parallaxHeader.view = imageView
+        scrollView.parallaxHeader.view = self.profileImage
         scrollView.parallaxHeader.height = 400
         scrollView.parallaxHeader.minimumHeight = 120
         scrollView.parallaxHeader.mode = .centerFill
@@ -45,4 +52,33 @@ class UserProfileViewController: UIViewController {
                 
     }
 
+}
+
+
+//MARK: Profile Image Picker Extension
+extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func setupProfileImage() {
+        profileImage.isUserInteractionEnabled = true
+        profileImage.layer.masksToBounds = false
+        profileImage.contentMode = .scaleAspectFill
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        profileImage.clipsToBounds = true
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(switchUserPhoto))
+        singleTap.numberOfTouchesRequired = 1
+        self.profileImage.addGestureRecognizer(singleTap)
+    }
+
+    @objc func switchUserPhoto() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+        self.profileImage.image = image
+        dismiss(animated: true)
+    }
 }
