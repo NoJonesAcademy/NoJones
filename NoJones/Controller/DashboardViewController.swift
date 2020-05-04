@@ -46,6 +46,7 @@ class DashboardViewController: InitialScreenViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
@@ -82,6 +83,13 @@ class DashboardViewController: InitialScreenViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
+        if let viewController = habitsDetailsViewController {
+            viewController.habits = addictions
+        }
+    }
 }
 
 
@@ -117,7 +125,7 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailSegue", sender: nil)
+        performSegue(withIdentifier: SegueDestination.HabitDetails.rawValue, sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -203,5 +211,3 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         return cell
     }
 }
-
-
