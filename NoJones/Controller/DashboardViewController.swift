@@ -32,7 +32,7 @@ class DashboardViewController: InitialScreenViewController {
     
     //MARK: IBOutlets
     private var profileImageView = UIImageView(image: UIImage(named: "profileImage")!.withRenderingMode(.alwaysTemplate))
-    private var userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
+    private var userName: String?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
@@ -59,12 +59,19 @@ class DashboardViewController: InitialScreenViewController {
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarItem.title = "My Title"
-
        
+        self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
+        
         collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
         
+        
+        setTitle()
+        setupTableView()
+        setupUI()
+    }
+    
+    func setTitle() {
         self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
             if let height = changes.newValue?.height {
                 if height > 44.0 {
@@ -76,9 +83,6 @@ class DashboardViewController: InitialScreenViewController {
                 }
             }
         })
-        
-        setupTableView()
-        setupUI()
     }
     
     //MARK: Table View Properties
