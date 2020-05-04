@@ -15,8 +15,8 @@ class UserProfileViewController: UIViewController {
     let profileImage = UIImageView()
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userAge: UILabel!
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userAge: UITextField!
     
     
     override func viewDidLoad() {

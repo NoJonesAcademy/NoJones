@@ -20,28 +20,34 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogr-EC-UBE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="434.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9t-Mr-ndB">
-                                                <rect key="frame" x="181" y="32" width="52.5" height="26.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QO-45-C0c">
-                                                <rect key="frame" x="188.5" y="66.5" width="37.5" height="18"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-Lk-v1a">
+                                                <rect key="frame" x="16" y="32" width="382" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="NU3-jS-fBV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHV-ZR-Lkn">
+                                                <rect key="frame" x="16" y="74" width="382" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="dNI-cE-XkZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="5QO-45-C0c" firstAttribute="top" secondItem="f9t-Mr-ndB" secondAttribute="bottom" constant="8" id="0xL-On-W8s"/>
-                                            <constraint firstAttribute="bottom" secondItem="5QO-45-C0c" secondAttribute="bottom" constant="350" id="Cxg-RI-awT"/>
-                                            <constraint firstItem="f9t-Mr-ndB" firstAttribute="top" secondItem="Ogr-EC-UBE" secondAttribute="top" constant="32" id="a9K-u9-W1x"/>
-                                            <constraint firstItem="5QO-45-C0c" firstAttribute="centerX" secondItem="Ogr-EC-UBE" secondAttribute="centerX" id="dtl-G4-dZE"/>
-                                            <constraint firstItem="f9t-Mr-ndB" firstAttribute="centerX" secondItem="Ogr-EC-UBE" secondAttribute="centerX" id="l8H-pZ-fs6"/>
+                                            <constraint firstItem="Js0-Lk-v1a" firstAttribute="top" secondItem="Ogr-EC-UBE" secondAttribute="top" constant="32" id="0e9-Da-Qcu"/>
+                                            <constraint firstAttribute="bottom" secondItem="MHV-ZR-Lkn" secondAttribute="bottom" constant="350" id="Mvo-uy-C8o"/>
+                                            <constraint firstItem="MHV-ZR-Lkn" firstAttribute="leading" secondItem="Ogr-EC-UBE" secondAttribute="leading" constant="16" id="YKj-Kv-zt7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Js0-Lk-v1a" secondAttribute="trailing" constant="16" id="YPC-E9-eGR"/>
+                                            <constraint firstItem="MHV-ZR-Lkn" firstAttribute="top" secondItem="Js0-Lk-v1a" secondAttribute="bottom" constant="8" id="YWD-kU-HbK"/>
+                                            <constraint firstAttribute="trailing" secondItem="MHV-ZR-Lkn" secondAttribute="trailing" constant="16" id="Yig-wn-lMH"/>
+                                            <constraint firstItem="Js0-Lk-v1a" firstAttribute="leading" secondItem="Ogr-EC-UBE" secondAttribute="leading" constant="16" id="ebC-d0-wet"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -68,8 +74,8 @@
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="twU-KC-0NC" id="gX4-5o-Zcj"/>
-                        <outlet property="userAge" destination="5QO-45-C0c" id="DqU-Tp-bvm"/>
-                        <outlet property="userName" destination="f9t-Mr-ndB" id="CM7-Bg-80D"/>
+                        <outlet property="userAge" destination="MHV-ZR-Lkn" id="Qsq-br-CJg"/>
+                        <outlet property="userName" destination="Js0-Lk-v1a" id="3eT-BT-KC6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf7-fe-wSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
