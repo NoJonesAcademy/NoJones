@@ -154,6 +154,7 @@
                         <outlet property="feelingsAfterTextField" destination="48k-Aw-A52" id="WoJ-gE-RP7"/>
                         <outlet property="fellingsBeforeTextField" destination="To1-ae-qnu" id="bUx-Gb-Mxj"/>
                         <outlet property="newHabitTextField" destination="wkU-wi-h2p" id="db8-JQ-sYJ"/>
+                        <outlet property="scrollView" destination="m1P-8O-CLe" id="5yK-sa-joh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yof-Kw-szb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

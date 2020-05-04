@@ -11,6 +11,7 @@ import UIKit
 
 class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var addictionPicker: UIPickerView!
     @IBOutlet weak var addictionNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
@@ -34,6 +35,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.keyboardDismissMode = .onDrag
         self.configueTextFields()
         
         self.addictionPicker.delegate = self
