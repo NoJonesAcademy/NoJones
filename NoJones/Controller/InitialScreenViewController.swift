@@ -10,8 +10,37 @@ import UIKit
 
 class InitialScreenViewController: UIViewController{
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var bornDate: UIDatePicker!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField?.delegate = self
+    }
+    
+    @IBAction func saveData(_ sender: Any) {
+        if nameTextField.text == "" {
+            nameTextField.layer.borderWidth = 1.0
+            nameTextField.layer.borderColor = UIColor.red.cgColor
+            let alertController = UIAlertController(title: "Oops", message:
+                "Você esqueceu de inserir seu nome", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Entendi", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            performSegue(withIdentifier: "segue", sender: nil)
+            UserDefaultsManager.setUser(name: nameTextField.text, bornDate: bornDate?.date)
+        }
     }
 }
 
+extension InitialScreenViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        
+        return true
+    }
+}

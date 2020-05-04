@@ -86,6 +86,7 @@
                         <outlet property="pageControl" destination="LmX-mB-3w6" id="rxk-iq-g9n"/>
                         <outlet property="scrollView" destination="wy6-ue-SQD" id="xWI-Ru-q3b"/>
                         <outlet property="skipButton" destination="Xni-BU-Rdh" id="cuw-b0-WY6"/>
+                        <segue destination="mIR-Dk-eu4" kind="presentation" identifier="segue" modalPresentationStyle="fullScreen" id="w9D-JX-nDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbm-Sx-Wu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,7 +101,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGb-JX-qt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-35"/>
+            <point key="canvasLocation" x="698" y="252"/>
         </scene>
     </scenes>
     <resources>
@@ -108,4 +109,7 @@
             <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="w9D-JX-nDe"/>
+    </inferredMetricsTieBreakers>
 </document>

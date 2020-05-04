@@ -9,7 +9,7 @@
 import UIKit
 
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: InitialScreenViewController {
     
     //MARK: Collection and Table Data from Model
     var addictions = [
@@ -23,7 +23,12 @@ class DashboardViewController: UIViewController {
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
         Addiction(name: "Cigarro", days: 0, type: "Cronico")
-    ]
+        ]
+        {
+        didSet {
+            noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 160 : 0
+        }
+    }
     
     var achievements = [
         Achievement(image: UIImage(named: "achievement1"), name: "Welcome"),
@@ -39,6 +44,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var userAge: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noAddictionMessage: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -48,13 +54,11 @@ class DashboardViewController: UIViewController {
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
 
         setupTableView()
         setupProfileImage()
-        
     }
     
     //MARK: Table View Properties
@@ -64,6 +68,19 @@ class DashboardViewController: UIViewController {
         tableView.delegate = self
         let sectionNib = UINib(nibName: HabitsSectionHeader.xibName, bundle: nil)
         tableView.register(sectionNib, forHeaderFooterViewReuseIdentifier: HabitsSectionHeader.identifier)
+        
+        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 160 : 0
+        profileImage.layer.masksToBounds = false
+        profileImage.contentMode = .scaleAspectFill
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        profileImage.clipsToBounds = true
+        
+        //setProfileImage()
+        
+        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName) {
+            self.username.text = userName
+        }
+        
     }
 }
 
@@ -160,6 +177,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
         addictions.remove(at: indexPath.row)

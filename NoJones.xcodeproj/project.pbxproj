@@ -11,6 +11,7 @@
 		7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB288124508525001A8467 /* OnBoardingViewController.swift */; };
 		7CF0241E24586767002759F7 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0241D24586767002759F7 /* InitialScreen.storyboard */; };
 		7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0241F24587242002759F7 /* InitialScreenViewController.swift */; };
+		8100FA67245B030A006EFF92 /* DayWeekCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */; };
 		810A6202245700F300E98DF4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810A6201245700F300E98DF4 /* Dashboard.storyboard */; };
 		810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A62032457011400E98DF4 /* DashboardViewController.swift */; };
 		81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81248624244E3CBB0091CFA4 /* AppDelegate.swift */; };
@@ -28,7 +29,10 @@
 		81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */; };
 		819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD3245A1601005D07E8 /* Addiction.swift */; };
 		819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD5245A1608005D07E8 /* Achievement.swift */; };
+		81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */; };
+		81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25D245DE83400F63DD3 /* AppRouter.swift */; };
 		81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */; };
+		81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */; };
 		AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */; };
 		AE3258A824585BB50089FA35 /* HabitsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */; };
 		AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258AB245867FA0089FA35 /* HabitsSectionHeader.swift */; };
@@ -64,6 +68,7 @@
 		7CDB288124508525001A8467 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		7CF0241D24586767002759F7 /* InitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
 		7CF0241F24587242002759F7 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
+		8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayWeekCustomView.xib; sourceTree = "<group>"; };
 		810A6201245700F300E98DF4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		810A62032457011400E98DF4 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		81248621244E3CBB0091CFA4 /* NoJones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoJones.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +92,10 @@
 		81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitDetails.storyboard; sourceTree = "<group>"; };
 		819D4DD3245A1601005D07E8 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		819D4DD5245A1608005D07E8 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		81ABC25D245DE83400F63DD3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
+		81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeekCustomView.swift; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitsSectionHeader.xib; sourceTree = "<group>"; };
@@ -173,6 +181,9 @@
 		81248623244E3CBB0091CFA4 /* NoJones */ = {
 			isa = PBXGroup;
 			children = (
+				81ABC25F245DE83C00F63DD3 /* Router */,
+				81ABC25A245DCF2200F63DD3 /* Manager */,
+				81F3A597245B25E0008BE5F1 /* CustomView */,
 				81DA37F42458BB6D00BE804E /* Protocols */,
 				81DA37F32458BB4D00BE804E /* Model */,
 				81248657244E3F2C0091CFA4 /* View */,
@@ -218,6 +229,7 @@
 				AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */,
 				AE3258AB245867FA0089FA35 /* HabitsSectionHeader.swift */,
 				7CF0241D24586767002759F7 /* InitialScreen.storyboard */,
+				8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +247,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		81ABC25A245DCF2200F63DD3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		81ABC25F245DE83C00F63DD3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				81ABC25D245DE83400F63DD3 /* AppRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		81DA37F32458BB4D00BE804E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +277,14 @@
 			children = (
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		81F3A597245B25E0008BE5F1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +405,7 @@
 				81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */,
 				AE3258A824585BB50089FA35 /* HabitsSectionHeader.xib in Resources */,
 				81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */,
+				8100FA67245B030A006EFF92 /* DayWeekCustomView.xib in Resources */,
 				81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,12 +538,15 @@
 				810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */,
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
+				81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */,
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
 				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
+				81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */,
+				81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */,
 				81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 				AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */,
