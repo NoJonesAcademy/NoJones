@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ParallaxHeader
 
 class DashboardViewController: InitialScreenViewController {
     
@@ -32,7 +31,7 @@ class DashboardViewController: InitialScreenViewController {
     ]
     
     //MARK: IBOutlets
-    private let profileImageView = UIImageView(image: UIImage(named: "profileImage"))
+    private var profileImageView = UIImageView(image: UIImage(named: "profileImage")!.withRenderingMode(.alwaysTemplate))
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
@@ -105,7 +104,8 @@ extension DashboardViewController {
         singleTap.numberOfTouchesRequired = 1
         self.profileImageView.addGestureRecognizer(singleTap)
         profileImageView.isUserInteractionEnabled = true
-        
+        profileImageView.tintColor = UIColor(named: "buttonColor")
+
         navigationBar.addSubview(profileImageView)
         
         
