@@ -70,27 +70,31 @@ extension AddAddictionViewController: UITextFieldDelegate {
     
     func configueTextFields() {
         
-        self.addictionNameTextField.delegate = self
-        self.newHabitTextField.delegate = self
-        self.fellingsBeforeTextField.delegate = self
-        self.feelingsAfterTextField.delegate = self
+        customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 0
                 
-        self.addictionNameTextField.layer.borderWidth  = 2
-        self.addictionNameTextField.layer.cornerRadius = 8
+        customTextField(textField: addictionNameTextField)
         self.addictionNameTextField.tag = 1
        
-        self.newHabitTextField.layer.borderWidth  = 2
-        self.newHabitTextField.layer.cornerRadius = 8
+        customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 2
         
-        self.fellingsBeforeTextField.layer.borderWidth  = 2
-        self.fellingsBeforeTextField.layer.cornerRadius = 8
+        customTextField(textField: fellingsBeforeTextField)
         self.fellingsBeforeTextField.tag = 3
         
-        self.feelingsAfterTextField.layer.borderWidth  = 2
-        self.feelingsAfterTextField.layer.cornerRadius = 8
+        customTextField(textField: feelingsAfterTextField)
         self.feelingsAfterTextField.tag = 4
+    }
+    
+    func customTextField(textField: UITextField) {
+        let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 8, height: 2.0))
+        textField.leftView = leftView
+        textField.leftViewMode = .always
+        textField.delegate = self
+        textField.tintColor = UIColor(named: "buttonColor")
+        textField.layer.borderWidth  = 2
+        textField.layer.borderColor = UIColor(named: "buttonColor")?.cgColor
+        textField.layer.cornerRadius = 8
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

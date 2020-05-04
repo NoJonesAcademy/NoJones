@@ -1,16 +1,20 @@
 PODS:
   - CVCalendar (1.7.0)
+  - ParallaxHeader (3.0.0)
 
 DEPENDENCIES:
   - CVCalendar (~> 1.7.0)
+  - ParallaxHeader (~> 3.0.0)
 
 SPEC REPOS:
   trunk:
     - CVCalendar
+    - ParallaxHeader
 
 SPEC CHECKSUMS:
   CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
+  ParallaxHeader: a343f55eb38f52a89c5820a77e14cf975b84e6aa
 
-PODFILE CHECKSUM: e5fb584cd06eac805c0ab34525304347cb081d9e
+PODFILE CHECKSUM: 7e294ebd13acab17820835d3c32a727df71a8834
 
 COCOAPODS: 1.9.1
