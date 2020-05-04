@@ -16,7 +16,7 @@ class HabitDetailsViewController: UIViewController {
     
     var habits: [Addiction]?
     
-    override func viewWillAppear(_ animated: Bool) {/Users/vinicius
+    override func viewWillAppear(_ animated: Bool) {
         configureViews()
     }
     
@@ -62,13 +62,4 @@ class HabitDetailsViewController: UIViewController {
         
     }
 
-}
-
-
-extension HabitDetailsViewController: DashboardDelegate {
-    
-    func sendHabitDetails(habits: [Addiction]) {
-        print(habits)
-    }
-    
 }
