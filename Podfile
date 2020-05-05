@@ -5,6 +5,7 @@ target 'NoJones' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'CVCalendar', '~> 1.7.0'
   pod 'ParallaxHeader', '~> 3.0.0'
+  pod 'SnapKit', '~> 5.0.0'
   use_frameworks!
 
   # Pods for NoJones
