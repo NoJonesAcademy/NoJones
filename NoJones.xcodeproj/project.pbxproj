@@ -32,6 +32,8 @@
 		81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */; };
 		81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25D245DE83400F63DD3 /* AppRouter.swift */; };
 		81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */; };
+		81DB9A9224608BB800B45CF3 /* DashboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9A9124608BB800B45CF3 /* DashboardDelegate.swift */; };
+		81DB9A942460A82800B45CF3 /* SegueRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9A932460A82800B45CF3 /* SegueRoute.swift */; };
 		81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */; };
 		AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */; };
 		AE3258A824585BB50089FA35 /* HabitsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */; };
@@ -97,6 +99,8 @@
 		81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		81ABC25D245DE83400F63DD3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
+		81DB9A9124608BB800B45CF3 /* DashboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDelegate.swift; sourceTree = "<group>"; };
+		81DB9A932460A82800B45CF3 /* SegueRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueRoute.swift; sourceTree = "<group>"; };
 		81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeekCustomView.swift; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				81ABC25D245DE83400F63DD3 /* AppRouter.swift */,
+				81DB9A932460A82800B45CF3 /* SegueRoute.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 		81DA37F42458BB6D00BE804E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				81DB9A9124608BB800B45CF3 /* DashboardDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -542,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */,
+				81DB9A942460A82800B45CF3 /* SegueRoute.swift in Sources */,
 				810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */,
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
@@ -550,6 +557,7 @@
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
+				81DB9A9224608BB800B45CF3 /* DashboardDelegate.swift in Sources */,
 				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,

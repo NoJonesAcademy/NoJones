@@ -39,6 +39,7 @@ class DashboardViewController: InitialScreenViewController {
     var observer: NSKeyValueObservation?
 
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -89,10 +90,18 @@ class DashboardViewController: InitialScreenViewController {
         
         noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 220 : 0
         //setProfileImage()
-        //        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName) {
-        //            self.username.text = userName
-        //        }
+      
+        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .bornDate) {
+            self.username.text = userName
+        }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
+        if let viewController = habitsDetailsViewController {
+            viewController.habits = addictions
+        }
     }
 }
 
@@ -195,7 +204,7 @@ extension DashboardViewController {
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailSegue", sender: nil)
+        performSegue(withIdentifier: SegueDestination.HabitDetails.rawValue, sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -281,5 +290,3 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         return cell
     }
 }
-
-
