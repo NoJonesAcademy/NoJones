@@ -32,10 +32,30 @@ class UserProfileViewController: UIViewController {
         setUserImage()
         setupProfileImageAction()
         
-
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    @objc func keyboardWillShow(notification:NSNotification){
 
+        let userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        contentInset = self.scrollView.contentInset
+        changeHeight = keyboardFrame.size.height + view.frame.size.height/6
+        contentInset.bottom = changeHeight
+        scrollView.contentInset = contentInset
+    }
+
+    var contentInset:UIEdgeInsets = UIEdgeInsets()
+    var changeHeight: CGFloat = CGFloat()
+    
+    @objc func keyboardWillHide(notification:NSNotification){
+
+        contentInset.bottom -= changeHeight
+        scrollView.contentInset = contentInset
+    }
     
     func setUserImage() {
         self.profileImage.backgroundColor = .systemGray
