@@ -52,8 +52,6 @@ class UserProfileViewController: UIViewController {
         
         
         self.roundIcon.image = image
-        self.roundIcon.layer.borderColor = UIColor.white.cgColor
-        self.roundIcon.layer.borderWidth = 2
         self.roundIcon.layer.cornerRadius = roundIcon.frame.width / 2
         self.roundIcon.clipsToBounds = true
         
