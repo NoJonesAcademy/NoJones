@@ -2,7 +2,7 @@
 //  HabitDetailsViewController.swift
 //  NoJones
 //
-//  Created by VInicius Mesquita on 28/04/20.
+//  Created by Vinicius Mesquita on 28/04/20.
 //  Copyright © 2020 NoJones. All rights reserved.
 //
 
@@ -14,6 +14,8 @@ class HabitDetailsViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     
+    var habits: [Addiction]?
+    
     override func viewWillAppear(_ animated: Bool) {
         configureViews()
     }
@@ -22,6 +24,11 @@ class HabitDetailsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         self.scrollView.contentOffset = .zero
+        
+        if let habits = habits {
+           print(habits)
+        }
+        
         
     }
     

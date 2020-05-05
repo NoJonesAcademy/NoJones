@@ -31,7 +31,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" name="secondaryColor"/>
+                    <color key="backgroundColor" name="buttonColor"/>
                     <constraints>
                         <constraint firstItem="8qo-mx-P9A" firstAttribute="top" secondItem="I63-5i-V4b" secondAttribute="top" constant="5" id="0fe-cX-Pf7"/>
                         <constraint firstAttribute="height" constant="25" id="Rtz-TN-isk"/>
@@ -59,8 +59,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="secondaryColor">
-            <color red="0.42399999499320984" green="0.60799998044967651" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="buttonColor">
+            <color red="0.10599999874830246" green="0.3449999988079071" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

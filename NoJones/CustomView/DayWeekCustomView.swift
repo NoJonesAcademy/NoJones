@@ -36,6 +36,7 @@ public class DayWeekCustomView: UIView {
         setupXib()
         self.contentView?.backgroundColor = UIColor(named: "buttonColor")
         self.contentView?.layer.cornerRadius = 6
+//        self.imageMark.backgroundColor = UIColor(named: "buttonColor")
         circleView.layer.cornerRadius = circleView.frame.height / 2
     }
     
