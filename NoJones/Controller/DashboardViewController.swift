@@ -56,12 +56,17 @@ class DashboardViewController: InitialScreenViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backButton = UIBarButtonItem()
+        
         backButton.title = "Dashboard"
         navigationItem.backBarButtonItem = backButton
+      
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
         
         let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
         if let viewController = habitsDetailsViewController {
-            viewController.habits = addictions
+            viewController.habit = addictions[indexPath.row]
         }
     }
     
@@ -106,7 +111,6 @@ class DashboardViewController: InitialScreenViewController {
     
     func showEmptyStateIllustration() {
         noAddictionMessage.frame.size.height = self.addictions.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
-
     }
 }
 
