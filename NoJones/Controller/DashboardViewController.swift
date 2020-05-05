@@ -18,7 +18,7 @@ class DashboardViewController: InitialScreenViewController {
         ]
         {
         didSet {
-            noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 220 : 0
+            showEmptyStateIllustration()
         }
     }
     
@@ -37,14 +37,14 @@ class DashboardViewController: InitialScreenViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
     var observer: NSKeyValueObservation?
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
         self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         setTitle()
-
+        
         showImage(true)
     }
     
@@ -62,13 +62,14 @@ class DashboardViewController: InitialScreenViewController {
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
         collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
         
         setupTableView()
-        setupUI()
+        setupUserImage()
+        showEmptyStateIllustration()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func setTitle() {
@@ -93,40 +94,31 @@ class DashboardViewController: InitialScreenViewController {
         tableView.delegate = self
         let sectionNib = UINib(nibName: HabitsSectionHeader.xibName, bundle: nil)
         tableView.register(sectionNib, forHeaderFooterViewReuseIdentifier: HabitsSectionHeader.identifier)
+        showEmptyStateIllustration()
         
-        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 220 : 0
-        //setProfileImage()
-        //        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName) {
-        //            self.username.text = userName
-        //        }
-        
+    }
+    
+    func showEmptyStateIllustration() {
+        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
     }
 }
 
+//MARK: Profile Image Edit Extension
 extension DashboardViewController {
     
-    /// WARNING: Change these constants according to your project's design
-    private struct Const {
-        /// Image height/width for Large NavBar state
-        static let ImageSizeForLargeState: CGFloat = 40
-        /// Margin from right anchor of safe area to right anchor of Image
-        static let ImageRightMargin: CGFloat = 16
-        /// Margin from bottom anchor of NavBar to bottom anchor of Image for Large NavBar state
-        static let ImageBottomMarginForLargeState: CGFloat = 12
-        /// Margin from bottom anchor of NavBar to bottom anchor of Image for Small NavBar state
-        static let ImageBottomMarginForSmallState: CGFloat = 6
-        /// Image height/width for Small NavBar state
-        static let ImageSizeForSmallState: CGFloat = 32
-        /// Height of NavBar for Small state. Usually it's just 44
-        static let NavBarHeightSmallState: CGFloat = 44
-        /// Height of NavBar for Large state. Usually it's just 96.5 but if you have a custom font for the title, please make sure to edit this value since it changes the height for Large state of NavBar
-        static let NavBarHeightLargeState: CGFloat = 96.5
+    private enum Constants: CGFloat {
+        case dashBoardTableViewHeaderHeight = 220
+        case imageSizeForLargeState = 40
+        case imageRightMargin = 16
+        case imageBottomMarginForLargeState = 12
+        case imageBottomMarginForSmallState = 6
+        case imageSizeForSmallState = 32
+        case navBarHeightSmallState = 44
+        case navBarHeightLargeState = 96.5
     }
     
-    /**
-     Setup the image in navbar to be on the same line as the navbar title
-     */
-    private func setupUI() {
+
+    private func setupUserImage() {
         // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
         guard let navigationBar = self.navigationController?.navigationBar else { return }
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(profileScreenSegue))
@@ -134,19 +126,17 @@ extension DashboardViewController {
         self.profileImageView.addGestureRecognizer(singleTap)
         profileImageView.isUserInteractionEnabled = true
         profileImageView.tintColor = UIColor(named: "buttonColor")
-
+        
         navigationBar.addSubview(profileImageView)
         
-        
-        
         // setup constraints
-        profileImageView.layer.cornerRadius = Const.ImageSizeForLargeState / 2
+        profileImageView.layer.cornerRadius = Constants.imageSizeForLargeState.rawValue / 2
         profileImageView.clipsToBounds = true
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            profileImageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Const.ImageRightMargin),
-            profileImageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Const.ImageBottomMarginForLargeState),
-            profileImageView.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
+            profileImageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Constants.imageRightMargin.rawValue),
+            profileImageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Constants.imageBottomMarginForLargeState.rawValue),
+            profileImageView.heightAnchor.constraint(equalToConstant: Constants.imageSizeForLargeState.rawValue),
             profileImageView.widthAnchor.constraint(equalTo: profileImageView.heightAnchor)
         ])
     }
@@ -156,19 +146,19 @@ extension DashboardViewController {
     }
     
     private func showImage(_ show: Bool) {
-      UIView.animate(withDuration: 0.2) {
-        self.profileImageView.alpha = show ? 1.0 : 0.0
-      }
+        UIView.animate(withDuration: 0.2) {
+            self.profileImageView.alpha = show ? 1.0 : 0.0
+        }
     }
     
     private func moveAndResizeImage(for height: CGFloat) {
         let coeff: CGFloat = {
-            let delta = height - Const.NavBarHeightSmallState
-            let heightDifferenceBetweenStates = (Const.NavBarHeightLargeState - Const.NavBarHeightSmallState)
+            let delta = height - Constants.navBarHeightSmallState.rawValue
+            let heightDifferenceBetweenStates = (Constants.navBarHeightLargeState.rawValue - Constants.navBarHeightSmallState.rawValue)
             return delta / heightDifferenceBetweenStates
         }()
         
-        let factor = Const.ImageSizeForSmallState / Const.ImageSizeForLargeState
+        let factor = Constants.imageSizeForSmallState.rawValue / Constants.imageSizeForLargeState.rawValue
         
         let scale: CGFloat = {
             let sizeAddendumFactor = coeff * (1.0 - factor)
@@ -176,11 +166,11 @@ extension DashboardViewController {
         }()
         
         // Value of difference between icons for large and small states
-        let sizeDiff = Const.ImageSizeForLargeState * (1.0 - factor) // 8.0
+        let sizeDiff = Constants.imageSizeForLargeState.rawValue * (1.0 - factor) // 8.0
         let yTranslation: CGFloat = {
             /// This value = 14. It equals to difference of 12 and 6 (bottom margin for large and small states). Also it adds 8.0 (size difference when the image gets smaller size)
-            let maxYTranslation = Const.ImageBottomMarginForLargeState - Const.ImageBottomMarginForSmallState + sizeDiff
-            return max(0, min(maxYTranslation, (maxYTranslation - coeff * (Const.ImageBottomMarginForSmallState + sizeDiff))))
+            let maxYTranslation = Constants.imageBottomMarginForLargeState.rawValue - Constants.imageBottomMarginForSmallState.rawValue + sizeDiff
+            return max(0, min(maxYTranslation, (maxYTranslation - coeff * (Constants.imageBottomMarginForSmallState.rawValue + sizeDiff))))
         }()
         
         let xTranslation = max(0, sizeDiff - coeff * sizeDiff)
@@ -269,7 +259,6 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deleteRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }
-    
 }
 
 
