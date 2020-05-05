@@ -36,7 +36,7 @@ extension UIView {
     
     class BlurView {
         
-        private var superview: UIView
+        private var superview: UIView!
         private var blur: UIVisualEffectView?
         private var editing: Bool = false
         private (set) var blurContentView: UIView?

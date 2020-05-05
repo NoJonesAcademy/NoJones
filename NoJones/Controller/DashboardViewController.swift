@@ -56,8 +56,19 @@ class DashboardViewController: InitialScreenViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backButton = UIBarButtonItem()
+        
         backButton.title = "Dashboard"
         navigationItem.backBarButtonItem = backButton
+        
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
+        if let viewController = habitsDetailsViewController {
+            viewController.habit = addictions[indexPath.row]
+        }
+        
     }
     
     //MARK: ViewDidLoad
@@ -95,30 +106,20 @@ class DashboardViewController: InitialScreenViewController {
         tableView.delegate = self
         let sectionNib = UINib(nibName: HabitsSectionHeader.xibName, bundle: nil)
         tableView.register(sectionNib, forHeaderFooterViewReuseIdentifier: HabitsSectionHeader.identifier)
-<<<<<<< HEAD
         showEmptyStateIllustration()
         
     }
     
     func showEmptyStateIllustration() {
         noAddictionMessage.frame.size.height = self.addictions.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
-=======
         
         noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 220 : 0
         //setProfileImage()
       
         if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .bornDate) {
-            self.username.text = userName
+//            self.username.text = userName
         }
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
-        if let viewController = habitsDetailsViewController {
-            viewController.habits = addictions
-        }
->>>>>>> ca87d07bf13c2af268f6a9aef73e1dcb0793a6da
     }
 }
 

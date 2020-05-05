@@ -13,8 +13,10 @@ class HabitDetailsViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var habitName: UILabel!
+    @IBOutlet weak var competitorHabitName: UILabel!
     
-    var habits: [Addiction]?
+    var habit: Addiction?
     
     override func viewWillAppear(_ animated: Bool) {
         configureViews()
@@ -24,11 +26,7 @@ class HabitDetailsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         self.scrollView.contentOffset = .zero
-        
-        if let habits = habits {
-           print(habits)
-        }
-        
+        configureHabitDetails()
         
     }
     
@@ -59,7 +57,12 @@ class HabitDetailsViewController: UIViewController {
 
         }
         
-        
+    }
+    
+    
+    func configureHabitDetails() {
+        habitName.text = habit?.name
+        competitorHabitName.text = "Cigarret"
     }
 
 }

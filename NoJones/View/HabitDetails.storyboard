@@ -412,6 +412,8 @@
                     <navigationItem key="navigationItem" id="KOG-7d-xfP"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="competitorHabitName" destination="pTa-xl-RHW" id="ufM-e7-df3"/>
+                        <outlet property="habitName" destination="bXO-Zd-UNo" id="NdK-br-TGT"/>
                         <outlet property="scrollView" destination="oUC-BH-u4G" id="ha8-BG-tCR"/>
                         <outlet property="stackView" destination="bHx-sv-rWM" id="FXF-cZ-ogs"/>
                     </connections>
