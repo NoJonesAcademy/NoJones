@@ -22,7 +22,6 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userAge: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
@@ -33,7 +32,10 @@ class UserProfileViewController: UIViewController {
         setUserImage()
         setupProfileImageAction()
         
+
     }
+    
+
     
     func setUserImage() {
         self.profileImage.backgroundColor = .systemGray

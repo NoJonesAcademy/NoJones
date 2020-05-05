@@ -76,9 +76,9 @@ class DashboardViewController: InitialScreenViewController {
         self.navigationItem.title = "Olá, \(self.userName!)"
         self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
             if let height = changes.newValue?.height {
-                if height > 44.0 {
+                if let username = self.userName, height > 44.0 {
                     //Large Title
-                    self.navigationItem.title = "Olá, \(self.userName!)"
+                    self.navigationItem.title = "Olá, \(username)"
                 } else {
                     //Small Title
                     self.navigationItem.title = "Dashboard"
