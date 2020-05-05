@@ -59,7 +59,7 @@ class DashboardViewController: InitialScreenViewController {
         
         backButton.title = "Dashboard"
         navigationItem.backBarButtonItem = backButton
-        
+      
         guard let indexPath = tableView.indexPathForSelectedRow else {
             return
         }
@@ -68,7 +68,6 @@ class DashboardViewController: InitialScreenViewController {
         if let viewController = habitsDetailsViewController {
             viewController.habit = addictions[indexPath.row]
         }
-        
     }
     
     //MARK: ViewDidLoad
@@ -112,16 +111,9 @@ class DashboardViewController: InitialScreenViewController {
     
     func showEmptyStateIllustration() {
         noAddictionMessage.frame.size.height = self.addictions.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
-        
-        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 220 : 0
-        //setProfileImage()
-      
-        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .bornDate) {
-//            self.username.text = userName
-        }
-        
     }
 }
+
 
 //MARK: Profile Image Edit Extension
 extension DashboardViewController {
