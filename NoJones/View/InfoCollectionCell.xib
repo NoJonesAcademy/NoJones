@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achievement1" translatesAutoresizingMaskIntoConstraints="NO" id="PqG-KA-5Fc">
-                    <rect key="frame" x="0.0" y="0.0" width="469" height="253"/>
+                    <rect key="frame" x="0.0" y="0.0" width="469" height="253.00000000000006"/>
                     <accessibility key="accessibilityConfiguration" identifier="InfoCell"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E32-2H-Dn0">
@@ -24,7 +24,7 @@
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-eF-mwB">
                     <rect key="frame" x="12" y="192.5" width="445" height="14.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -47,9 +47,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="backgroundImage" destination="PqG-KA-5Fc" id="OXM-pn-0ei"/>
-                <outlet property="opacityLayerView" destination="E32-2H-Dn0" id="E4T-sH-zAq"/>
-                <outlet property="text" destination="OtY-eF-mwB" id="G02-VW-Rri"/>
+                <outlet property="backgroundImage" destination="PqG-KA-5Fc" id="fFT-pA-KQB"/>
+                <outlet property="opacityLayerView" destination="E32-2H-Dn0" id="rs3-nU-3i3"/>
+                <outlet property="text" destination="OtY-eF-mwB" id="N1d-ZO-TDR"/>
             </connections>
             <point key="canvasLocation" x="177.536231884058" y="371.98660714285711"/>
         </view>

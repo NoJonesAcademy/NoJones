@@ -10,14 +10,13 @@ import UIKit
 
 class InfoCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var opacityLayerView: UIView!
     @IBOutlet weak var text: UILabel!
-     @IBOutlet weak var opacityLayerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.sizeToFit()
+        //self.sizeToFit()
         // Initialization code
     }
     
