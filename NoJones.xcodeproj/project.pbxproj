@@ -19,6 +19,7 @@
 		275C4F1F2463009D006065D4 /* DayWeekCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F1E2463009D006065D4 /* DayWeekCustomView.xib */; };
 		275C4F21246300B0006065D4 /* HabitsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F20246300B0006065D4 /* HabitsSectionHeader.xib */; };
 		275C4F23246300D5006065D4 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F22246300D4006065D4 /* InitialScreen.storyboard */; };
+		275C4F2624633D9F006065D4 /* InfoSitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275C4F2524633D9F006065D4 /* InfoSitesViewController.swift */; };
 		7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB288124508525001A8467 /* OnBoardingViewController.swift */; };
 		7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0241F24587242002759F7 /* InitialScreenViewController.swift */; };
 		810A6202245700F300E98DF4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810A6201245700F300E98DF4 /* Dashboard.storyboard */; };
@@ -98,6 +99,7 @@
 		275C4F1E2463009D006065D4 /* DayWeekCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayWeekCustomView.xib; sourceTree = "<group>"; };
 		275C4F20246300B0006065D4 /* HabitsSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HabitsSectionHeader.xib; sourceTree = "<group>"; };
 		275C4F22246300D4006065D4 /* InitialScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
+		275C4F2524633D9F006065D4 /* InfoSitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSitesViewController.swift; sourceTree = "<group>"; };
 		4567A5930D61A7B1E165E6D1 /* Pods-NoJones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.release.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.release.xcconfig"; sourceTree = "<group>"; };
 		58927E0B460B73A9CDED4FF3 /* Pods-NoJones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.debug.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.debug.xcconfig"; sourceTree = "<group>"; };
 		7CDB288124508525001A8467 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275C4F24246337FE006065D4 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				275C4F102462FC47006065D4 /* InfoCollectionTableViewCell.swift */,
+				275C4F0E2462FC47006065D4 /* InfoCollectionViewCell.swift */,
+				275C4F0F2462FC47006065D4 /* InfoTableViewController.swift */,
+				275C4F112462FC47006065D4 /* InfoAppTableViewCell.swift */,
+				275C4F2524633D9F006065D4 /* InfoSitesViewController.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 		2D8D743CFFA0D842F3501154 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,10 +305,7 @@
 				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
 				7CDB288124508525001A8467 /* OnBoardingViewController.swift */,
 				7CF0241F24587242002759F7 /* InitialScreenViewController.swift */,
-				275C4F112462FC47006065D4 /* InfoAppTableViewCell.swift */,
-				275C4F102462FC47006065D4 /* InfoCollectionTableViewCell.swift */,
-				275C4F0E2462FC47006065D4 /* InfoCollectionViewCell.swift */,
-				275C4F0F2462FC47006065D4 /* InfoTableViewController.swift */,
+				275C4F24246337FE006065D4 /* Info */,
 				AE3258AF246055AE0089FA35 /* UserProfileViewController.swift */,
 			);
 			path = Controller;
@@ -625,7 +636,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */,
 				81DB9AD32462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift in Sources */,
 				81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */,
 				275C4F142462FC47006065D4 /* InfoCollectionTableViewCell.swift in Sources */,
@@ -648,8 +658,6 @@
 				81DB9AD92462300D00B45CF3 /* Achievements+CoreDataClass.swift in Sources */,
 				275C4F152462FC47006065D4 /* InfoAppTableViewCell.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
-				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
-				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
 				275C4F1D2463006A006065D4 /* HabitsSectionHeader.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
@@ -663,9 +671,9 @@
 				81DB9ACA24622FED00B45CF3 /* User+CoreDataProperties.swift in Sources */,
 				AEE041A724619AD900187734 /* UIView+Blur.swift in Sources */,
 				81DB9ADA2462300D00B45CF3 /* Achievements+CoreDataProperties.swift in Sources */,
+				275C4F2624633D9F006065D4 /* InfoSitesViewController.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 				81DB9AD72462300D00B45CF3 /* Habit+CoreDataClass.swift in Sources */,
-				AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */,
 				275C4F1B24630021006065D4 /* AchievementCollectionViewCell.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 			);

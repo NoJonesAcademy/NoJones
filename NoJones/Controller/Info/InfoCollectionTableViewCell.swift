@@ -15,6 +15,7 @@ class InfoCollectionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var infoCollectionView: UICollectionView!
     
+    public var naviagationController:UINavigationController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,18 +60,34 @@ extension InfoCollectionTableViewCell: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-    override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        print("TESTANDO TESTANDo")
-        
-        return true
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let cellWidth = collectionView.layer.frame.width / 2 - 10
         let cellHeight = collectionView.layer.frame.height / 2 - 5
         
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name:"Info", bundle: nil)
+        var siteViewController: InfoSitesViewController?
+        
+        siteViewController = storyboard.instantiateViewController(withIdentifier: "InfoSitesViewController") as? InfoSitesViewController
+        
+        switch indexPath.item {
+        case 0:
+            siteViewController?.siteUrl = "https://ioscreator.com"
+        case 1:
+            siteViewController?.siteUrl = "https://blog.psicologiaviva.com.br/sindrome-de-tourette/"
+        case 2:
+            siteViewController?.siteUrl = "https://ioscreator.com"
+        case 3:
+            siteViewController?.siteUrl = "https://ioscreator.com"
+        default:
+            break
+        }
+        self.naviagationController?.pushViewController(siteViewController!, animated: true)
     }
     
 }
