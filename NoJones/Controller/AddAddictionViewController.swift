@@ -13,6 +13,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var addictionPicker: UIPickerView!
+    //TextFields
     @IBOutlet weak var addictionNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
     @IBOutlet weak var fellingsBeforeTextField: UITextField!
@@ -111,3 +112,4 @@ extension AddAddictionViewController: UITextFieldDelegate {
     }
     
 }
+

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Addiction {
+struct Habit {
     var name: String?
     var days: Int?
     var type: String?

@@ -27,7 +27,7 @@
 		81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248663244E4A980091CFA4 /* AddAddiction.storyboard */; };
 		81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248665244E4AA60091CFA4 /* OnBoarding.storyboard */; };
 		81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */; };
-		819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD3245A1601005D07E8 /* Addiction.swift */; };
+		819D4DD4245A1601005D07E8 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD3245A1601005D07E8 /* Habit.swift */; };
 		819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD5245A1608005D07E8 /* Achievement.swift */; };
 		81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */; };
 		81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25D245DE83400F63DD3 /* AppRouter.swift */; };
@@ -94,7 +94,7 @@
 		81248663244E4A980091CFA4 /* AddAddiction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAddiction.storyboard; sourceTree = "<group>"; };
 		81248665244E4AA60091CFA4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitDetails.storyboard; sourceTree = "<group>"; };
-		819D4DD3245A1601005D07E8 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
+		819D4DD3245A1601005D07E8 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		819D4DD5245A1608005D07E8 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		81ABC25D245DE83400F63DD3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 		81DA37F32458BB4D00BE804E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				819D4DD3245A1601005D07E8 /* Addiction.swift */,
+				819D4DD3245A1601005D07E8 /* Habit.swift */,
 				819D4DD5245A1608005D07E8 /* Achievement.swift */,
 			);
 			path = Model;
@@ -557,7 +557,7 @@
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
-				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
+				819D4DD4245A1601005D07E8 /* Habit.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
 				81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */,

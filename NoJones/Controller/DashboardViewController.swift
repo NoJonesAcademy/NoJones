@@ -11,10 +11,10 @@ import UIKit
 class DashboardViewController: InitialScreenViewController {
     
     //MARK: Collection and Table Data from Model
-    var addictions = [
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico")
+    var habits = [
+        Habit(name: "Cigarro", days: 0, type: "Cronico"),
+        Habit(name: "Cigarro", days: 0, type: "Cronico"),
+        Habit(name: "Cigarro", days: 0, type: "Cronico")
         ]
         {
         didSet {
@@ -66,7 +66,7 @@ class DashboardViewController: InitialScreenViewController {
         
         let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
         if let viewController = habitsDetailsViewController {
-            viewController.habit = addictions[indexPath.row]
+            viewController.habit = habits[indexPath.row]
         }
     }
     
@@ -110,7 +110,7 @@ class DashboardViewController: InitialScreenViewController {
     }
     
     func showEmptyStateIllustration() {
-        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
+        noAddictionMessage.frame.size.height = self.habits.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
     }
 }
 
@@ -208,14 +208,14 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return addictions.count
+        return habits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "addictionCell")
         
-        cell.textLabel?.text = addictions[indexPath.row].name
-        cell.detailTextLabel?.text = addictions[indexPath.row].type
+        cell.textLabel?.text = habits[indexPath.row].name
+        cell.detailTextLabel?.text = habits[indexPath.row].type
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -238,11 +238,11 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Add Addiction Action Button
     @objc func addAddiction() {
-        performSegue(withIdentifier: "addAddictionSegue", sender: nil)
+        performSegue(withIdentifier: "addhabitsegue", sender: nil)
         
         //Insert new Row
         //        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
-        //        addictions.insert(newAddiction, at: 0)
+        //        habits.insert(newAddiction, at: 0)
         //        tableView.beginUpdates()
         //        let indexPath = IndexPath(row: 0, section: 0)
         //        tableView.insertRows(at: [indexPath], with: .left)
@@ -267,7 +267,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
-        addictions.remove(at: indexPath.row)
+        habits.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }
