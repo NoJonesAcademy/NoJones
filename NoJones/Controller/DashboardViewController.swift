@@ -10,8 +10,11 @@ import UIKit
 
 class DashboardViewController: InitialScreenViewController {
     
+    let habitDao = CoreDao<Habit>(with: "Habit")
+    let achievementsDao = CoreDao<Achievements>(with: "Achievements")
+    
     //MARK: Collection and Table Data from Model
-    var habits: [NewHabit] = []
+    var habits: [Habit] = []
     {
         didSet {
             showEmptyStateIllustration()
@@ -38,6 +41,7 @@ class DashboardViewController: InitialScreenViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        habits = habitDao.fetchAll()
         tableView.reloadData()
         self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         setTitle()
@@ -57,7 +61,7 @@ class DashboardViewController: InitialScreenViewController {
         navigationItem.backBarButtonItem = backButton
 
         
-        if segue.identifier! == "detailsSegue" {
+        if segue.identifier! == SegueDestination.HabitDetails.rawValue {
             guard let indexPath = tableView.indexPathForSelectedRow else {
                       return
                   }
@@ -65,14 +69,13 @@ class DashboardViewController: InitialScreenViewController {
             if let viewController = habitsDetailsViewController {
                 viewController.habit = habits[indexPath.row]
             }
-        } else if segue.identifier! == "addHabitSegue" {
+        } else if segue.identifier! == SegueDestination.AddHabit.rawValue {
             let navigation = segue.destination as? UINavigationController
             if let viewController = navigation?.topViewController as? AddAddictionViewController {
                 viewController.delegate = self
             }
         }
-        
-        
+
     }
     
     //MARK: ViewDidLoad
@@ -220,7 +223,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "addictionCell")
         
         cell.textLabel?.text = habits[indexPath.row].name
-        cell.detailTextLabel?.text = habits[indexPath.row].concurrent
+        cell.detailTextLabel?.text = habits[indexPath.row].concurrent?.name
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -259,6 +262,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Deleting Cells
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        habitDao.delete(object: habits[indexPath.row])
         return .delete
     }
     
@@ -289,7 +293,7 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
 
 //Create Habit
 extension DashboardViewController: HabitDelegate {
-    func didCreateHabit(_ habit: NewHabit) {
+    func didCreateHabit(_ habit: Habit) {
         habits.insert(habit, at: 0)
         tableView.beginUpdates()
         let indexPath = IndexPath(row: 0, section: 0)

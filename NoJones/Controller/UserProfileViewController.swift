@@ -12,7 +12,7 @@ import SnapKit
 
 class UserProfileViewController: UIViewController {
     
-    let image = UIImage(named: "emptyProfile")
+    var image = UIImage(named: "emptyProfile")
     let profileImage = UIImageView()
     let roundIcon = UIImageView(
         frame: CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -70,9 +70,9 @@ class UserProfileViewController: UIViewController {
             let users = try userDao.fetchAll()
             print(users)
             if let imageData = users.first?.profileImage {
-                let image = UIImage(data: imageData)
-                self.profileImage.image = image
-                self.roundIcon.image = UIImage(data: imageData)
+                self.image = UIImage(data: imageData)
+                self.profileImage.image = self.image
+                self.roundIcon.image = self.image
             }
         }
         

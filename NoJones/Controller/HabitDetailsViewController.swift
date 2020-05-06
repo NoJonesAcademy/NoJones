@@ -16,7 +16,7 @@ class HabitDetailsViewController: UIViewController {
     @IBOutlet weak var habitName: UILabel!
     @IBOutlet weak var competitorHabitName: UILabel!
     
-    var habit: NewHabit?
+    var habit: Habit?
     
     override func viewWillAppear(_ animated: Bool) {
         configureViews()
@@ -62,7 +62,7 @@ class HabitDetailsViewController: UIViewController {
     
     func configureHabitDetails() {
         habitName.text = habit?.name
-        competitorHabitName.text = "Cigarret"
+        competitorHabitName.text = habit?.concurrent?.name
     }
 
 }

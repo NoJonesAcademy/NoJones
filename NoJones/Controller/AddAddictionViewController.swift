@@ -8,10 +8,10 @@
 
 import UIKit
 
-
 class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var delegate: HabitDelegate?
+    let habitDao = CoreDao<Habit>(with: "Habit")
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var addictionPicker: UIPickerView!
@@ -112,7 +112,7 @@ extension AddAddictionViewController {
     
     @objc func createHabit(){
         
-        var habit = NewHabit()
+        let habit = habitDao.new()
         var complete = true
         let textFieldColor = UIColor(named: "buttonColor")?.cgColor
         
@@ -130,7 +130,7 @@ extension AddAddictionViewController {
         }
         else {
             newHabitTextField.layer.borderColor = textFieldColor
-            habit.concurrent = newHabitTextField.text
+            habit.concurrent?.name = newHabitTextField.text
         }
         if fellingsBeforeTextField.text == "" {
             warningEmptyTextField(textField: fellingsBeforeTextField)
@@ -146,12 +146,14 @@ extension AddAddictionViewController {
         }
         else {
             feelingsAfterTextField.layer.borderColor = textFieldColor
-            habit.finalFeeling = feelingsAfterTextField.text
+            habit.finalFelling = feelingsAfterTextField.text
         }
         
         if complete {
             delegate?.didCreateHabit(habit)
             dismissModal()
+            habitDao.insert(object: habit)
+            _ = habitDao.new()
         }
     }
     
@@ -167,5 +169,5 @@ extension AddAddictionViewController {
 }
 
 protocol HabitDelegate {
-    func didCreateHabit(_ habit: NewHabit)
+    func didCreateHabit(_ habit: Habit)
 }
