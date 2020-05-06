@@ -77,13 +77,13 @@ extension InfoCollectionTableViewCell: UICollectionViewDelegate, UICollectionVie
         
         switch indexPath.item {
         case 0:
-            siteViewController?.siteUrl = "https://ioscreator.com"
+            siteViewController?.siteUrl = "https://www.ecodebate.com.br/2017/07/24/tique-toc-ou-simplesmente-habito/"
         case 1:
-            siteViewController?.siteUrl = "https://blog.psicologiaviva.com.br/sindrome-de-tourette/"
+            siteViewController?.siteUrl = "https://drauziovarella.uol.com.br/doencas-e-sintomas/sindrome-de-tourette/"
         case 2:
-            siteViewController?.siteUrl = "https://ioscreator.com"
+            siteViewController?.siteUrl = "https://casule.com/voce-sabe-como-suprimir-aquele-habito-ruim/"
         case 3:
-            siteViewController?.siteUrl = "https://ioscreator.com"
+            siteViewController?.siteUrl = "https://www.comportese.com/2017/02/os-conceitos-de-analise-e-avaliacao-funcional"
         default:
             break
         }
