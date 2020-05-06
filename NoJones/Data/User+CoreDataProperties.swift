@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  NoJones
 //
-//  Created by Vinicius Mesquita on 05/05/20.
+//  Created by Vinicius Mesquita on 06/05/20.
 //  Copyright © 2020 NoJones. All rights reserved.
 //
 //
@@ -18,8 +18,8 @@ extension User {
     }
 
     @NSManaged public var age: Int32
-    @NSManaged public var profileImage: Data?
     @NSManaged public var name: String?
+    @NSManaged public var profileImage: Data?
     @NSManaged public var achievements: Achievements?
     @NSManaged public var habit: Habit?
 
