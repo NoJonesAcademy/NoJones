@@ -11,6 +11,8 @@ import UIKit
 
 class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    var delegate: HabitDelegate?
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var addictionPicker: UIPickerView!
     //TextFields
@@ -47,7 +49,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
 
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveData))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(createAddiction))
         
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "buttonColor")
 
@@ -59,13 +61,6 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
         //self.navigationController?
     }
     
-    @objc func saveData(){
-        print(addictionNameTextField.text ?? "Vazio")
-        print(newHabitTextField.text ?? "Vazio")
-        print(fellingsBeforeTextField.text ?? "Vazio")
-        print(feelingsAfterTextField.text ?? "Vazio")
-        print(addictionPicker.selectedRow(inComponent: 0))
-    }
 }
 
 
@@ -113,3 +108,49 @@ extension AddAddictionViewController: UITextFieldDelegate {
     
 }
 
+extension AddAddictionViewController {
+    
+    @objc func createHabit(){
+        
+        var habit = Habit()
+        
+        if addictionNameTextField.text == "" {
+            warningEmptyTextField(textField: addictionNameTextField)
+        }
+        else {
+            habit.name = addictionNameTextField.text
+        }
+        if newHabitTextField.text == "" {
+            warningEmptyTextField(textField: addictionNameTextField)
+        }
+        else {
+            habit.name = addictionNameTextField.text
+        }
+        if fellingsBeforeTextField.text == "" {
+            warningEmptyTextField(textField: addictionNameTextField)
+        }
+        else {
+            habit.name = addictionNameTextField.text
+        }
+        if feelingsAfterTextField.text == "" {
+            warningEmptyTextField(textField: addictionNameTextField)
+        }
+        else {
+            habit.name = addictionNameTextField.text
+        }
+    }
+    
+    func warningEmptyTextField(textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.red.cgColor
+        let alertController = UIAlertController(title: "Oops", message:
+            "Você esqueceu de algo", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Entendi", style: .default))
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+protocol HabitDelegate {
+    func didCreateHabit(_ habit: Habit)
+}
