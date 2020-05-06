@@ -16,7 +16,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var addictionPicker: UIPickerView!
     //TextFields
-    @IBOutlet weak var addictionNameTextField: UITextField!
+    @IBOutlet weak var habitNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
     @IBOutlet weak var fellingsBeforeTextField: UITextField!
     @IBOutlet weak var feelingsAfterTextField: UITextField!
@@ -49,7 +49,7 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
 
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(createAddiction))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(createHabit))
         
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "buttonColor")
 
@@ -71,8 +71,8 @@ extension AddAddictionViewController: UITextFieldDelegate {
         customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 0
                 
-        customTextField(textField: addictionNameTextField)
-        self.addictionNameTextField.tag = 1
+        customTextField(textField: habitNameTextField)
+        self.habitNameTextField.tag = 1
        
         customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 2
@@ -112,32 +112,34 @@ extension AddAddictionViewController {
     
     @objc func createHabit(){
         
-        var habit = Habit()
+        let habit = Habit()
         
-        if addictionNameTextField.text == "" {
-            warningEmptyTextField(textField: addictionNameTextField)
+        if habitNameTextField.text == "" {
+            warningEmptyTextField(textField: habitNameTextField)
         }
         else {
-            habit.name = addictionNameTextField.text
+            habit.name = habitNameTextField.text
         }
         if newHabitTextField.text == "" {
-            warningEmptyTextField(textField: addictionNameTextField)
+            warningEmptyTextField(textField: newHabitTextField)
         }
         else {
-            habit.name = addictionNameTextField.text
+            habit.concurrent?.name = newHabitTextField.text
         }
         if fellingsBeforeTextField.text == "" {
-            warningEmptyTextField(textField: addictionNameTextField)
+           warningEmptyTextField(textField: fellingsBeforeTextField)
         }
         else {
-            habit.name = addictionNameTextField.text
+             habit.initialFelling = fellingsBeforeTextField.text
         }
         if feelingsAfterTextField.text == "" {
-            warningEmptyTextField(textField: addictionNameTextField)
+            warningEmptyTextField(textField: feelingsAfterTextField)
         }
         else {
-            habit.name = addictionNameTextField.text
+            habit.finalFelling = feelingsAfterTextField.text
         }
+        
+        delegate?.didCreateHabit(habit)
     }
     
     func warningEmptyTextField(textField: UITextField) {

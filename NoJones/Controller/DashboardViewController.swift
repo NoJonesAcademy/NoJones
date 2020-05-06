@@ -12,11 +12,9 @@ class DashboardViewController: InitialScreenViewController {
     
     //MARK: Collection and Table Data from Model
     var habits = [
-        Habit(name: "Cigarro", days: 0, type: "Cronico"),
-        Habit(name: "Cigarro", days: 0, type: "Cronico"),
-        Habit(name: "Cigarro", days: 0, type: "Cronico")
+        Habit()
         ]
-        {
+    {
         didSet {
             showEmptyStateIllustration()
         }
@@ -215,7 +213,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "addictionCell")
         
         cell.textLabel?.text = habits[indexPath.row].name
-        cell.detailTextLabel?.text = habits[indexPath.row].type
+        cell.detailTextLabel?.text = habits[indexPath.row].concurrent?.name
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -239,14 +237,6 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     //Add Addiction Action Button
     @objc func addAddiction() {
         performSegue(withIdentifier: "addhabitsegue", sender: nil)
-        
-        //Insert new Row
-        //        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
-        //        habits.insert(newAddiction, at: 0)
-        //        tableView.beginUpdates()
-        //        let indexPath = IndexPath(row: 0, section: 0)
-        //        tableView.insertRows(at: [indexPath], with: .left)
-        //        tableView.endUpdates()
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -287,5 +277,17 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         cell.achievement = self.achievements[indexPath.row]
         
         return cell
+    }
+}
+
+//Create Habit
+extension DashboardViewController: HabitDelegate {
+    func didCreateHabit(_ habit: Habit) {
+        habits.append(habit)
+        habits.insert(habit, at: 0)
+        tableView.beginUpdates()
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexPath], with: .left)
+        tableView.endUpdates()
     }
 }
