@@ -43,6 +43,7 @@ class DashboardViewController: InitialScreenViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         habits = habitDao.fetchAll()
+        setupUserImage()
         tableView.reloadData()
         self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         setTitle()
@@ -87,7 +88,6 @@ class DashboardViewController: InitialScreenViewController {
         collectionView.dataSource = self
         
         setupTableView()
-        setupUserImage()
         showEmptyStateIllustration()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
