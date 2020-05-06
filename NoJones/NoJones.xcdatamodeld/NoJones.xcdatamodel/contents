@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Achievements" representedClassName="Achievements" syncable="YES">
+        <attribute name="dateAcomplished" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="image" attributeType="String"/>
+    </entity>
+    <entity name="ConcurrentHabit" representedClassName="ConcurrentHabit" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DateHabit" representedClassName="DateHabit" syncable="YES">
+        <attribute name="data" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Habit" representedClassName="Habit" syncable="YES">
+        <attribute name="finalFelling" attributeType="String"/>
+        <attribute name="initialFelling" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="concurrent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConcurrentHabit"/>
+        <relationship name="dates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DateHabit"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="age" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="achievements" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Achievements"/>
+        <relationship name="habit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Habit"/>
+    </entity>
+    <elements>
+        <element name="Achievements" positionX="-299.25390625" positionY="102.20703125" width="128" height="88"/>
+        <element name="ConcurrentHabit" positionX="-762.53125" positionY="262.17578125" width="128" height="73"/>
+        <element name="DateHabit" positionX="-460.09375" positionY="258.48046875" width="128" height="73"/>
+        <element name="Habit" positionX="-649.62890625" positionY="102.1171875" width="128" height="118"/>
+        <element name="User" positionX="-484.765625" positionY="52.828125" width="128" height="118"/>
+    </elements>
 </model>

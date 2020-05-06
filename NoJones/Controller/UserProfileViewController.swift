@@ -63,6 +63,19 @@ class UserProfileViewController: UIViewController {
         self.profileImage.contentMode = .scaleAspectFill
         self.profileImage.blurView.enable()
         
+        if #available(iOS 13.0, *) {
+            if let user = CoreDataManager.fetchUser() {
+                if let image = user.profileImage {
+                    self.profileImage.image = UIImage(data: image)
+                }
+                
+                if let name = user.name {
+                    self.userName.text = name
+                }
+           
+            }
+        }
+        
         scrollView.parallaxHeader.view = self.profileImage
         scrollView.parallaxHeader.height = 400
         scrollView.parallaxHeader.minimumHeight = 120
@@ -115,6 +128,12 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         guard let image = info[.editedImage] as? UIImage else { return }
         self.profileImage.image = image
         self.roundIcon.image = image
+        
+        
+        if #available(iOS 13.0, *) {
+            CoreDataManager.saveUser(name: "Juninho", profileImage: image.pngData()!)
+        }
+        
         dismiss(animated: true)
     }
 }
