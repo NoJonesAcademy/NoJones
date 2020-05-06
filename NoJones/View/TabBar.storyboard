@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="XCK-94-FRN" kind="relationship" relationship="viewControllers" id="1bD-Zi-cqO"/>
                         <segue destination="XeF-tT-ZtG" kind="relationship" relationship="viewControllers" id="eg9-fJ-bYn"/>
+                        <segue destination="WGE-jr-VuS" kind="relationship" relationship="viewControllers" id="vJM-Tz-Vdo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MC3-ur-o8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -32,7 +33,7 @@
         <scene sceneID="VCi-5T-fwg">
             <objects>
                 <viewControllerPlaceholder storyboardName="Dashboard" id="XCK-94-FRN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="I1t-lZ-LEG"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="I1t-lZ-LEG"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXa-uh-giy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,11 +43,21 @@
         <scene sceneID="PX3-VV-Qqy">
             <objects>
                 <viewControllerPlaceholder storyboardName="Progress" id="XeF-tT-ZtG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="g91-Cy-Ksz"/>
+                    <tabBarItem key="tabBarItem" title="Progress" id="g91-Cy-Ksz"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MeU-aa-wsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="273" y="242"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="d6W-Ml-lVH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" id="WGE-jr-VuS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" id="LF1-bp-ceE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvg-vm-RyY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="234"/>
         </scene>
     </scenes>
     <resources>
