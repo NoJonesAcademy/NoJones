@@ -43,6 +43,10 @@
 		81DB9AD92462300D00B45CF3 /* Achievements+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AD12462300D00B45CF3 /* Achievements+CoreDataClass.swift */; };
 		81DB9ADA2462300D00B45CF3 /* Achievements+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AD22462300D00B45CF3 /* Achievements+CoreDataProperties.swift */; };
 		81DB9ADC2462324700B45CF3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ADB2462324700B45CF3 /* CoreDataManager.swift */; };
+		81DB9ADF2462DFA800B45CF3 /* ConfigurableDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ADE2462DFA800B45CF3 /* ConfigurableDao.swift */; };
+		81DB9AE12462DFB200B45CF3 /* CoreDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AE02462DFB200B45CF3 /* CoreDao.swift */; };
+		81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AE22462DFC100B45CF3 /* CoreStack.swift */; };
+		81DB9AE52462DFD900B45CF3 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AE42462DFD900B45CF3 /* NSManagedObject+Extension.swift */; };
 		81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */; };
 		AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */; };
 		AE3258A824585BB50089FA35 /* HabitsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */; };
@@ -121,6 +125,10 @@
 		81DB9AD12462300D00B45CF3 /* Achievements+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievements+CoreDataClass.swift"; sourceTree = "<group>"; };
 		81DB9AD22462300D00B45CF3 /* Achievements+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievements+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		81DB9ADB2462324700B45CF3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		81DB9ADE2462DFA800B45CF3 /* ConfigurableDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableDao.swift; sourceTree = "<group>"; };
+		81DB9AE02462DFB200B45CF3 /* CoreDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDao.swift; sourceTree = "<group>"; };
+		81DB9AE22462DFC100B45CF3 /* CoreStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStack.swift; sourceTree = "<group>"; };
+		81DB9AE42462DFD900B45CF3 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
 		81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeekCustomView.swift; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -211,6 +219,7 @@
 		81248623244E3CBB0091CFA4 /* NoJones */ = {
 			isa = PBXGroup;
 			children = (
+				81DB9ADD2462DF9000B45CF3 /* Source */,
 				81DB9AC624622FBE00B45CF3 /* Data */,
 				81ABC25F245DE83C00F63DD3 /* Router */,
 				81ABC25A245DCF2200F63DD3 /* Manager */,
@@ -325,6 +334,17 @@
 				81DB9AC824622FED00B45CF3 /* User+CoreDataProperties.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		81DB9ADD2462DF9000B45CF3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				81DB9ADE2462DFA800B45CF3 /* ConfigurableDao.swift */,
+				81DB9AE02462DFB200B45CF3 /* CoreDao.swift */,
+				81DB9AE22462DFC100B45CF3 /* CoreStack.swift */,
+				81DB9AE42462DFD900B45CF3 /* NSManagedObject+Extension.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		81F3A597245B25E0008BE5F1 /* CustomView */ = {
@@ -590,15 +610,19 @@
 			files = (
 				AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */,
 				81DB9AD32462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift in Sources */,
+				81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */,
 				81DB9A942460A82800B45CF3 /* SegueRoute.swift in Sources */,
 				810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */,
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
+				81DB9AE12462DFB200B45CF3 /* CoreDao.swift in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
 				81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */,
 				AE3258B0246055AE0089FA35 /* UserProfileViewController.swift in Sources */,
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				AEE041A92462DED800187734 /* NewHabit.swift in Sources */,
 				81DB9AD42462300D00B45CF3 /* ConcurrentHabit+CoreDataProperties.swift in Sources */,
+				81DB9ADF2462DFA800B45CF3 /* ConfigurableDao.swift in Sources */,
+				81DB9AE52462DFD900B45CF3 /* NSManagedObject+Extension.swift in Sources */,
 				81DB9AD52462300D00B45CF3 /* DateHabit+CoreDataClass.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,

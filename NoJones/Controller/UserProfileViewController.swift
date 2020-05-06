@@ -22,6 +22,8 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userAge: UITextField!
     
+    let userDao = CoreDao<User>(with: "User")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
@@ -62,19 +64,19 @@ class UserProfileViewController: UIViewController {
         self.profileImage.image = image
         self.profileImage.contentMode = .scaleAspectFill
         self.profileImage.blurView.enable()
+        // fetch data from user
         
-        if #available(iOS 13.0, *) {
-            if let user = CoreDataManager.fetchUser() {
-                if let image = user.profileImage {
-                    self.profileImage.image = UIImage(data: image)
-                }
-                
-                if let name = user.name {
-                    self.userName.text = name
-                }
-           
+        do {
+            let users = try userDao.fetchAll()
+            print(users)
+            if let imageData = users.first?.profileImage {
+                let image = UIImage(data: imageData)
+                self.profileImage.image = image
+                self.roundIcon.image = UIImage(data: imageData)
             }
         }
+        
+        
         
         scrollView.parallaxHeader.view = self.profileImage
         scrollView.parallaxHeader.height = 400
@@ -128,11 +130,14 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         guard let image = info[.editedImage] as? UIImage else { return }
         self.profileImage.image = image
         self.roundIcon.image = image
-        
-        
-        if #available(iOS 13.0, *) {
-            CoreDataManager.saveUser(name: "Juninho", profileImage: image.pngData()!)
-        }
+
+        // core data save data
+        let user = userDao.new()
+        user.name = "Vinicius"
+        user.age = 20
+        user.profileImage = image.pngData()
+        userDao.insert(object: user)
+        _ = userDao.new()
         
         dismiss(animated: true)
     }
