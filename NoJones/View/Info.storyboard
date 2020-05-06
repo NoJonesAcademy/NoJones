@@ -13,10 +13,10 @@
         <scene sceneID="BMZ-U0-E0m">
             <objects>
                 <navigationController id="nDJ-t6-XNe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Informações" image="rectangle.grid.2x2.fill" catalog="system" id="b2d-ZG-P80"/>
+                    <tabBarItem key="tabBarItem" title="Informações" image="informationIcon" landscapeImage="informationIcon" selectedImage="informationIcon" id="b2d-ZG-P80"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CEw-fR-Nyr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -172,7 +172,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rectangle.grid.2x2.fill" catalog="system" width="64" height="48"/>
+        <image name="informationIcon" width="25" height="21"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
