@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1SI-Oc-F5y">
-                                <rect key="frame" x="0.0" y="96" width="320" height="384"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="JWr-98-XYA" userLabel="ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
@@ -97,7 +97,7 @@
                         <outlet property="collectionView" destination="6CU-bo-goa" id="o0X-Mn-hU5"/>
                         <outlet property="noAddictionMessage" destination="lY6-py-j8k" id="pAR-J8-eQP"/>
                         <outlet property="tableView" destination="1SI-Oc-F5y" id="eaD-JL-93B"/>
-                        <segue destination="uJ5-qa-DFE" kind="presentation" identifier="addAddictionSegue" id="MKa-AS-n5s"/>
+                        <segue destination="uJ5-qa-DFE" kind="presentation" identifier="addHabitSegue" id="MKa-AS-n5s"/>
                         <segue destination="Q9D-FH-Szh" kind="show" identifier="detailSegue" id="Uei-Mu-N4n"/>
                         <segue destination="5FT-fQ-wlU" kind="show" identifier="profileSegue" id="jQE-qe-X7J"/>
                     </connections>

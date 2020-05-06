@@ -16,7 +16,7 @@ class HabitDetailsViewController: UIViewController {
     @IBOutlet weak var habitName: UILabel!
     @IBOutlet weak var competitorHabitName: UILabel!
     
-    var habit: Habit?
+    var habit: NewHabit?
     
     override func viewWillAppear(_ animated: Bool) {
         configureViews()

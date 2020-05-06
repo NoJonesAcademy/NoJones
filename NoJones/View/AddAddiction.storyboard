@@ -149,10 +149,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar Hábito" id="omL-qD-hAA"/>
                     <connections>
-                        <outlet property="addictionNameTextField" destination="UQ1-0c-ONN" id="Ryw-5P-wra"/>
                         <outlet property="addictionPicker" destination="ThN-if-JJj" id="MK0-BY-yPx"/>
                         <outlet property="feelingsAfterTextField" destination="48k-Aw-A52" id="WoJ-gE-RP7"/>
                         <outlet property="fellingsBeforeTextField" destination="To1-ae-qnu" id="bUx-Gb-Mxj"/>
+                        <outlet property="habitNameTextField" destination="UQ1-0c-ONN" id="DA7-bR-ynY"/>
                         <outlet property="newHabitTextField" destination="wkU-wi-h2p" id="db8-JQ-sYJ"/>
                         <outlet property="scrollView" destination="m1P-8O-CLe" id="5yK-sa-joh"/>
                     </connections>
@@ -164,6 +164,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yiB-LT-KQW">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="des-Lj-aRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fde-gt-BtO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bIY-44-Esq">
@@ -175,7 +176,6 @@
                         <segue destination="FjU-Oh-UbZ" kind="relationship" relationship="rootViewController" id="4XG-zE-wMn"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="des-Lj-aRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="233.33333333333334" y="89.732142857142847"/>
         </scene>

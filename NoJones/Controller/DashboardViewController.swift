@@ -11,9 +11,7 @@ import UIKit
 class DashboardViewController: InitialScreenViewController {
     
     //MARK: Collection and Table Data from Model
-    var habits = [
-        Habit()
-        ]
+    var habits: [NewHabit] = []
     {
         didSet {
             showEmptyStateIllustration()
@@ -57,15 +55,24 @@ class DashboardViewController: InitialScreenViewController {
         
         backButton.title = "Dashboard"
         navigationItem.backBarButtonItem = backButton
-      
-        guard let indexPath = tableView.indexPathForSelectedRow else {
-            return
+
+        
+        if segue.identifier! == "detailsSegue" {
+            guard let indexPath = tableView.indexPathForSelectedRow else {
+                      return
+                  }
+            let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
+            if let viewController = habitsDetailsViewController {
+                viewController.habit = habits[indexPath.row]
+            }
+        } else if segue.identifier! == "addHabitSegue" {
+            let navigation = segue.destination as? UINavigationController
+            if let viewController = navigation?.topViewController as? AddAddictionViewController {
+                viewController.delegate = self
+            }
         }
         
-        let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
-        if let viewController = habitsDetailsViewController {
-            viewController.habit = habits[indexPath.row]
-        }
+        
     }
     
     //MARK: ViewDidLoad
@@ -213,7 +220,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "addictionCell")
         
         cell.textLabel?.text = habits[indexPath.row].name
-        cell.detailTextLabel?.text = habits[indexPath.row].concurrent?.name
+        cell.detailTextLabel?.text = habits[indexPath.row].concurrent
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -236,7 +243,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Add Addiction Action Button
     @objc func addAddiction() {
-        performSegue(withIdentifier: "addhabitsegue", sender: nil)
+        performSegue(withIdentifier: "addHabitSegue", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -282,8 +289,7 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
 
 //Create Habit
 extension DashboardViewController: HabitDelegate {
-    func didCreateHabit(_ habit: Habit) {
-        habits.append(habit)
+    func didCreateHabit(_ habit: NewHabit) {
         habits.insert(habit, at: 0)
         tableView.beginUpdates()
         let indexPath = IndexPath(row: 0, section: 0)

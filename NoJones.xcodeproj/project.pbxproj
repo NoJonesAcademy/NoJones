@@ -51,6 +51,7 @@
 		AE3258B0246055AE0089FA35 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258AF246055AE0089FA35 /* UserProfileViewController.swift */; };
 		AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */; };
 		AEE041A724619AD900187734 /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE041A624619AD900187734 /* UIView+Blur.swift */; };
+		AEE041A92462DED800187734 /* NewHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE041A82462DED800187734 /* NewHabit.swift */; };
 		BFB461EAB00EB3074AEBC038 /* Pods_NoJones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10413357CE4E7821F737B79B /* Pods_NoJones.framework */; };
 		C5DF32B559391958122E49C7 /* Pods_NoJonesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */; };
 /* End PBXBuildFile section */
@@ -129,6 +130,7 @@
 		AE3258AF246055AE0089FA35 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddictionViewController.swift; sourceTree = "<group>"; };
 		AEE041A624619AD900187734 /* UIView+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
+		AEE041A82462DED800187734 /* NewHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabit.swift; sourceTree = "<group>"; };
 		CEC294EA6351D5D0A9943B4D /* Pods_NoJonesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoJonesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7C321F9E4039BE64D1D274 /* Pods-NoJonesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.release.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				819D4DD5245A1608005D07E8 /* Achievement.swift */,
+				AEE041A82462DED800187734 /* NewHabit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -594,11 +597,11 @@
 				81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */,
 				AE3258B0246055AE0089FA35 /* UserProfileViewController.swift in Sources */,
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
+				AEE041A92462DED800187734 /* NewHabit.swift in Sources */,
 				81DB9AD42462300D00B45CF3 /* ConcurrentHabit+CoreDataProperties.swift in Sources */,
 				81DB9AD52462300D00B45CF3 /* DateHabit+CoreDataClass.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
-				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
 				81DB9AD92462300D00B45CF3 /* Achievements+CoreDataClass.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,

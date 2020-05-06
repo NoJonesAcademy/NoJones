@@ -112,34 +112,42 @@ extension AddAddictionViewController {
     
     @objc func createHabit(){
         
-        let habit = Habit()
+        var habit = NewHabit()
+        var complete = true
         
         if habitNameTextField.text == "" {
             warningEmptyTextField(textField: habitNameTextField)
+            complete = false
         }
         else {
             habit.name = habitNameTextField.text
         }
         if newHabitTextField.text == "" {
             warningEmptyTextField(textField: newHabitTextField)
+            complete = false
         }
         else {
-            habit.concurrent?.name = newHabitTextField.text
+            habit.concurrent = newHabitTextField.text
         }
         if fellingsBeforeTextField.text == "" {
            warningEmptyTextField(textField: fellingsBeforeTextField)
+            complete = false
         }
         else {
              habit.initialFelling = fellingsBeforeTextField.text
         }
         if feelingsAfterTextField.text == "" {
             warningEmptyTextField(textField: feelingsAfterTextField)
+            complete = false
         }
         else {
-            habit.finalFelling = feelingsAfterTextField.text
+            habit.finalFeeling = feelingsAfterTextField.text
         }
         
-        delegate?.didCreateHabit(habit)
+        if complete {
+            delegate?.didCreateHabit(habit)
+            dismissModal()
+        }
     }
     
     func warningEmptyTextField(textField: UITextField) {
@@ -154,5 +162,5 @@ extension AddAddictionViewController {
 }
 
 protocol HabitDelegate {
-    func didCreateHabit(_ habit: Habit)
+    func didCreateHabit(_ habit: NewHabit)
 }
