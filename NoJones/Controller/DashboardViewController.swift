@@ -82,7 +82,7 @@ class DashboardViewController: InitialScreenViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: AchievementCollectionViewCell.indentifier)
+        collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: AchievementCollectionViewCell.identifier)
         collectionView.dataSource = self
         
         setupTableView()
@@ -127,6 +127,7 @@ class DashboardViewController: InitialScreenViewController {
 extension DashboardViewController {
     
     private enum Constants: CGFloat {
+        
         case dashBoardTableViewHeaderHeight = 220
         case imageSizeForLargeState = 40
         case imageRightMargin = 16
@@ -283,14 +284,11 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AchievementCollectionViewCell.identifier, for: indexPath) as! AchievementCollectionViewCell
-        
         cell.achievement = self.achievements[indexPath.row]
-        
         return cell
     }
 }
 
-//Create Habit
 extension DashboardViewController: HabitDelegate {
     func didCreateHabit(_ habit: Habit) {
         habits.insert(habit, at: 0)

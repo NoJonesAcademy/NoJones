@@ -22,9 +22,15 @@ public class CoreDao<Element: NSManagedObject>: ConfigurableDao {
         return NSEntityDescription.insertNewObject(forEntityName: containerName, into: context) as! Element
     }
     
+    
+    
     public func insert(object: Element) {
         context.insert(object)
         save()
+    }
+    
+    public func update(object: Element) {
+//        context.delete()
     }
     
     public func fetchAll() -> [Element] {

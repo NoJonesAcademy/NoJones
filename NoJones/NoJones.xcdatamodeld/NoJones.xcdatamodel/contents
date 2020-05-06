@@ -4,12 +4,12 @@
         <attribute name="dateAcomplished" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="image" attributeType="String"/>
-        <relationship name="userOwner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="achievements" inverseEntity="User"/>
+        <relationship name="userOwner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
     </entity>
     <entity name="ConcurrentHabit" representedClassName="ConcurrentHabit" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="habitOwner" maxCount="1" deletionRule="Nullify" destinationEntity="Habit" inverseName="concurrent" inverseEntity="Habit"/>
+        <relationship name="habitOwner" maxCount="1" deletionRule="Nullify" destinationEntity="Habit"/>
     </entity>
     <entity name="DateHabit" representedClassName="DateHabit" syncable="YES">
         <attribute name="data" attributeType="Date" usesScalarValueType="NO"/>
@@ -20,16 +20,16 @@
         <attribute name="finalFelling" attributeType="String"/>
         <attribute name="initialFelling" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="concurrent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConcurrentHabit" inverseName="habitOwner" inverseEntity="ConcurrentHabit"/>
+        <relationship name="concurrent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConcurrentHabit"/>
         <relationship name="dates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DateHabit" inverseName="habitOwner" inverseEntity="DateHabit"/>
-        <relationship name="userOwner" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="habit" inverseEntity="User"/>
+        <relationship name="userOwner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="habits" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="age" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="profileImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
-        <relationship name="achievements" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Achievements" inverseName="userOwner" inverseEntity="Achievements"/>
-        <relationship name="habit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Habit" inverseName="userOwner" inverseEntity="Habit"/>
+        <relationship name="achievements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Achievements"/>
+        <relationship name="habits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Habit" inverseName="userOwner" inverseEntity="Habit"/>
     </entity>
     <elements>
         <element name="Achievements" positionX="-453.125" positionY="74.53515625" width="128" height="103"/>
