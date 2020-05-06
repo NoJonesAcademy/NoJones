@@ -8,25 +8,17 @@
 
 import UIKit
 
-
 class DashboardViewController: InitialScreenViewController {
     
     //MARK: Collection and Table Data from Model
     var addictions = [
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
         Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
         Addiction(name: "Cigarro", days: 0, type: "Cronico")
         ]
         {
         didSet {
-            noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 160 : 0
+            showEmptyStateIllustration()
         }
     }
     
@@ -39,26 +31,71 @@ class DashboardViewController: InitialScreenViewController {
     ]
     
     //MARK: IBOutlets
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var username: UILabel!
-    @IBOutlet weak var userAge: UILabel!
+    private var profileImageView = UIImageView(image: UIImage(named: "profileImage")!.withRenderingMode(.alwaysTemplate))
+    private var userName: String?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noAddictionMessage: UIView!
+    var observer: NSKeyValueObservation?
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         tableView.reloadData()
+        self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
+        setTitle()
+        
+        showImage(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showImage(false)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backButton = UIBarButtonItem()
+        
+        backButton.title = "Dashboard"
+        navigationItem.backBarButtonItem = backButton
+      
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
+        if let viewController = habitsDetailsViewController {
+            viewController.habit = addictions[indexPath.row]
+        }
     }
     
     //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
-
+        
         setupTableView()
-        setupProfileImage()
+        setupUserImage()
+        showEmptyStateIllustration()
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    func setTitle() {
+        self.navigationItem.title = "Olá, \(self.userName!)"
+        self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
+            if let height = changes.newValue?.height {
+                if let username = self.userName, height > 44.0 {
+                    //Large Title
+                    self.navigationItem.title = "Olá, \(username)"
+                } else {
+                    //Small Title
+                    self.navigationItem.title = "Dashboard"
+                }
+            }
+        })
     }
     
     //MARK: Table View Properties
@@ -68,56 +105,106 @@ class DashboardViewController: InitialScreenViewController {
         tableView.delegate = self
         let sectionNib = UINib(nibName: HabitsSectionHeader.xibName, bundle: nil)
         tableView.register(sectionNib, forHeaderFooterViewReuseIdentifier: HabitsSectionHeader.identifier)
+        showEmptyStateIllustration()
         
-        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? 160 : 0
-        profileImage.layer.masksToBounds = false
-        profileImage.contentMode = .scaleAspectFill
-        profileImage.layer.cornerRadius = profileImage.frame.height / 2
-        profileImage.clipsToBounds = true
-        
-        //setProfileImage()
-        
-        if let userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName) {
-            self.username.text = userName
-        }
-        
+    }
+    
+    func showEmptyStateIllustration() {
+        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
     }
 }
 
 
-//MARK: Profile Image Picker Extension
-extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//MARK: Profile Image Edit Extension
+extension DashboardViewController {
     
-    func setupProfileImage() {
-        profileImage.layer.masksToBounds = false
-        profileImage.contentMode = .scaleAspectFill
-        profileImage.layer.cornerRadius = profileImage.frame.height / 2
-        profileImage.clipsToBounds = true
-        let singleTap = UITapGestureRecognizer(target: self, action: #selector(switchUserPhoto))
+    private enum Constants: CGFloat {
+        case dashBoardTableViewHeaderHeight = 220
+        case imageSizeForLargeState = 40
+        case imageRightMargin = 16
+        case imageBottomMarginForLargeState = 12
+        case imageBottomMarginForSmallState = 6
+        case imageSizeForSmallState = 32
+        case navBarHeightSmallState = 44
+        case navBarHeightLargeState = 96.5
+    }
+    
+
+    private func setupUserImage() {
+        // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(profileScreenSegue))
         singleTap.numberOfTouchesRequired = 1
-        self.profileImage.addGestureRecognizer(singleTap)
+        self.profileImageView.addGestureRecognizer(singleTap)
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.tintColor = UIColor(named: "buttonColor")
+        
+        navigationBar.addSubview(profileImageView)
+        
+        // setup constraints
+        profileImageView.layer.cornerRadius = Constants.imageSizeForLargeState.rawValue / 2
+        profileImageView.clipsToBounds = true
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            profileImageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Constants.imageRightMargin.rawValue),
+            profileImageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Constants.imageBottomMarginForLargeState.rawValue),
+            profileImageView.heightAnchor.constraint(equalToConstant: Constants.imageSizeForLargeState.rawValue),
+            profileImageView.widthAnchor.constraint(equalTo: profileImageView.heightAnchor)
+        ])
     }
     
-    @objc func switchUserPhoto() {
-        let picker = UIImagePickerController()
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
+    @objc func profileScreenSegue() {
+        performSegue(withIdentifier: "profileSegue", sender: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[.editedImage] as? UIImage else { return }
-        self.profileImage.image = image
-        dismiss(animated: true)
+    private func showImage(_ show: Bool) {
+        UIView.animate(withDuration: 0.2) {
+            self.profileImageView.alpha = show ? 1.0 : 0.0
+        }
+    }
+    
+    private func moveAndResizeImage(for height: CGFloat) {
+        let coeff: CGFloat = {
+            let delta = height - Constants.navBarHeightSmallState.rawValue
+            let heightDifferenceBetweenStates = (Constants.navBarHeightLargeState.rawValue - Constants.navBarHeightSmallState.rawValue)
+            return delta / heightDifferenceBetweenStates
+        }()
+        
+        let factor = Constants.imageSizeForSmallState.rawValue / Constants.imageSizeForLargeState.rawValue
+        
+        let scale: CGFloat = {
+            let sizeAddendumFactor = coeff * (1.0 - factor)
+            return min(1.0, sizeAddendumFactor + factor)
+        }()
+        
+        // Value of difference between icons for large and small states
+        let sizeDiff = Constants.imageSizeForLargeState.rawValue * (1.0 - factor) // 8.0
+        let yTranslation: CGFloat = {
+            /// This value = 14. It equals to difference of 12 and 6 (bottom margin for large and small states). Also it adds 8.0 (size difference when the image gets smaller size)
+            let maxYTranslation = Constants.imageBottomMarginForLargeState.rawValue - Constants.imageBottomMarginForSmallState.rawValue + sizeDiff
+            return max(0, min(maxYTranslation, (maxYTranslation - coeff * (Constants.imageBottomMarginForSmallState.rawValue + sizeDiff))))
+        }()
+        
+        let xTranslation = max(0, sizeDiff - coeff * sizeDiff)
+        
+        profileImageView.transform = CGAffineTransform.identity
+            .scaledBy(x: scale, y: scale)
+            .translatedBy(x: xTranslation, y: yTranslation)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let height = navigationController?.navigationBar.frame.height else { return }
+        moveAndResizeImage(for: height)
     }
 }
+
 
 
 //MARK: Table View Delegate and Data Source
 extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailSegue", sender: nil)
+        performSegue(withIdentifier: SegueDestination.HabitDetails.rawValue, sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -152,14 +239,14 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     //Add Addiction Action Button
     @objc func addAddiction() {
         performSegue(withIdentifier: "addAddictionSegue", sender: nil)
-
+        
         //Insert new Row
-//        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
-//        addictions.insert(newAddiction, at: 0)
-//        tableView.beginUpdates()
-//        let indexPath = IndexPath(row: 0, section: 0)
-//        tableView.insertRows(at: [indexPath], with: .left)
-//        tableView.endUpdates()
+        //        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
+        //        addictions.insert(newAddiction, at: 0)
+        //        tableView.beginUpdates()
+        //        let indexPath = IndexPath(row: 0, section: 0)
+        //        tableView.insertRows(at: [indexPath], with: .left)
+        //        tableView.endUpdates()
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -184,7 +271,6 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deleteRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }
-
 }
 
 
@@ -203,5 +289,3 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         return cell
     }
 }
-
-

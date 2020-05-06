@@ -13,19 +13,6 @@ public class DayWeekCustomView: UIView {
     @IBOutlet weak private var circleView: UIView!
     @IBOutlet weak public var imageMark: UIImageView!
     @IBOutlet weak public var dayWeek: UILabel!
-
-//    @IBInspectable public var day: String = "Day" {
-//        didSet {
-//            dayWeek.text = day
-//        }
-//    }
-//
-//    @IBInspectable public var image: UIImage? = UIImage(named: "") {
-//        didSet {
-//            guard let image = image else { return }
-//            imageMark.image = image
-//        }
-//    }
     
     var contentView: UIView?
     var xibName = "DayWeekCustomView"

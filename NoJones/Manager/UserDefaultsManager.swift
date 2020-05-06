@@ -45,6 +45,10 @@ struct UserDefaultsManager {
         
      }
     
+    static func setUserName(name: String?) {
+        UserDefaults.standard.set(name, forKey: UserDefaultsKey.userName.rawValue)
+    }
+    
     static func fetchString(withUserDefaultKey userDefaultKey: UserDefaultsKey) -> String? {
         let userDefaults = UserDefaults.standard
         return userDefaults.string(forKey: userDefaultKey.rawValue)

@@ -2,7 +2,7 @@
 //  HabitDetailsViewController.swift
 //  NoJones
 //
-//  Created by VInicius Mesquita on 28/04/20.
+//  Created by Vinicius Mesquita on 28/04/20.
 //  Copyright © 2020 NoJones. All rights reserved.
 //
 
@@ -13,6 +13,10 @@ class HabitDetailsViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var habitName: UILabel!
+    @IBOutlet weak var competitorHabitName: UILabel!
+    
+    var habit: Addiction?
     
     override func viewWillAppear(_ animated: Bool) {
         configureViews()
@@ -22,6 +26,7 @@ class HabitDetailsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         self.scrollView.contentOffset = .zero
+        configureHabitDetails()
         
     }
     
@@ -52,7 +57,12 @@ class HabitDetailsViewController: UIViewController {
 
         }
         
-        
+    }
+    
+    
+    func configureHabitDetails() {
+        habitName.text = habit?.name
+        competitorHabitName.text = "Cigarret"
     }
 
 }

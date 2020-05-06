@@ -1,16 +1,24 @@
 PODS:
   - CVCalendar (1.7.0)
+  - ParallaxHeader (3.0.0)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - CVCalendar (~> 1.7.0)
+  - ParallaxHeader (~> 3.0.0)
+  - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - CVCalendar
+    - ParallaxHeader
+    - SnapKit
 
 SPEC CHECKSUMS:
   CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
+  ParallaxHeader: a343f55eb38f52a89c5820a77e14cf975b84e6aa
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: e5fb584cd06eac805c0ab34525304347cb081d9e
+PODFILE CHECKSUM: bff7323e06b8bb78ee42eb1396cad69b58428a12
 
 COCOAPODS: 1.9.1

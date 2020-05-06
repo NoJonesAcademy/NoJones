@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fde-gt-BtO">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,70 +13,85 @@
             <objects>
                 <viewController id="FjU-Oh-UbZ" customClass="AddAddictionViewController" customModule="NoJones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UjU-V3-dAD">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-8O-CLe">
-                                <rect key="frame" x="0.0" y="32" width="667" height="343"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRl-Xn-oIS">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="549"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="834"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hábito ruim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlI-18-nj0">
-                                                <rect key="frame" x="16" y="24" width="635" height="20"/>
+                                                <rect key="frame" x="16" y="8" width="343" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-0c-ONN">
-                                                <rect key="frame" x="16" y="52" width="635" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-0c-ONN">
+                                                <rect key="frame" x="16" y="36" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="DFc-u9-Em4"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar novo hábito substituto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-ne-u2m">
-                                                <rect key="frame" x="16" y="102" width="635" height="20"/>
+                                                <rect key="frame" x="16" y="96" width="343" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wkU-wi-h2p">
-                                                <rect key="frame" x="16" y="130" width="635" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wkU-wi-h2p">
+                                                <rect key="frame" x="16" y="124" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="W1M-bo-55Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se sente antes do hábito ruim?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGV-70-fjR">
+                                                <rect key="frame" x="16" y="184" width="343" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="To1-ae-qnu">
+                                                <rect key="frame" x="16" y="212" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="opl-5W-KLi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se sente após o hábito ruim?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd0-Sr-wly">
+                                                <rect key="frame" x="16" y="272" width="343" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="48k-Aw-A52">
+                                                <rect key="frame" x="16" y="300" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="fWD-5M-ocy"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se sente antes do hábito ruim?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGV-70-fjR">
-                                                <rect key="frame" x="16" y="180" width="635" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="To1-ae-qnu">
-                                                <rect key="frame" x="16" y="208" width="635" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se sente após o hábito ruim?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd0-Sr-wly">
-                                                <rect key="frame" x="16" y="258" width="635" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48k-Aw-A52">
-                                                <rect key="frame" x="16" y="286" width="635" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidade de Medida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-gy-Jjf">
-                                                <rect key="frame" x="16" y="336" width="635" height="19.5"/>
+                                                <rect key="frame" x="16" y="360" width="343" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThN-if-JJj">
-                                                <rect key="frame" x="0.0" y="364" width="667" height="162"/>
+                                                <rect key="frame" x="0.0" y="379.5" width="375" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="R2M-pB-mwf"/>
+                                                </constraints>
                                             </pickerView>
                                         </subviews>
-                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="zd0-Sr-wly" firstAttribute="top" secondItem="To1-ae-qnu" secondAttribute="bottom" constant="16" id="1hP-gM-mDC"/>
                                             <constraint firstAttribute="trailing" secondItem="YlI-18-nj0" secondAttribute="trailing" constant="16" id="2DM-Qw-Sv7"/>
@@ -95,13 +109,13 @@
                                             <constraint firstItem="UQ1-0c-ONN" firstAttribute="top" secondItem="YlI-18-nj0" secondAttribute="bottom" constant="8" id="NKx-Ud-0Uh"/>
                                             <constraint firstItem="48k-Aw-A52" firstAttribute="leading" secondItem="YRl-Xn-oIS" secondAttribute="leading" constant="16" id="OUS-97-cEW"/>
                                             <constraint firstItem="zd0-Sr-wly" firstAttribute="leading" secondItem="YRl-Xn-oIS" secondAttribute="leading" constant="16" id="P2K-lb-IQr"/>
-                                            <constraint firstItem="YlI-18-nj0" firstAttribute="top" secondItem="YRl-Xn-oIS" secondAttribute="top" constant="24" id="RAG-wX-lEi"/>
+                                            <constraint firstItem="YlI-18-nj0" firstAttribute="top" secondItem="YRl-Xn-oIS" secondAttribute="top" constant="8" id="RAG-wX-lEi"/>
                                             <constraint firstAttribute="trailing" secondItem="ThN-if-JJj" secondAttribute="trailing" id="Tf7-L9-gP1"/>
                                             <constraint firstAttribute="trailing" secondItem="zd0-Sr-wly" secondAttribute="trailing" constant="16" id="WxT-Je-s2G"/>
                                             <constraint firstItem="Jm4-gy-Jjf" firstAttribute="top" secondItem="48k-Aw-A52" secondAttribute="bottom" constant="16" id="X2T-2A-7u0"/>
                                             <constraint firstItem="wkU-wi-h2p" firstAttribute="top" secondItem="Xel-ne-u2m" secondAttribute="bottom" constant="8" id="Y8Q-Uc-yDt"/>
                                             <constraint firstItem="YlI-18-nj0" firstAttribute="leading" secondItem="YRl-Xn-oIS" secondAttribute="leading" constant="16" id="a2q-0B-Yom"/>
-                                            <constraint firstItem="ThN-if-JJj" firstAttribute="top" secondItem="Jm4-gy-Jjf" secondAttribute="bottom" constant="8.5" id="fzz-mA-Ajy"/>
+                                            <constraint firstItem="ThN-if-JJj" firstAttribute="top" secondItem="Jm4-gy-Jjf" secondAttribute="bottom" id="fzz-mA-Ajy"/>
                                             <constraint firstItem="wkU-wi-h2p" firstAttribute="leading" secondItem="YRl-Xn-oIS" secondAttribute="leading" constant="16" id="gJE-oa-99J"/>
                                             <constraint firstItem="48k-Aw-A52" firstAttribute="top" secondItem="zd0-Sr-wly" secondAttribute="bottom" constant="8" id="i8U-6D-tDN"/>
                                             <constraint firstItem="Xel-ne-u2m" firstAttribute="leading" secondItem="YRl-Xn-oIS" secondAttribute="leading" constant="16" id="jcP-79-Nqf"/>
@@ -140,11 +154,12 @@
                         <outlet property="feelingsAfterTextField" destination="48k-Aw-A52" id="WoJ-gE-RP7"/>
                         <outlet property="fellingsBeforeTextField" destination="To1-ae-qnu" id="bUx-Gb-Mxj"/>
                         <outlet property="newHabitTextField" destination="wkU-wi-h2p" id="db8-JQ-sYJ"/>
+                        <outlet property="scrollView" destination="m1P-8O-CLe" id="5yK-sa-joh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yof-Kw-szb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141.0794602698652" y="87.200000000000003"/>
+            <point key="canvasLocation" x="1140" y="86.806596701649184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yiB-LT-KQW">
@@ -152,7 +167,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fde-gt-BtO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bIY-44-Esq">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -165,9 +180,4 @@
             <point key="canvasLocation" x="233.33333333333334" y="89.732142857142847"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="BackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>
