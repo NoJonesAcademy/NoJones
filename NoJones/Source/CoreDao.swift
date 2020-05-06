@@ -10,14 +10,16 @@ import CoreData
 public class CoreDao<Element: NSManagedObject>: ConfigurableDao {
     
     public var context: NSManagedObjectContext
+    private var containerName: String
     
     init(with containerName: String) {
         let coreStack = CoreStack(with: "NoJones")
+        self.containerName = containerName
         context = coreStack.persistentContainer.viewContext
     }
     
     public func new() -> Element {
-        return NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! Element
+        return NSEntityDescription.insertNewObject(forEntityName: containerName, into: context) as! Element
     }
     
     public func insert(object: Element) {
@@ -26,7 +28,7 @@ public class CoreDao<Element: NSManagedObject>: ConfigurableDao {
     }
     
     public func fetchAll() -> [Element] {
-        let request = NSFetchRequest<Element>(entityName: "User")
+        let request = NSFetchRequest<Element>(entityName: containerName)
         let result = try! context.fetch(request)
         return result
     }
