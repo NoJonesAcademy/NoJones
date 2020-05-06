@@ -10,6 +10,7 @@ import UIKit
 
 class DashboardViewController: InitialScreenViewController {
     
+    let userDao = CoreDao<User>(with: "User")
     let habitDao = CoreDao<Habit>(with: "Habit")
     let achievementsDao = CoreDao<Achievements>(with: "Achievements")
     
@@ -147,6 +148,14 @@ extension DashboardViewController {
         profileImageView.isUserInteractionEnabled = true
         profileImageView.tintColor = UIColor(named: "buttonColor")
         
+        do {
+            let users = try userDao.fetchAll()
+            print(users)
+            if let imageData = users.first?.profileImage {
+                let image = UIImage(data: imageData)
+                self.profileImageView.image = image
+            }
+        }
         navigationBar.addSubview(profileImageView)
         
         // setup constraints
