@@ -16,8 +16,6 @@ class InfoCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //self.sizeToFit()
-        // Initialization code
     }
     
     public func configure(image: UIImage, text: String){

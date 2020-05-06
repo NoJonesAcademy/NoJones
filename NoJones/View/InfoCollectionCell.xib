@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achievement1" translatesAutoresizingMaskIntoConstraints="NO" id="PqG-KA-5Fc">
-                    <rect key="frame" x="0.0" y="0.0" width="469" height="253.00000000000006"/>
+                    <rect key="frame" x="0.0" y="0.0" width="469" height="253"/>
                     <accessibility key="accessibilityConfiguration" identifier="InfoCell"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E32-2H-Dn0">

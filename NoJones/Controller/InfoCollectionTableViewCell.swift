@@ -21,16 +21,12 @@ class InfoCollectionTableViewCell: UITableViewCell {
         infoCollectionView.register(InfoCollectionViewCell.nib(), forCellWithReuseIdentifier: "InfoCollectionCell")
         infoCollectionView.delegate = self
         infoCollectionView.dataSource = self
-        
-        //infoCollectionView
-        
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
@@ -46,7 +42,6 @@ extension InfoCollectionTableViewCell: UICollectionViewDelegate, UICollectionVie
         var cell: InfoCollectionViewCell
         
         cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoCollectionCell", for: indexPath) as! InfoCollectionViewCell
-        cell.configure(image: #imageLiteral(resourceName: "achievement3-enable"), text: "Esta funcionando bem agora ")
         
         switch indexPath.item {
         case 0:
@@ -57,12 +52,17 @@ extension InfoCollectionTableViewCell: UICollectionViewDelegate, UICollectionVie
             cell.configure(image: #imageLiteral(resourceName: "reversao"), text: "Reversão de Hábitos")
         case 3:
             cell.configure(image: #imageLiteral(resourceName: "terapeuta"), text: "Análise Funcional")
-            
         default:
             break
         }
     
         return cell
+    }
+    
+    override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        print("TESTANDO TESTANDo")
+        
+        return true
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
