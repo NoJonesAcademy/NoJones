@@ -274,10 +274,10 @@
 				81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */,
 				810A6201245700F300E98DF4 /* Dashboard.storyboard */,
 				AE3258AD24604FC70089FA35 /* UserProfile.storyboard */,
-				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
-				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
 				275C4F162462FCC1006065D4 /* Info.storyboard */,
 				275C4F172462FCC1006065D4 /* InfoCollectionCell.xib */,
+				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
+				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -625,7 +625,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */,
 				81DB9AD32462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift in Sources */,
 				81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */,
 				275C4F142462FC47006065D4 /* InfoCollectionTableViewCell.swift in Sources */,
@@ -648,8 +647,6 @@
 				81DB9AD92462300D00B45CF3 /* Achievements+CoreDataClass.swift in Sources */,
 				275C4F152462FC47006065D4 /* InfoAppTableViewCell.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
-				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
-				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
 				275C4F1D2463006A006065D4 /* HabitsSectionHeader.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
@@ -665,7 +662,6 @@
 				81DB9ADA2462300D00B45CF3 /* Achievements+CoreDataProperties.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 				81DB9AD72462300D00B45CF3 /* Habit+CoreDataClass.swift in Sources */,
-				AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */,
 				275C4F1B24630021006065D4 /* AchievementCollectionViewCell.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 			);
