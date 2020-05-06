@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0EE6005F129CABBDAB7B5F85 /* Pods_NoJones_NoJonesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EE235A9AF9118B59D90D8F /* Pods_NoJones_NoJonesUITests.framework */; };
-		7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB288124508525001A8467 /* OnBoardingViewController.swift */; };
+		7C2BA1D62461E9BD00099300 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BA1D52461E9BD00099300 /* Page.swift */; };
+		7CE21AE024605B4B004F7509 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE21ADF24605B4B004F7509 /* Slide.xib */; };
+		7CE21AE224605E97004F7509 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE21AE124605E97004F7509 /* OnBoarding.storyboard */; };
+		7CE21AE4246063F0004F7509 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE21AE3246063F0004F7509 /* OnBoardingViewController.swift */; };
+		7CE21AE6246065D4004F7509 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE21AE5246065D4004F7509 /* Slide.swift */; };
 		7CF0241E24586767002759F7 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0241D24586767002759F7 /* InitialScreen.storyboard */; };
 		7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0241F24587242002759F7 /* InitialScreenViewController.swift */; };
 		8100FA67245B030A006EFF92 /* DayWeekCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */; };
@@ -25,7 +29,6 @@
 		8124865D244E3FC10091CFA4 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8124865C244E3FC10091CFA4 /* Progress.storyboard */; };
 		81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124865F244E447C0091CFA4 /* ProgressViewController.swift */; };
 		81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248663244E4A980091CFA4 /* AddAddiction.storyboard */; };
-		81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248665244E4AA60091CFA4 /* OnBoarding.storyboard */; };
 		81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */; };
 		819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD3245A1601005D07E8 /* Addiction.swift */; };
 		819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D4DD5245A1608005D07E8 /* Achievement.swift */; };
@@ -65,7 +68,11 @@
 		21EE235A9AF9118B59D90D8F /* Pods_NoJones_NoJonesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoJones_NoJonesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4567A5930D61A7B1E165E6D1 /* Pods-NoJones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.release.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.release.xcconfig"; sourceTree = "<group>"; };
 		58927E0B460B73A9CDED4FF3 /* Pods-NoJones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.debug.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.debug.xcconfig"; sourceTree = "<group>"; };
-		7CDB288124508525001A8467 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		7C2BA1D52461E9BD00099300 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		7CE21ADF24605B4B004F7509 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		7CE21AE124605E97004F7509 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		7CE21AE3246063F0004F7509 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		7CE21AE5246065D4004F7509 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		7CF0241D24586767002759F7 /* InitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
 		7CF0241F24587242002759F7 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayWeekCustomView.xib; sourceTree = "<group>"; };
@@ -88,7 +95,6 @@
 		8124865C244E3FC10091CFA4 /* Progress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
 		8124865F244E447C0091CFA4 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		81248663244E4A980091CFA4 /* AddAddiction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAddiction.storyboard; sourceTree = "<group>"; };
-		81248665244E4AA60091CFA4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitDetails.storyboard; sourceTree = "<group>"; };
 		819D4DD3245A1601005D07E8 /* Addiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		819D4DD5245A1608005D07E8 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
@@ -217,9 +223,9 @@
 		81248657244E3F2C0091CFA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7CE21AE5246065D4004F7509 /* Slide.swift */,
 				81248658244E3F7D0091CFA4 /* TabBar.storyboard */,
 				8124865C244E3FC10091CFA4 /* Progress.storyboard */,
-				81248665244E4AA60091CFA4 /* OnBoarding.storyboard */,
 				81248663244E4A980091CFA4 /* AddAddiction.storyboard */,
 				81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */,
 				810A6201245700F300E98DF4 /* Dashboard.storyboard */,
@@ -230,6 +236,8 @@
 				AE3258AB245867FA0089FA35 /* HabitsSectionHeader.swift */,
 				7CF0241D24586767002759F7 /* InitialScreen.storyboard */,
 				8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */,
+				7CE21ADF24605B4B004F7509 /* Slide.xib */,
+				7CE21AE124605E97004F7509 /* OnBoarding.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,8 +249,8 @@
 				810A62032457011400E98DF4 /* DashboardViewController.swift */,
 				AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */,
 				8124865F244E447C0091CFA4 /* ProgressViewController.swift */,
-				7CDB288124508525001A8467 /* OnBoardingViewController.swift */,
 				7CF0241F24587242002759F7 /* InitialScreenViewController.swift */,
+				7CE21AE3246063F0004F7509 /* OnBoardingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			children = (
 				819D4DD3245A1601005D07E8 /* Addiction.swift */,
 				819D4DD5245A1608005D07E8 /* Achievement.swift */,
+				7C2BA1D52461E9BD00099300 /* Page.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,13 +409,14 @@
 				81248659244E3F7D0091CFA4 /* TabBar.storyboard in Resources */,
 				7CF0241E24586767002759F7 /* InitialScreen.storyboard in Resources */,
 				8124865D244E3FC10091CFA4 /* Progress.storyboard in Resources */,
+				7CE21AE024605B4B004F7509 /* Slide.xib in Resources */,
 				810A6202245700F300E98DF4 /* Dashboard.storyboard in Resources */,
 				81248631244E3CBE0091CFA4 /* Assets.xcassets in Resources */,
-				81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */,
 				AE3258A824585BB50089FA35 /* HabitsSectionHeader.xib in Resources */,
 				81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */,
 				8100FA67245B030A006EFF92 /* DayWeekCustomView.xib in Resources */,
 				81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */,
+				7CE21AE224605E97004F7509 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,15 +549,17 @@
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
 				81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */,
-				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
 				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
 				81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */,
+				7C2BA1D62461E9BD00099300 /* Page.swift in Sources */,
+				7CE21AE4246063F0004F7509 /* OnBoardingViewController.swift in Sources */,
 				81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */,
 				81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */,
+				7CE21AE6246065D4004F7509 /* Slide.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 				AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */,
 			);
