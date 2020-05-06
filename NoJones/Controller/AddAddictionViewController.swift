@@ -46,13 +46,13 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
         addictionData = ["Vezes ao Dia","Minutos","Horas"]
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissModal))
-
+        
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(createHabit))
         
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "buttonColor")
-
+        
     }
     
     
@@ -70,10 +70,10 @@ extension AddAddictionViewController: UITextFieldDelegate {
         
         customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 0
-                
+        
         customTextField(textField: habitNameTextField)
         self.habitNameTextField.tag = 1
-       
+        
         customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 2
         
@@ -114,12 +114,14 @@ extension AddAddictionViewController {
         
         var habit = NewHabit()
         var complete = true
+        let textFieldColor = UIColor(named: "buttonColor")?.cgColor
         
         if habitNameTextField.text == "" {
             warningEmptyTextField(textField: habitNameTextField)
             complete = false
         }
         else {
+            habitNameTextField.layer.borderColor = textFieldColor
             habit.name = habitNameTextField.text
         }
         if newHabitTextField.text == "" {
@@ -127,20 +129,23 @@ extension AddAddictionViewController {
             complete = false
         }
         else {
+            newHabitTextField.layer.borderColor = textFieldColor
             habit.concurrent = newHabitTextField.text
         }
         if fellingsBeforeTextField.text == "" {
-           warningEmptyTextField(textField: fellingsBeforeTextField)
+            warningEmptyTextField(textField: fellingsBeforeTextField)
             complete = false
         }
         else {
-             habit.initialFelling = fellingsBeforeTextField.text
+            fellingsBeforeTextField.layer.borderColor = textFieldColor
+            habit.initialFelling = fellingsBeforeTextField.text
         }
         if feelingsAfterTextField.text == "" {
             warningEmptyTextField(textField: feelingsAfterTextField)
             complete = false
         }
         else {
+            feelingsAfterTextField.layer.borderColor = textFieldColor
             habit.finalFeeling = feelingsAfterTextField.text
         }
         
@@ -156,7 +161,7 @@ extension AddAddictionViewController {
         let alertController = UIAlertController(title: "Oops", message:
             "Você esqueceu de algo", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Entendi", style: .default))
-
+        
         self.present(alertController, animated: true, completion: nil)
     }
 }
