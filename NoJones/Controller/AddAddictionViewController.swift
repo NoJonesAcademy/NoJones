@@ -45,11 +45,11 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
         self.addictionPicker.dataSource = self
         addictionData = ["Vezes ao Dia","Minutos","Horas"]
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissModal))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(dismissModal))
         
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(createHabit))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(createHabit))
         
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
