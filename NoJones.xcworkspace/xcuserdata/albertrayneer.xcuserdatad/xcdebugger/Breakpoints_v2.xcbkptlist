@@ -96,7 +96,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "126">
+                  offsetFromSymbolStart = "144">
                </Location>
                <Location
                   uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - ef02bce157e13f4a"
@@ -111,7 +111,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "160">
+                  offsetFromSymbolStart = "196">
                </Location>
                <Location
                   uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - 9a1525a8daa5a7b"
@@ -126,7 +126,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - 18ba00ed734bfc52"
@@ -141,7 +141,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "4">
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - b328974beb0a2baa"
@@ -156,7 +156,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "579">
+                  offsetFromSymbolStart = "524">
                </Location>
                <Location
                   uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - 36ab2a131a597d47"
@@ -171,7 +171,164 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "511">
+                  offsetFromSymbolStart = "468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "640B0031-1CA9-49CD-BDF4-06EF1383CD4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoJones/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "297BF20C-FF52-4A83-AF48-83E44B367648"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoJones/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "297BF20C-FF52-4A83-AF48-83E44B367648 - 2c68dbceec30a4a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.AppDelegate.window.getter : Swift.Optional&lt;__C.UIWindow&gt;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "297BF20C-FF52-4A83-AF48-83E44B367648 - e7616fac8b1c44c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.AppDelegate.window.setter : Swift.Optional&lt;__C.UIWindow&gt;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "297BF20C-FF52-4A83-AF48-83E44B367648 - 5e2c9b04b8625ca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.AppDelegate.window.modify : Swift.Optional&lt;__C.UIWindow&gt;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "297BF20C-FF52-4A83-AF48-83E44B367648 - d6e510ba35cfd738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.AppDelegate.window.modify : Swift.Optional&lt;__C.UIWindow&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "297BF20C-FF52-4A83-AF48-83E44B367648 - 44f6c4de7df9fc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.AppDelegate.init() -&gt; NoJones.AppDelegate"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "636CAC4E-9543-439D-8392-BDF1CBBE25A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoJones/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "636CAC4E-9543-439D-8392-BDF1CBBE25A6 - 91b7d83ca16c3d40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.AppDelegate.systemVersion.getter : Swift.Double"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "636CAC4E-9543-439D-8392-BDF1CBBE25A6 - 44f6c4de7df9fc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.AppDelegate.init() -&gt; NoJones.AppDelegate"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "152">
                </Location>
             </Locations>
          </BreakpointContent>

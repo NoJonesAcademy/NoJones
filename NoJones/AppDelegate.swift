@@ -15,18 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let flag = UserDefaults.standard
 
-    let systemVersion = Double(UIDevice.current.systemVersion)
+    let systemVersion = Double(UIDevice.current.systemVersion) ?? 12.4
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let systemVersion = systemVersion {
-            
+        
             if systemVersion <= 12.9 {
                 _ = AppRouter.init(window: window)
             }
             
-        }
         return true
     }
 
