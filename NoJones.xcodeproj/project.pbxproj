@@ -14,10 +14,13 @@
 		275C4F152462FC47006065D4 /* InfoAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275C4F112462FC47006065D4 /* InfoAppTableViewCell.swift */; };
 		275C4F182462FCC1006065D4 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F162462FCC1006065D4 /* Info.storyboard */; };
 		275C4F192462FCC1006065D4 /* InfoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F172462FCC1006065D4 /* InfoCollectionCell.xib */; };
+		275C4F1B24630021006065D4 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275C4F1A24630021006065D4 /* AchievementCollectionViewCell.swift */; };
+		275C4F1D2463006A006065D4 /* HabitsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275C4F1C2463006A006065D4 /* HabitsSectionHeader.swift */; };
+		275C4F1F2463009D006065D4 /* DayWeekCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F1E2463009D006065D4 /* DayWeekCustomView.xib */; };
+		275C4F21246300B0006065D4 /* HabitsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F20246300B0006065D4 /* HabitsSectionHeader.xib */; };
+		275C4F23246300D5006065D4 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275C4F22246300D4006065D4 /* InitialScreen.storyboard */; };
 		7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB288124508525001A8467 /* OnBoardingViewController.swift */; };
-		7CF0241E24586767002759F7 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF0241D24586767002759F7 /* InitialScreen.storyboard */; };
 		7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0241F24587242002759F7 /* InitialScreenViewController.swift */; };
-		8100FA67245B030A006EFF92 /* DayWeekCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */; };
 		810A6202245700F300E98DF4 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810A6201245700F300E98DF4 /* Dashboard.storyboard */; };
 		810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810A62032457011400E98DF4 /* DashboardViewController.swift */; };
 		81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81248624244E3CBB0091CFA4 /* AppDelegate.swift */; };
@@ -40,9 +43,6 @@
 		81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */; };
 		81DB9A942460A82800B45CF3 /* SegueRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9A932460A82800B45CF3 /* SegueRoute.swift */; };
 		81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */; };
-		AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */; };
-		AE3258A824585BB50089FA35 /* HabitsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */; };
-		AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258AB245867FA0089FA35 /* HabitsSectionHeader.swift */; };
 		AE3258AE24604FC70089FA35 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3258AD24604FC70089FA35 /* UserProfile.storyboard */; };
 		AE3258B0246055AE0089FA35 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258AF246055AE0089FA35 /* UserProfileViewController.swift */; };
 		AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */; };
@@ -79,12 +79,15 @@
 		275C4F112462FC47006065D4 /* InfoAppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoAppTableViewCell.swift; sourceTree = "<group>"; };
 		275C4F162462FCC1006065D4 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		275C4F172462FCC1006065D4 /* InfoCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCollectionCell.xib; sourceTree = "<group>"; };
+		275C4F1A24630021006065D4 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
+		275C4F1C2463006A006065D4 /* HabitsSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsSectionHeader.swift; sourceTree = "<group>"; };
+		275C4F1E2463009D006065D4 /* DayWeekCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayWeekCustomView.xib; sourceTree = "<group>"; };
+		275C4F20246300B0006065D4 /* HabitsSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HabitsSectionHeader.xib; sourceTree = "<group>"; };
+		275C4F22246300D4006065D4 /* InitialScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
 		4567A5930D61A7B1E165E6D1 /* Pods-NoJones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.release.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.release.xcconfig"; sourceTree = "<group>"; };
 		58927E0B460B73A9CDED4FF3 /* Pods-NoJones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJones.debug.xcconfig"; path = "Target Support Files/Pods-NoJones/Pods-NoJones.debug.xcconfig"; sourceTree = "<group>"; };
 		7CDB288124508525001A8467 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		7CF0241D24586767002759F7 /* InitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
 		7CF0241F24587242002759F7 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
-		8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayWeekCustomView.xib; sourceTree = "<group>"; };
 		810A6201245700F300E98DF4 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		810A62032457011400E98DF4 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		81248621244E3CBB0091CFA4 /* NoJones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoJones.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,9 +117,6 @@
 		81DB9A932460A82800B45CF3 /* SegueRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueRoute.swift; sourceTree = "<group>"; };
 		81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeekCustomView.swift; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
-		AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitsSectionHeader.xib; sourceTree = "<group>"; };
-		AE3258AB245867FA0089FA35 /* HabitsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsSectionHeader.swift; sourceTree = "<group>"; };
 		AE3258AD24604FC70089FA35 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		AE3258AF246055AE0089FA35 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		AEB17E8424506E9D00B99198 /* AddAddictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddictionViewController.swift; sourceTree = "<group>"; };
@@ -246,13 +246,8 @@
 				AE3258AD24604FC70089FA35 /* UserProfile.storyboard */,
 				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
 				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
-				AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */,
-				AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */,
-				AE3258AB245867FA0089FA35 /* HabitsSectionHeader.swift */,
-				7CF0241D24586767002759F7 /* InitialScreen.storyboard */,
 				275C4F162462FCC1006065D4 /* Info.storyboard */,
 				275C4F172462FCC1006065D4 /* InfoCollectionCell.xib */,
-				8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,12 +307,12 @@
 		81F3A597245B25E0008BE5F1 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				AE3258A5245855190089FA35 /* AchievementCollectionViewCell.swift */,
-				AE3258A724585BB50089FA35 /* HabitsSectionHeader.xib */,
-				AE3258AB245867FA0089FA35 /* HabitsSectionHeader.swift */,
-				7CF0241D24586767002759F7 /* InitialScreen.storyboard */,
-				8100FA66245B030A006EFF92 /* DayWeekCustomView.xib */,
+				275C4F1A24630021006065D4 /* AchievementCollectionViewCell.swift */,
 				81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */,
+				275C4F20246300B0006065D4 /* HabitsSectionHeader.xib */,
+				275C4F22246300D4006065D4 /* InitialScreen.storyboard */,
+				275C4F1C2463006A006065D4 /* HabitsSectionHeader.swift */,
+				275C4F1E2463009D006065D4 /* DayWeekCustomView.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -433,18 +428,18 @@
 			files = (
 				81248634244E3CBE0091CFA4 /* LaunchScreen.storyboard in Resources */,
 				81248659244E3F7D0091CFA4 /* TabBar.storyboard in Resources */,
+				275C4F1F2463009D006065D4 /* DayWeekCustomView.xib in Resources */,
+				275C4F21246300B0006065D4 /* HabitsSectionHeader.xib in Resources */,
 				275C4F192462FCC1006065D4 /* InfoCollectionCell.xib in Resources */,
-				7CF0241E24586767002759F7 /* InitialScreen.storyboard in Resources */,
 				8124865D244E3FC10091CFA4 /* Progress.storyboard in Resources */,
 				810A6202245700F300E98DF4 /* Dashboard.storyboard in Resources */,
 				81248631244E3CBE0091CFA4 /* Assets.xcassets in Resources */,
 				275C4F182462FCC1006065D4 /* Info.storyboard in Resources */,
 				81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */,
-				AE3258A824585BB50089FA35 /* HabitsSectionHeader.xib in Resources */,
 				81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */,
 				AE3258AE24604FC70089FA35 /* UserProfile.storyboard in Resources */,
-				8100FA67245B030A006EFF92 /* DayWeekCustomView.xib in Resources */,
 				81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */,
+				275C4F23246300D5006065D4 /* InitialScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +567,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE3258A6245855190089FA35 /* AchievementCollectionViewCell.swift in Sources */,
 				275C4F142462FC47006065D4 /* InfoCollectionTableViewCell.swift in Sources */,
 				81DB9A942460A82800B45CF3 /* SegueRoute.swift in Sources */,
 				810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */,
@@ -587,14 +581,15 @@
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				819D4DD6245A1609005D07E8 /* Achievement.swift in Sources */,
 				819D4DD4245A1601005D07E8 /* Addiction.swift in Sources */,
+				275C4F1D2463006A006065D4 /* HabitsSectionHeader.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
 				81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */,
 				81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */,
 				81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */,
 				AEE041A724619AD900187734 /* UIView+Blur.swift in Sources */,
+				275C4F1B24630021006065D4 /* AchievementCollectionViewCell.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
-				AE3258AC245867FA0089FA35 /* HabitsSectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
