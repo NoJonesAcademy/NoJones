@@ -12,7 +12,7 @@ import SnapKit
 
 class UserProfileViewController: UIViewController {
     
-    let image = UIImage(named: "emptyProfile")
+    var image = UIImage(named: "emptyProfile")
     let profileImage = UIImageView()
     let roundIcon = UIImageView(
         frame: CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -21,6 +21,8 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userAge: UITextField!
+    
+    let userDao = CoreDao<User>(with: "User")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +64,19 @@ class UserProfileViewController: UIViewController {
         self.profileImage.image = image
         self.profileImage.contentMode = .scaleAspectFill
         self.profileImage.blurView.enable()
+        // fetch data from user
+        
+        do {
+            let users = try userDao.fetchAll()
+            print(users)
+            if let imageData = users.first?.profileImage {
+                self.image = UIImage(data: imageData)
+                self.profileImage.image = self.image
+                self.roundIcon.image = self.image
+            }
+        }
+        
+        
         
         scrollView.parallaxHeader.view = self.profileImage
         scrollView.parallaxHeader.height = 400
@@ -115,6 +130,15 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         guard let image = info[.editedImage] as? UIImage else { return }
         self.profileImage.image = image
         self.roundIcon.image = image
+
+        // core data save data
+        let user = userDao.new()
+        user.name = "Vinicius"
+        user.age = 20
+        user.profileImage = image.pngData()
+        userDao.insert(object: user)
+        _ = userDao.new()
+        
         dismiss(animated: true)
     }
 }

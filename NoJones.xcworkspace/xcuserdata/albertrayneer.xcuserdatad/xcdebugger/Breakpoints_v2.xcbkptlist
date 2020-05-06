@@ -36,5 +36,145 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34BA80A9-5E02-47D5-A3C8-337467293E00"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoJones/Controller/AddAddictionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "createHabit()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A9FAB2A-510F-4906-BDC8-B08240F6ECAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoJones/Controller/HabitDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "configureHabitDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoJones/Controller/HabitDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "HabitDetailsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - 15862f5f82a17b7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.HabitDetailsViewController.habit.getter : Swift.Optional&lt;NoJones.Habit&gt;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/Controller/HabitDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - ef02bce157e13f4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.HabitDetailsViewController.habit.setter : Swift.Optional&lt;NoJones.Habit&gt;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/Controller/HabitDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - 9a1525a8daa5a7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.HabitDetailsViewController.habit.modify : Swift.Optional&lt;NoJones.Habit&gt;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/Controller/HabitDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - 18ba00ed734bfc52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.HabitDetailsViewController.habit.modify : Swift.Optional&lt;NoJones.Habit&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/Controller/HabitDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - b328974beb0a2baa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.HabitDetailsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NoJones.HabitDetailsViewController"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/Controller/HabitDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "579">
+               </Location>
+               <Location
+                  uuid = "3152FDE8-26DD-455E-BA52-80EF9EC8B748 - 36ab2a131a597d47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NoJones.HabitDetailsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NoJones.HabitDetailsViewController&gt;"
+                  moduleName = "NoJones"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albertrayneer/Documents/NoJones/NoJones/Controller/HabitDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "511">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

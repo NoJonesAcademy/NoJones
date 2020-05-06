@@ -2,7 +2,7 @@
 //  Achievement.swift
 //  NoJones
 //
-//  Created by Albert Rayneer on 22/04/20.
+//  Created by Albert Rayneer on 06/05/20.
 //  Copyright © 2020 NoJones. All rights reserved.
 //
 
@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 struct Achievement {
-    var image: UIImage?
-    var name: String?
+    let image: UIImage?
+    let name: String?
 }

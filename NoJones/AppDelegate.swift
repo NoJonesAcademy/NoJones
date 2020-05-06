@@ -88,6 +88,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        
+        let coreStack = CoreStack(with: "NoJones")
+        coreStack.saveContext()
+        
+    }
 
 }
 

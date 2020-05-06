@@ -10,13 +10,12 @@ import UIKit
 
 class DashboardViewController: InitialScreenViewController {
     
+    let habitDao = CoreDao<Habit>(with: "Habit")
+    let achievementsDao = CoreDao<Achievements>(with: "Achievements")
+    
     //MARK: Collection and Table Data from Model
-    var addictions = [
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico"),
-        Addiction(name: "Cigarro", days: 0, type: "Cronico")
-        ]
-        {
+    var habits: [Habit] = []
+    {
         didSet {
             showEmptyStateIllustration()
         }
@@ -42,6 +41,7 @@ class DashboardViewController: InitialScreenViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        habits = habitDao.fetchAll()
         tableView.reloadData()
         self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         setTitle()
@@ -59,15 +59,23 @@ class DashboardViewController: InitialScreenViewController {
         
         backButton.title = "Dashboard"
         navigationItem.backBarButtonItem = backButton
-      
-        guard let indexPath = tableView.indexPathForSelectedRow else {
-            return
-        }
+
         
-        let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
-        if let viewController = habitsDetailsViewController {
-            viewController.habit = addictions[indexPath.row]
+        if segue.identifier! == SegueDestination.HabitDetails.rawValue {
+            guard let indexPath = tableView.indexPathForSelectedRow else {
+                      return
+                  }
+            let habitsDetailsViewController = segue.destination as? HabitDetailsViewController
+            if let viewController = habitsDetailsViewController {
+                viewController.habit = habits[indexPath.row]
+            }
+        } else if segue.identifier! == SegueDestination.AddHabit.rawValue {
+            let navigation = segue.destination as? UINavigationController
+            if let viewController = navigation?.topViewController as? AddAddictionViewController {
+                viewController.delegate = self
+            }
         }
+
     }
     
     //MARK: ViewDidLoad
@@ -110,7 +118,7 @@ class DashboardViewController: InitialScreenViewController {
     }
     
     func showEmptyStateIllustration() {
-        noAddictionMessage.frame.size.height = self.addictions.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
+        noAddictionMessage.frame.size.height = self.habits.isEmpty ? Constants.dashBoardTableViewHeaderHeight.rawValue : 0
     }
 }
 
@@ -208,14 +216,14 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return addictions.count
+        return habits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "addictionCell")
         
-        cell.textLabel?.text = addictions[indexPath.row].name
-        cell.detailTextLabel?.text = addictions[indexPath.row].type
+        cell.textLabel?.text = habits[indexPath.row].name
+        cell.detailTextLabel?.text = habits[indexPath.row].concurrent?.name
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -238,15 +246,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Add Addiction Action Button
     @objc func addAddiction() {
-        performSegue(withIdentifier: "addAddictionSegue", sender: nil)
-        
-        //Insert new Row
-        //        let newAddiction = Addiction(name: "Games", days: 0, type: "Tech", done: false)
-        //        addictions.insert(newAddiction, at: 0)
-        //        tableView.beginUpdates()
-        //        let indexPath = IndexPath(row: 0, section: 0)
-        //        tableView.insertRows(at: [indexPath], with: .left)
-        //        tableView.endUpdates()
+        performSegue(withIdentifier: "addHabitSegue", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -262,12 +262,13 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Deleting Cells
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        habitDao.delete(object: habits[indexPath.row])
         return .delete
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
-        addictions.remove(at: indexPath.row)
+        habits.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }
@@ -287,5 +288,16 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         cell.achievement = self.achievements[indexPath.row]
         
         return cell
+    }
+}
+
+//Create Habit
+extension DashboardViewController: HabitDelegate {
+    func didCreateHabit(_ habit: Habit) {
+        habits.insert(habit, at: 0)
+        tableView.beginUpdates()
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexPath], with: .left)
+        tableView.endUpdates()
     }
 }

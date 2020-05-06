@@ -8,12 +8,15 @@
 
 import UIKit
 
-
 class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var delegate: HabitDelegate?
+    let habitDao = CoreDao<Habit>(with: "Habit")
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var addictionPicker: UIPickerView!
-    @IBOutlet weak var addictionNameTextField: UITextField!
+    //TextFields
+    @IBOutlet weak var habitNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
     @IBOutlet weak var fellingsBeforeTextField: UITextField!
     @IBOutlet weak var feelingsAfterTextField: UITextField!
@@ -43,13 +46,13 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
         addictionData = ["Vezes ao Dia","Minutos","Horas"]
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissModal))
-
+        
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveData))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(createHabit))
         
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "buttonColor")
-
+        
     }
     
     
@@ -58,13 +61,6 @@ class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPick
         //self.navigationController?
     }
     
-    @objc func saveData(){
-        print(addictionNameTextField.text ?? "Vazio")
-        print(newHabitTextField.text ?? "Vazio")
-        print(fellingsBeforeTextField.text ?? "Vazio")
-        print(feelingsAfterTextField.text ?? "Vazio")
-        print(addictionPicker.selectedRow(inComponent: 0))
-    }
 }
 
 
@@ -74,10 +70,10 @@ extension AddAddictionViewController: UITextFieldDelegate {
         
         customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 0
-                
-        customTextField(textField: addictionNameTextField)
-        self.addictionNameTextField.tag = 1
-       
+        
+        customTextField(textField: habitNameTextField)
+        self.habitNameTextField.tag = 1
+        
         customTextField(textField: newHabitTextField)
         self.newHabitTextField.tag = 2
         
@@ -110,4 +106,68 @@ extension AddAddictionViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+extension AddAddictionViewController {
+    
+    @objc func createHabit(){
+        
+        let habit = habitDao.new()
+        var complete = true
+        let textFieldColor = UIColor(named: "buttonColor")?.cgColor
+        
+        if habitNameTextField.text == "" {
+            warningEmptyTextField(textField: habitNameTextField)
+            complete = false
+        }
+        else {
+            habitNameTextField.layer.borderColor = textFieldColor
+            habit.name = habitNameTextField.text
+        }
+        if newHabitTextField.text == "" {
+            warningEmptyTextField(textField: newHabitTextField)
+            complete = false
+        }
+        else {
+            newHabitTextField.layer.borderColor = textFieldColor
+            habit.concurrent?.name = newHabitTextField.text
+        }
+        if fellingsBeforeTextField.text == "" {
+            warningEmptyTextField(textField: fellingsBeforeTextField)
+            complete = false
+        }
+        else {
+            fellingsBeforeTextField.layer.borderColor = textFieldColor
+            habit.initialFelling = fellingsBeforeTextField.text
+        }
+        if feelingsAfterTextField.text == "" {
+            warningEmptyTextField(textField: feelingsAfterTextField)
+            complete = false
+        }
+        else {
+            feelingsAfterTextField.layer.borderColor = textFieldColor
+            habit.finalFelling = feelingsAfterTextField.text
+        }
+        
+        if complete {
+            delegate?.didCreateHabit(habit)
+            dismissModal()
+            habitDao.insert(object: habit)
+            _ = habitDao.new()
+        }
+    }
+    
+    func warningEmptyTextField(textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.red.cgColor
+        let alertController = UIAlertController(title: "Oops", message:
+            "Você esqueceu de algo", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Entendi", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+protocol HabitDelegate {
+    func didCreateHabit(_ habit: Habit)
 }

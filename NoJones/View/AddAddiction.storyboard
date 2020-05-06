@@ -149,10 +149,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar Hábito" id="omL-qD-hAA"/>
                     <connections>
-                        <outlet property="addictionNameTextField" destination="UQ1-0c-ONN" id="Ryw-5P-wra"/>
                         <outlet property="addictionPicker" destination="ThN-if-JJj" id="MK0-BY-yPx"/>
                         <outlet property="feelingsAfterTextField" destination="48k-Aw-A52" id="WoJ-gE-RP7"/>
                         <outlet property="fellingsBeforeTextField" destination="To1-ae-qnu" id="bUx-Gb-Mxj"/>
+                        <outlet property="habitNameTextField" destination="UQ1-0c-ONN" id="DA7-bR-ynY"/>
                         <outlet property="newHabitTextField" destination="wkU-wi-h2p" id="db8-JQ-sYJ"/>
                         <outlet property="scrollView" destination="m1P-8O-CLe" id="5yK-sa-joh"/>
                     </connections>
