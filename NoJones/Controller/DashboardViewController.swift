@@ -10,6 +10,7 @@ import UIKit
 
 class DashboardViewController: InitialScreenViewController {
     
+    let userDao = CoreDao<User>(with: "User")
     let habitDao = CoreDao<Habit>(with: "Habit")
     let achievementsDao = CoreDao<Achievements>(with: "Achievements")
     
@@ -26,7 +27,13 @@ class DashboardViewController: InitialScreenViewController {
         Achievement(image: UIImage(named: "achievement2-disable"), name: "OneDay"),
         Achievement(image: UIImage(named: "achievement3-disable"), name: "SevenDays"),
         Achievement(image: UIImage(named: "achievement4-disable"), name: "OneMonth"),
-        Achievement(image: UIImage(named: "achievement5-disable"), name: "OneYear")
+        Achievement(image: UIImage(named: "achievement5-disable"), name: "OneYear"),
+        Achievement(image: UIImage(named: "achievement6-disable"), name: "Welcome"),
+        Achievement(image: UIImage(named: "achievement7-disable"), name: "OneDay"),
+        Achievement(image: UIImage(named: "achievement8-disable"), name: "SevenDays"),
+        Achievement(image: UIImage(named: "achievement9-disable"), name: "OneMonth"),
+        Achievement(image: UIImage(named: "achievement10-disable"), name: "OneYear"),
+        Achievement(image: UIImage(named: "achievement11-disable"), name: "OneYear")
     ]
     
     //MARK: IBOutlets
@@ -42,6 +49,7 @@ class DashboardViewController: InitialScreenViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         habits = habitDao.fetchAll()
+        setupUserImage()
         tableView.reloadData()
         self.userName = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
         setTitle()
@@ -86,7 +94,6 @@ class DashboardViewController: InitialScreenViewController {
         collectionView.dataSource = self
         
         setupTableView()
-        setupUserImage()
         showEmptyStateIllustration()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -148,6 +155,14 @@ extension DashboardViewController {
         profileImageView.isUserInteractionEnabled = true
         profileImageView.tintColor = UIColor(named: "buttonColor")
         
+        do {
+            let users = try userDao.fetchAll()
+            print(users)
+            if let imageData = users.first?.profileImage {
+                let image = UIImage(data: imageData)
+                self.profileImageView.image = image
+            }
+        }
         navigationBar.addSubview(profileImageView)
         
         // setup constraints
@@ -155,6 +170,7 @@ extension DashboardViewController {
         profileImageView.clipsToBounds = true
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            
             profileImageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Constants.imageRightMargin.rawValue),
             profileImageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Constants.imageBottomMarginForLargeState.rawValue),
             profileImageView.heightAnchor.constraint(equalToConstant: Constants.imageSizeForLargeState.rawValue),

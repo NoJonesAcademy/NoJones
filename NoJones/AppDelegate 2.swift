@@ -13,18 +13,9 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let flag = UserDefaults.standard
-
-    let systemVersion = Double(UIDevice.current.systemVersion) ?? 12.4
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        
-            if systemVersion <= 12.9 {
-                _ = AppRouter.init(window: window)
-            }
-            
         return true
     }
 
@@ -41,10 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
 
     // MARK: - Core Data stack
-    
+    @available(iOS 13.0, *)
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -73,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     // MARK: - Core Data Saving support
-   
+    @available(iOS 13.0, *)
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -86,14 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
-    
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        
-        let coreStack = CoreStack(with: "NoJones")
-        coreStack.saveContext()
-        
     }
 
 }

@@ -296,10 +296,10 @@
 				81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */,
 				810A6201245700F300E98DF4 /* Dashboard.storyboard */,
 				AE3258AD24604FC70089FA35 /* UserProfile.storyboard */,
-				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
-				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
 				275C4F162462FCC1006065D4 /* Info.storyboard */,
 				275C4F172462FCC1006065D4 /* InfoCollectionCell.xib */,
+				81248632244E3CBE0091CFA4 /* LaunchScreen.storyboard */,
+				81248630244E3CBE0091CFA4 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DB9AD32462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift in Sources */,
 				819AD03524638753004C2A89 /* Habit+CoreDataClass.swift in Sources */,
 				819AD03324638753004C2A89 /* Achievements+CoreDataClass.swift in Sources */,
 				81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */,
@@ -684,6 +685,7 @@
 				AEE041A724619AD900187734 /* UIView+Blur.swift in Sources */,
 				819AD03424638753004C2A89 /* Achievements+CoreDataProperties.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
+				81DB9AD72462300D00B45CF3 /* Habit+CoreDataClass.swift in Sources */,
 				275C4F2624633D9F006065D4 /* InfoSitesViewController.swift in Sources */,
 				7C9D32A72463A5F000FE331C /* Slide.swift in Sources */,
 				275C4F1B24630021006065D4 /* AchievementCollectionViewCell.swift in Sources */,
