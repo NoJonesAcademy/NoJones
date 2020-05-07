@@ -7,11 +7,31 @@
 //
 
 import UIKit
+import WebKit
 
-class InfoTableViewController: UITableViewController {
+class InfoTableViewController: UITableViewController, WKNavigationDelegate {
 
+    var webView: WKWebView!
+    
+//    override func loadView() {
+//        webView = WKWebView()
+//        webView.navigationDelegate = self
+//        view = webView
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let url = URL(string: "https://ioscreator.com")!
+//        webView.load(URLRequest(url: url))
+//
+//        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+//        toolbarItems = [refresh]
+//        navigationController?.isToolbarHidden = false
+    }
+    
+    func acessSite(url:String, view: UIViewController){
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -37,10 +57,16 @@ class InfoTableViewController: UITableViewController {
         var cell: UITableViewCell?
         
         if(indexPath.section == 0){
-            cell = tableView.dequeueReusableCell(withIdentifier: "InfoCollectionTableViewCell") as! InfoCollectionTableViewCell
+            var cell2: InfoCollectionTableViewCell = InfoCollectionTableViewCell()
+            cell2 = tableView.dequeueReusableCell(withIdentifier: "InfoCollectionTableViewCell") as! InfoCollectionTableViewCell
+            
+            cell2.naviagationController = self.navigationController
+            return cell2
+            
         }else {
             cell = tableView.dequeueReusableCell(withIdentifier: "infoAppCell")
         }
+        
         
         return cell!
     }
