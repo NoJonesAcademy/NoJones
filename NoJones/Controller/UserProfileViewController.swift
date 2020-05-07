@@ -38,7 +38,7 @@ class UserProfileViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc func keyboardWillShow(notification:NSNotification){
+    @objc func keyboardWillShow(notification:NSNotification) {
 
         let userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
@@ -67,13 +67,15 @@ class UserProfileViewController: UIViewController {
         // fetch data from user
         
         do {
-            let users = try userDao.fetchAll()
-            print(users)
-            if let imageData = users.first?.profileImage {
+            
+            let user = userDao.fetchAll().first
+            
+            if let imageData = user?.profileImage {
                 self.image = UIImage(data: imageData)
                 self.profileImage.image = self.image
                 self.roundIcon.image = self.image
             }
+            
         }
         
         
@@ -130,14 +132,11 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         guard let image = info[.editedImage] as? UIImage else { return }
         self.profileImage.image = image
         self.roundIcon.image = image
-
-        // core data save data
-        let user = userDao.new()
-        user.name = "Vinicius"
-        user.age = 20
-        user.profileImage = image.pngData()
-        userDao.insert(object: user)
-        _ = userDao.new()
+    
+        if let currentUser = userDao.fetchAll().first {
+            currentUser.profileImage = image.pngData()
+            userDao.save()
+        }
         
         dismiss(animated: true)
     }

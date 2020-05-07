@@ -15,6 +15,7 @@ class InfoCollectionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var infoCollectionView: UICollectionView!
     
+    public var naviagationController:UINavigationController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,18 +60,34 @@ extension InfoCollectionTableViewCell: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-    override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        print("TESTANDO TESTANDo")
-        
-        return true
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let cellWidth = collectionView.layer.frame.width / 2 - 10
         let cellHeight = collectionView.layer.frame.height / 2 - 5
         
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name:"Info", bundle: nil)
+        var siteViewController: InfoSitesViewController?
+        
+        siteViewController = storyboard.instantiateViewController(withIdentifier: "InfoSitesViewController") as? InfoSitesViewController
+        
+        switch indexPath.item {
+        case 0:
+            siteViewController?.siteUrl = "https://www.ecodebate.com.br/2017/07/24/tique-toc-ou-simplesmente-habito/"
+        case 1:
+            siteViewController?.siteUrl = "https://drauziovarella.uol.com.br/doencas-e-sintomas/sindrome-de-tourette/"
+        case 2:
+            siteViewController?.siteUrl = "https://casule.com/voce-sabe-como-suprimir-aquele-habito-ruim/"
+        case 3:
+            siteViewController?.siteUrl = "https://www.comportese.com/2017/02/os-conceitos-de-analise-e-avaliacao-funcional"
+        default:
+            break
+        }
+        self.naviagationController?.pushViewController(siteViewController!, animated: true)
     }
     
 }

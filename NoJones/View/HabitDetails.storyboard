@@ -30,7 +30,7 @@
                                                         <rect key="frame" x="68.5" y="10" width="178" height="20"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-E3-gvC">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20.000000000000028"/>
                                                                 <color key="tintColor" name="buttonColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="G0Q-QX-W6g"/>
@@ -152,6 +152,12 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -341,17 +347,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="INx-Lt-LTo">
-                                                <rect key="frame" x="115.5" y="32" width="144" height="20"/>
+                                                <rect key="frame" x="30" y="32" width="315" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Cifsdsa" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXO-Zd-UNo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" name="buttonColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right_enable" translatesAutoresizingMaskIntoConstraints="NO" id="lky-L5-v0L">
-                                                        <rect key="frame" x="67" y="0.0" width="10" height="20"/>
+                                                        <rect key="frame" x="152.5" y="0.0" width="10" height="20"/>
                                                         <color key="tintColor" name="buttonColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="Fl6-Be-Des"/>
@@ -359,7 +365,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cigars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTa-xl-RHW">
-                                                        <rect key="frame" x="87" y="0.0" width="57" height="20"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="142.5" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" name="buttonColor"/>
                                                         <nil key="highlightedColor"/>
@@ -378,6 +384,8 @@
                                             <constraint firstItem="Y4p-50-G8G" firstAttribute="leading" secondItem="Hgc-w7-eRh" secondAttribute="leading" constant="19" id="8oE-jj-mjT"/>
                                             <constraint firstItem="INx-Lt-LTo" firstAttribute="top" secondItem="Hgc-w7-eRh" secondAttribute="top" constant="32" id="BYU-pq-3z1"/>
                                             <constraint firstItem="GTJ-W6-f4m" firstAttribute="centerX" secondItem="Hgc-w7-eRh" secondAttribute="centerX" id="K8q-kT-NA1"/>
+                                            <constraint firstItem="INx-Lt-LTo" firstAttribute="trailing" secondItem="GTJ-W6-f4m" secondAttribute="trailing" id="KJc-z9-lqf"/>
+                                            <constraint firstItem="INx-Lt-LTo" firstAttribute="leading" secondItem="GTJ-W6-f4m" secondAttribute="leading" id="KL7-Sr-KLC"/>
                                             <constraint firstItem="INx-Lt-LTo" firstAttribute="centerX" secondItem="Hgc-w7-eRh" secondAttribute="centerX" id="Lv1-sH-WUr"/>
                                             <constraint firstAttribute="trailing" secondItem="GTJ-W6-f4m" secondAttribute="trailing" constant="30" id="OV1-kf-hRa"/>
                                             <constraint firstItem="Y4p-50-G8G" firstAttribute="top" secondItem="GTJ-W6-f4m" secondAttribute="bottom" constant="50" id="UCr-q1-u4y"/>
