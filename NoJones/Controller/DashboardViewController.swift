@@ -10,9 +10,9 @@ import UIKit
 
 class DashboardViewController: InitialScreenViewController {
     
-    let userDao = CoreDao<User>(with: "User")
+    let userDashDao = CoreDao<User>(with: "User")
     let habitDao = CoreDao<Habit>(with: "Habit")
-    let achievementsDao = CoreDao<Achievements>(with: "Achievements")
+//    let achievementsDao = CoreDao<Achievements>(with: "Achievements")
     
     //MARK: Collection and Table Data from Model
     var habits: [Habit] = []
@@ -155,14 +155,13 @@ extension DashboardViewController {
         profileImageView.isUserInteractionEnabled = true
         profileImageView.tintColor = UIColor(named: "buttonColor")
         
-        do {
-            let users = try userDao.fetchAll()
-            print(users)
-            if let imageData = users.first?.profileImage {
-                let image = UIImage(data: imageData)
-                self.profileImageView.image = image
-            }
+        let users = userDashDao.fetchAll()
+        print(users)
+        if let imageData = users.first?.profileImage {
+            let image = UIImage(data: imageData)
+            self.profileImageView.image = image
         }
+        
         navigationBar.addSubview(profileImageView)
         
         // setup constraints
@@ -222,7 +221,6 @@ extension DashboardViewController {
         moveAndResizeImage(for: height)
     }
 }
-
 
 
 //MARK: Table View Delegate and Data Source
@@ -304,6 +302,7 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
         return cell
     }
 }
+
 
 extension DashboardViewController: HabitDelegate {
     func didCreateHabit(_ habit: Habit) {
