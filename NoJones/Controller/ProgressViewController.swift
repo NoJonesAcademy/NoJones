@@ -16,6 +16,8 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var monthLabel: UILabel!
     private var currentCalendar: Calendar?
     
+    var habits: [Habit]?
+    
     
     override func awakeFromNib() {
         if let currentCalendar = currentCalendar {
@@ -29,6 +31,7 @@ class ProgressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchHabits()
         setupCalendarViews()
         
         self.calendarView.calendarAppearanceDelegate = self
@@ -44,6 +47,11 @@ class ProgressViewController: UIViewController {
         
         menuView.commitMenuViewUpdate()
         calendarView.commitCalendarViewUpdate()
+    }
+    
+    func fetchHabits() {
+        let habitDao = CoreDao<Habit>(with: "Habit")
+        habits = habitDao.fetchAll()
     }
 
 
@@ -87,6 +95,41 @@ extension ProgressViewController: CalendarDelegates {
         self.monthLabel.text = "\(monthCapitalized)  \(year)"
     }
     
+    func dotMarker(shouldShowOnDayView dayView: DayView) -> Bool {
+        
+        guard let habits = habits else {
+          return false
+        }
+    
+        for habit in habits {
+            
+            let dates = habit.dates?.allObjects as! [DateHabit]
+//
+//            for date in dates {
+//                if date.data == dayView.date.convertedDate() {
+//                    return true
+//                }
+//            }
+            
+        }
+        return false
+    }
+
+    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
+        return 20.0
+    }
+    
+    func dotMarker(moveOffsetOnDayView dayView: DayView) -> CGFloat {
+        return 3.0
+    }
+    
+    func dotMarker(shouldMoveOnHighlightingOnDayView dayView: DayView) -> Bool {
+        return false
+    }
+    
+    func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
+        // some action when click day
+    }
 }
 
 extension ProgressViewController: CVCalendarViewAppearanceDelegate {
@@ -96,4 +139,26 @@ extension ProgressViewController: CVCalendarViewAppearanceDelegate {
     func dayLabelWeekdayDisabledColor() -> UIColor { return .lightGray }
        
     func dayOfWeekTextColor() -> UIColor { return .gray }
+    
+    func dayLabelColor(by weekDay: Weekday, status: CVStatus, present: CVPresent) -> UIColor? {
+        if present == .present {
+            return .white
+        }
+        return nil
+    }
+    
+    func dayLabelBackgroundColor(by weekDay: Weekday, status: CVStatus, present: CVPresent) -> UIColor? {
+        if status == .selected {
+            return .blue
+        }
+        
+        if status == .disabled {
+            return .brown
+        }
+        return .cyan
+    }
+    
+    func dotMarker(colorOnDayView dayView: DayView) -> [UIColor] { return [.brown, .darkGray, .gray] }
+    
+    
 }

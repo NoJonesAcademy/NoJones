@@ -303,8 +303,8 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
+        habitDao.delete(object: habits[indexPath.row])
         habits.remove(at: indexPath.row)
-         habitDao.delete(object: habits[indexPath.row])
         tableView.deleteRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }

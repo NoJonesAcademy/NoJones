@@ -8,16 +8,22 @@
 
 import UIKit
 
-class InitialScreenViewController: UIViewController{
+class InitialScreenViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var bornDate: UIDatePicker!
+    
     let userDao = CoreDao<User>(with: "User")
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameTextField?.delegate = self
+        
+        var currentCalendar = Calendar.current
+        currentCalendar.locale = Locale(identifier: "pt_BR")
+        bornDate?.calendar = currentCalendar
+
     }
     
     @IBAction func saveData(_ sender: Any) {
