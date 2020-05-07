@@ -33,7 +33,7 @@ class AddAddictionViewController: UIViewController {
         
         self.addictionPicker.delegate = self
         self.addictionPicker.dataSource = self
-        addictionData = ["Vezes ao Dia","Minutos","Horas"]
+        addictionData = ["Vezes ao Dia", "Minutos", "Horas"]
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(dismissModal))
         

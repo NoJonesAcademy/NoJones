@@ -36,8 +36,6 @@ class UserProfileViewController: UIViewController {
         if let user = self.user {
             userAge.text = String(user.age) + " anos"
         }
-        
-        
 
         userName.delegate = self
         setUserImage()
