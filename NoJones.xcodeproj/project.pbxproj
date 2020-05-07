@@ -37,20 +37,20 @@
 		81248664244E4A980091CFA4 /* AddAddiction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248663244E4A980091CFA4 /* AddAddiction.storyboard */; };
 		81248666244E4AA60091CFA4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248665244E4AA60091CFA4 /* OnBoarding.storyboard */; };
 		81248668244E4AFD0091CFA4 /* HabitDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */; };
+		819AD03324638753004C2A89 /* Achievements+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD02924638753004C2A89 /* Achievements+CoreDataClass.swift */; };
+		819AD03424638753004C2A89 /* Achievements+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD02A24638753004C2A89 /* Achievements+CoreDataProperties.swift */; };
+		819AD03524638753004C2A89 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD02B24638753004C2A89 /* Habit+CoreDataClass.swift */; };
+		819AD03624638753004C2A89 /* Habit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD02C24638753004C2A89 /* Habit+CoreDataProperties.swift */; };
+		819AD03724638753004C2A89 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD02D24638753004C2A89 /* User+CoreDataClass.swift */; };
+		819AD03824638753004C2A89 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD02E24638753004C2A89 /* User+CoreDataProperties.swift */; };
+		819AD03924638753004C2A89 /* DateHabit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD02F24638753004C2A89 /* DateHabit+CoreDataClass.swift */; };
+		819AD03A24638753004C2A89 /* DateHabit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD03024638753004C2A89 /* DateHabit+CoreDataProperties.swift */; };
+		819AD03B24638753004C2A89 /* ConcurrentHabit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD03124638753004C2A89 /* ConcurrentHabit+CoreDataClass.swift */; };
+		819AD03C24638753004C2A89 /* ConcurrentHabit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AD03224638753004C2A89 /* ConcurrentHabit+CoreDataProperties.swift */; };
 		81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */; };
 		81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ABC25D245DE83400F63DD3 /* AppRouter.swift */; };
 		81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */; };
 		81DB9A942460A82800B45CF3 /* SegueRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9A932460A82800B45CF3 /* SegueRoute.swift */; };
-		81DB9AC924622FED00B45CF3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AC724622FED00B45CF3 /* User+CoreDataClass.swift */; };
-		81DB9ACA24622FED00B45CF3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AC824622FED00B45CF3 /* User+CoreDataProperties.swift */; };
-		81DB9AD32462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ACB2462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift */; };
-		81DB9AD42462300D00B45CF3 /* ConcurrentHabit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ACC2462300D00B45CF3 /* ConcurrentHabit+CoreDataProperties.swift */; };
-		81DB9AD52462300D00B45CF3 /* DateHabit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ACD2462300D00B45CF3 /* DateHabit+CoreDataClass.swift */; };
-		81DB9AD62462300D00B45CF3 /* DateHabit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ACE2462300D00B45CF3 /* DateHabit+CoreDataProperties.swift */; };
-		81DB9AD72462300D00B45CF3 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ACF2462300D00B45CF3 /* Habit+CoreDataClass.swift */; };
-		81DB9AD82462300D00B45CF3 /* Habit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AD02462300D00B45CF3 /* Habit+CoreDataProperties.swift */; };
-		81DB9AD92462300D00B45CF3 /* Achievements+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AD12462300D00B45CF3 /* Achievements+CoreDataClass.swift */; };
-		81DB9ADA2462300D00B45CF3 /* Achievements+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AD22462300D00B45CF3 /* Achievements+CoreDataProperties.swift */; };
 		81DB9ADC2462324700B45CF3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ADB2462324700B45CF3 /* CoreDataManager.swift */; };
 		81DB9ADF2462DFA800B45CF3 /* ConfigurableDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9ADE2462DFA800B45CF3 /* ConfigurableDao.swift */; };
 		81DB9AE12462DFB200B45CF3 /* CoreDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AE02462DFB200B45CF3 /* CoreDao.swift */; };
@@ -125,20 +125,20 @@
 		81248663244E4A980091CFA4 /* AddAddiction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAddiction.storyboard; sourceTree = "<group>"; };
 		81248665244E4AA60091CFA4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		81248667244E4AFD0091CFA4 /* HabitDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitDetails.storyboard; sourceTree = "<group>"; };
+		819AD02924638753004C2A89 /* Achievements+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievements+CoreDataClass.swift"; sourceTree = "<group>"; };
+		819AD02A24638753004C2A89 /* Achievements+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievements+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		819AD02B24638753004C2A89 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		819AD02C24638753004C2A89 /* Habit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		819AD02D24638753004C2A89 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		819AD02E24638753004C2A89 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		819AD02F24638753004C2A89 /* DateHabit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateHabit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		819AD03024638753004C2A89 /* DateHabit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateHabit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		819AD03124638753004C2A89 /* ConcurrentHabit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConcurrentHabit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		819AD03224638753004C2A89 /* ConcurrentHabit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConcurrentHabit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		81ABC25B245DCF3E00F63DD3 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		81ABC25D245DE83400F63DD3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		81DA37F12458BB1400BE804E /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
 		81DB9A932460A82800B45CF3 /* SegueRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueRoute.swift; sourceTree = "<group>"; };
-		81DB9AC724622FED00B45CF3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		81DB9AC824622FED00B45CF3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		81DB9ACB2462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConcurrentHabit+CoreDataClass.swift"; sourceTree = "<group>"; };
-		81DB9ACC2462300D00B45CF3 /* ConcurrentHabit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConcurrentHabit+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		81DB9ACD2462300D00B45CF3 /* DateHabit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateHabit+CoreDataClass.swift"; sourceTree = "<group>"; };
-		81DB9ACE2462300D00B45CF3 /* DateHabit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateHabit+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		81DB9ACF2462300D00B45CF3 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
-		81DB9AD02462300D00B45CF3 /* Habit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		81DB9AD12462300D00B45CF3 /* Achievements+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievements+CoreDataClass.swift"; sourceTree = "<group>"; };
-		81DB9AD22462300D00B45CF3 /* Achievements+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievements+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		81DB9ADB2462324700B45CF3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		81DB9ADE2462DFA800B45CF3 /* ConfigurableDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableDao.swift; sourceTree = "<group>"; };
 		81DB9AE02462DFB200B45CF3 /* CoreDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDao.swift; sourceTree = "<group>"; };
@@ -348,16 +348,16 @@
 		81DB9AC624622FBE00B45CF3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				81DB9ACB2462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift */,
-				81DB9ACC2462300D00B45CF3 /* ConcurrentHabit+CoreDataProperties.swift */,
-				81DB9ACD2462300D00B45CF3 /* DateHabit+CoreDataClass.swift */,
-				81DB9ACE2462300D00B45CF3 /* DateHabit+CoreDataProperties.swift */,
-				81DB9ACF2462300D00B45CF3 /* Habit+CoreDataClass.swift */,
-				81DB9AD02462300D00B45CF3 /* Habit+CoreDataProperties.swift */,
-				81DB9AD12462300D00B45CF3 /* Achievements+CoreDataClass.swift */,
-				81DB9AD22462300D00B45CF3 /* Achievements+CoreDataProperties.swift */,
-				81DB9AC724622FED00B45CF3 /* User+CoreDataClass.swift */,
-				81DB9AC824622FED00B45CF3 /* User+CoreDataProperties.swift */,
+				819AD02924638753004C2A89 /* Achievements+CoreDataClass.swift */,
+				819AD02A24638753004C2A89 /* Achievements+CoreDataProperties.swift */,
+				819AD02B24638753004C2A89 /* Habit+CoreDataClass.swift */,
+				819AD02C24638753004C2A89 /* Habit+CoreDataProperties.swift */,
+				819AD02D24638753004C2A89 /* User+CoreDataClass.swift */,
+				819AD02E24638753004C2A89 /* User+CoreDataProperties.swift */,
+				819AD02F24638753004C2A89 /* DateHabit+CoreDataClass.swift */,
+				819AD03024638753004C2A89 /* DateHabit+CoreDataProperties.swift */,
+				819AD03124638753004C2A89 /* ConcurrentHabit+CoreDataClass.swift */,
+				819AD03224638753004C2A89 /* ConcurrentHabit+CoreDataProperties.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -636,44 +636,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819AD03524638753004C2A89 /* Habit+CoreDataClass.swift in Sources */,
+				819AD03324638753004C2A89 /* Achievements+CoreDataClass.swift in Sources */,
 				81DB9AD32462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift in Sources */,
 				81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */,
+				819AD03824638753004C2A89 /* User+CoreDataProperties.swift in Sources */,
 				275C4F142462FC47006065D4 /* InfoCollectionTableViewCell.swift in Sources */,
 				81DB9A942460A82800B45CF3 /* SegueRoute.swift in Sources */,
 				810A62042457011400E98DF4 /* DashboardViewController.swift in Sources */,
 				AEE041AB246301FC00187734 /* Achievement.swift in Sources */,
 				8124862F244E3CBB0091CFA4 /* NoJones.xcdatamodeld in Sources */,
+				819AD03724638753004C2A89 /* User+CoreDataClass.swift in Sources */,
 				81DB9AE12462DFB200B45CF3 /* CoreDao.swift in Sources */,
 				275C4F132462FC47006065D4 /* InfoTableViewController.swift in Sources */,
+				819AD03C24638753004C2A89 /* ConcurrentHabit+CoreDataProperties.swift in Sources */,
 				275C4F122462FC47006065D4 /* InfoCollectionViewCell.swift in Sources */,
 				81248625244E3CBB0091CFA4 /* AppDelegate.swift in Sources */,
 				81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */,
 				AE3258B0246055AE0089FA35 /* UserProfileViewController.swift in Sources */,
 				7CDB288224508525001A8467 /* OnBoardingViewController.swift in Sources */,
-				81DB9AD42462300D00B45CF3 /* ConcurrentHabit+CoreDataProperties.swift in Sources */,
+				819AD03B24638753004C2A89 /* ConcurrentHabit+CoreDataClass.swift in Sources */,
 				81DB9ADF2462DFA800B45CF3 /* ConfigurableDao.swift in Sources */,
 				81DB9AE52462DFD900B45CF3 /* NSManagedObject+Extension.swift in Sources */,
-				81DB9AD52462300D00B45CF3 /* DateHabit+CoreDataClass.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
-				81DB9AD92462300D00B45CF3 /* Achievements+CoreDataClass.swift in Sources */,
 				275C4F152462FC47006065D4 /* InfoAppTableViewCell.swift in Sources */,
+				819AD03A24638753004C2A89 /* DateHabit+CoreDataProperties.swift in Sources */,
+				819AD03624638753004C2A89 /* Habit+CoreDataProperties.swift in Sources */,
+				819AD03924638753004C2A89 /* DateHabit+CoreDataClass.swift in Sources */,
 				81248627244E3CBB0091CFA4 /* SceneDelegate.swift in Sources */,
 				275C4F1D2463006A006065D4 /* HabitsSectionHeader.swift in Sources */,
 				7CF0242024587242002759F7 /* InitialScreenViewController.swift in Sources */,
 				AEB17E8524506E9D00B99198 /* AddAddictionViewController.swift in Sources */,
-				81DB9AD82462300D00B45CF3 /* Habit+CoreDataProperties.swift in Sources */,
 				81DB9ADC2462324700B45CF3 /* CoreDataManager.swift in Sources */,
 				81ABC25C245DCF3E00F63DD3 /* UserDefaultsManager.swift in Sources */,
-				81DB9AC924622FED00B45CF3 /* User+CoreDataClass.swift in Sources */,
 				81ABC25E245DE83400F63DD3 /* AppRouter.swift in Sources */,
 				81DA37F22458BB1400BE804E /* HabitDetailsViewController.swift in Sources */,
-				81DB9AD62462300D00B45CF3 /* DateHabit+CoreDataProperties.swift in Sources */,
-				81DB9ACA24622FED00B45CF3 /* User+CoreDataProperties.swift in Sources */,
 				AEE041A724619AD900187734 /* UIView+Blur.swift in Sources */,
-				81DB9ADA2462300D00B45CF3 /* Achievements+CoreDataProperties.swift in Sources */,
-				275C4F2624633D9F006065D4 /* InfoSitesViewController.swift in Sources */,
+				819AD03424638753004C2A89 /* Achievements+CoreDataProperties.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
-				81DB9AD72462300D00B45CF3 /* Habit+CoreDataClass.swift in Sources */,
+        275C4F2624633D9F006065D4 /* InfoSitesViewController.swift in Sources */,
 				275C4F1B24630021006065D4 /* AchievementCollectionViewCell.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
 			);

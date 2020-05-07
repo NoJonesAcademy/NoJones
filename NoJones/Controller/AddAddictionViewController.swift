@@ -119,7 +119,7 @@ extension AddAddictionViewController {
     @objc func createHabit() {
         
         let habit = habitDao.new()
-        let user = userDao.fetchAll().first as? User
+        let user = userDao.fetchAll().first
         
         var complete = true
         let textFieldColor = UIColor(named: "buttonColor")?.cgColor
@@ -140,8 +140,10 @@ extension AddAddictionViewController {
             newHabitTextField.layer.borderColor = textFieldColor
             let concurrent = concurrentHabitDao.new()
             concurrent.name = newHabitTextField.text
-//            habit.concurrent = concurrent
-//            habit.concurrent?.name = newHabitTextField.text
+            concurrent.habitOwner = habit
+            concurrentHabitDao.save()
+            habit.concurrent = concurrent
+            
         }
         if fellingsBeforeTextField.text == "" {
             warningEmptyTextField(textField: fellingsBeforeTextField)
@@ -161,11 +163,11 @@ extension AddAddictionViewController {
         }
         
         if complete {
-//            habit.userOwner = use
+            habit.userOwner = user
             delegate?.didCreateHabit(habit)
             dismissModal()
             habitDao.insert(object: habit)
-            _ = habitDao.new()
+            habitDao.save()
         }
     }
     
