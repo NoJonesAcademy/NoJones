@@ -96,21 +96,8 @@ extension ProgressViewController: CalendarDelegates {
     }
     
     func dotMarker(shouldShowOnDayView dayView: DayView) -> Bool {
-        
         guard let habits = habits else {
           return false
-        }
-    
-        for habit in habits {
-            
-            let dates = habit.dates?.allObjects as! [DateHabit]
-//
-//            for date in dates {
-//                if date.data == dayView.date.convertedDate() {
-//                    return true
-//                }
-//            }
-            
         }
         return false
     }
@@ -140,16 +127,9 @@ extension ProgressViewController: CVCalendarViewAppearanceDelegate {
        
     func dayOfWeekTextColor() -> UIColor { return .gray }
     
-    func dayLabelColor(by weekDay: Weekday, status: CVStatus, present: CVPresent) -> UIColor? {
-        if present == .present {
-            return .white
-        }
-        return nil
-    }
-    
     func dayLabelBackgroundColor(by weekDay: Weekday, status: CVStatus, present: CVPresent) -> UIColor? {
         if status == .selected {
-            return .blue
+            return UIColor.init(named: "buttonColor")
         }
         
         if status == .disabled {
