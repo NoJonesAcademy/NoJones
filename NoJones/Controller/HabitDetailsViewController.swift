@@ -27,7 +27,6 @@ class HabitDetailsViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         self.scrollView.contentOffset = .zero
         configureHabitDetails()
-        
     }
     
     func configureViews() {
@@ -44,7 +43,7 @@ class HabitDetailsViewController: UIViewController {
             
             let customView = views[index] as? DayWeekCustomView
             customView?.dayWeek.text = day.capitalized
-            customView?.imageMark.image = UIImage(named: "checkmark")
+            customView?.imageMark.image = .none
             customView?.contentView?.backgroundColor = .none
 
             
@@ -52,8 +51,8 @@ class HabitDetailsViewController: UIViewController {
         
         if let dayWeek = date.weekDay()?.rawValue {
             let customView = views[dayWeek - 1] as? DayWeekCustomView
-            customView?.contentView?.backgroundColor =  .systemBlue
-            customView?.imageMark.image = .none
+            customView?.contentView?.backgroundColor =  .lightGray
+            customView?.imageMark.image =  UIImage(named: "checkmark")
 
         }
         
