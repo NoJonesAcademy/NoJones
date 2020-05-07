@@ -25,15 +25,15 @@ class DashboardViewController: InitialScreenViewController {
     var achievements = [
         Achievement(image: UIImage(named: "achievement1"), name: "Welcome"),
         Achievement(image: UIImage(named: "achievement2-disable"), name: "OneDay"),
-        Achievement(image: UIImage(named: "achievement3-disable"), name: "SevenDays"),
-        Achievement(image: UIImage(named: "achievement4-disable"), name: "OneMonth"),
-        Achievement(image: UIImage(named: "achievement5-disable"), name: "OneYear"),
-        Achievement(image: UIImage(named: "achievement6-disable"), name: "Welcome"),
-        Achievement(image: UIImage(named: "achievement7-disable"), name: "OneDay"),
-        Achievement(image: UIImage(named: "achievement8-disable"), name: "SevenDays"),
-        Achievement(image: UIImage(named: "achievement9-disable"), name: "OneMonth"),
+        Achievement(image: UIImage(named: "achievement7-disable"), name: "SevenDays"),
+        Achievement(image: UIImage(named: "achievement11-disable"), name: "OneMonth"),
+        Achievement(image: UIImage(named: "achievement9-disable"), name: "OneYear"),
+        Achievement(image: UIImage(named: "achievement4-disable"), name: "Welcome"),
+        Achievement(image: UIImage(named: "achievement3-disable"), name: "OneDay"),
+        Achievement(image: UIImage(named: "achievement5-disable"), name: "SevenDays"),
+        Achievement(image: UIImage(named: "achievement6-disable"), name: "OneMonth"),
         Achievement(image: UIImage(named: "achievement10-disable"), name: "OneYear"),
-        Achievement(image: UIImage(named: "achievement11-disable"), name: "OneYear")
+        Achievement(image: UIImage(named: "achievement8-disable"), name: "OneYear")
     ]
     
     //MARK: IBOutlets
