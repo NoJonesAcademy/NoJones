@@ -18,6 +18,8 @@ class UserProfileViewController: UIViewController {
         frame: CGRect(x: 0, y: 0, width: 100, height: 100)
     )
     
+    var user: User?
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userAge: UITextField!
@@ -29,6 +31,13 @@ class UserProfileViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
 
         userName.text = UserDefaultsManager.fetchString(withUserDefaultKey: .userName)
+        
+        user = userDao.fetchAll().first
+        if let user = self.user {
+            userAge.text = String(user.age) + " anos"
+        }
+        
+        
 
         userName.delegate = self
         setUserImage()
@@ -67,8 +76,6 @@ class UserProfileViewController: UIViewController {
         // fetch data from user
         
         do {
-            
-            let user = userDao.fetchAll().first
             
             if let imageData = user?.profileImage {
                 self.image = UIImage(data: imageData)
