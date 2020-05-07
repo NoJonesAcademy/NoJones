@@ -8,21 +8,32 @@
 
 import UIKit
 
-class AddAddictionViewController: UIViewController {
+class AddAddictionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var delegate: HabitDelegate?
     let habitDao = CoreDao<Habit>(with: "Habit")
-    let userDao =  CoreDao<User>(with: "User")
-    let concurrentHabitDao =  CoreDao<ConcurrentHabit>(with: "ConcurrentHabit")
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var addictionPicker: UIPickerView!
+    //TextFields
     @IBOutlet weak var habitNameTextField: UITextField!
     @IBOutlet weak var newHabitTextField: UITextField!
     @IBOutlet weak var fellingsBeforeTextField: UITextField!
     @IBOutlet weak var feelingsAfterTextField: UITextField!
     
     var addictionData = [String]()
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return addictionData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return addictionData[row]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +45,11 @@ class AddAddictionViewController: UIViewController {
         self.addictionPicker.dataSource = self
         addictionData = ["Vezes ao Dia","Minutos","Horas"]
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(dismissModal))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissModal))
         
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(createHabit))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(createHabit))
         
         navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "buttonColor")
         
@@ -97,30 +108,11 @@ extension AddAddictionViewController: UITextFieldDelegate {
     
 }
 
-extension AddAddictionViewController:  UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-         return 1
-     }
-     
-     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-         return addictionData.count
-     }
-     
-     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-         return addictionData[row]
-     }
-    
-}
-
-
 extension AddAddictionViewController {
     
-    @objc func createHabit() {
+    @objc func createHabit(){
         
         let habit = habitDao.new()
-        let user = userDao.fetchAll().first as? User
-        
         var complete = true
         let textFieldColor = UIColor(named: "buttonColor")?.cgColor
         
@@ -138,10 +130,7 @@ extension AddAddictionViewController {
         }
         else {
             newHabitTextField.layer.borderColor = textFieldColor
-            let concurrent = concurrentHabitDao.new()
-            concurrent.name = newHabitTextField.text
-//            habit.concurrent = concurrent
-//            habit.concurrent?.name = newHabitTextField.text
+            habit.concurrent?.name = newHabitTextField.text
         }
         if fellingsBeforeTextField.text == "" {
             warningEmptyTextField(textField: fellingsBeforeTextField)
@@ -161,7 +150,6 @@ extension AddAddictionViewController {
         }
         
         if complete {
-//            habit.userOwner = use
             delegate?.didCreateHabit(habit)
             dismissModal()
             habitDao.insert(object: habit)
@@ -179,7 +167,6 @@ extension AddAddictionViewController {
         self.present(alertController, animated: true, completion: nil)
     }
 }
-
 
 protocol HabitDelegate {
     func didCreateHabit(_ habit: Habit)

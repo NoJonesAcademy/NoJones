@@ -11,8 +11,6 @@ import UIKit
 //MARK: Collection View Cell
 class AchievementCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "achievementCell"
-    
     var achievement: Achievement? {
         didSet {
             guard let achievement = achievement else { return }

@@ -2,7 +2,7 @@
 //  DateHabit+CoreDataProperties.swift
 //  NoJones
 //
-//  Created by Vinicius Mesquita on 06/05/20.
+//  Created by Vinicius Mesquita on 05/05/20.
 //  Copyright © 2020 NoJones. All rights reserved.
 //
 //
@@ -19,6 +19,5 @@ extension DateHabit {
 
     @NSManaged public var data: Date?
     @NSManaged public var done: Bool
-    @NSManaged public var habitOwner: Habit?
 
 }

@@ -11,5 +11,4 @@ import Foundation
 enum SegueDestination: String {
     case HabitDetails = "detailSegue"
     case AddHabit = "addHabitSegue"
-    case UserProfile = "profileSegue"
 }

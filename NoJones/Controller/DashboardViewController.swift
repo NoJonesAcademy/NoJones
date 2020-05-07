@@ -82,7 +82,7 @@ class DashboardViewController: InitialScreenViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: AchievementCollectionViewCell.identifier)
+        collectionView.register(AchievementCollectionViewCell.self, forCellWithReuseIdentifier: "achievementCell")
         collectionView.dataSource = self
         
         setupTableView()
@@ -127,7 +127,6 @@ class DashboardViewController: InitialScreenViewController {
 extension DashboardViewController {
     
     private enum Constants: CGFloat {
-        
         case dashBoardTableViewHeaderHeight = 220
         case imageSizeForLargeState = 40
         case imageRightMargin = 16
@@ -163,7 +162,7 @@ extension DashboardViewController {
     }
     
     @objc func profileScreenSegue() {
-        performSegue(withIdentifier: SegueDestination.UserProfile.rawValue, sender: nil)
+        performSegue(withIdentifier: "profileSegue", sender: nil)
     }
     
     private func showImage(_ show: Bool) {
@@ -247,12 +246,13 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     //Add Addiction Action Button
     @objc func addAddiction() {
-        performSegue(withIdentifier: SegueDestination.AddHabit.rawValue, sender: nil)
+        performSegue(withIdentifier: "addHabitSegue", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let doneAction = UIContextualAction(style: .normal, title: "Feito"){ (_, _, success) in
+            print("Habito feito")
             success(true)
         }
         doneAction.backgroundColor = UIColor(named: "buttonColor")
@@ -283,12 +283,15 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AchievementCollectionViewCell.identifier, for: indexPath) as! AchievementCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCollectionViewCell
+        
         cell.achievement = self.achievements[indexPath.row]
+        
         return cell
     }
 }
 
+//Create Habit
 extension DashboardViewController: HabitDelegate {
     func didCreateHabit(_ habit: Habit) {
         habits.insert(habit, at: 0)
