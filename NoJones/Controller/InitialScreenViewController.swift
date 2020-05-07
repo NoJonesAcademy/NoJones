@@ -12,6 +12,7 @@ class InitialScreenViewController: UIViewController{
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var bornDate: UIDatePicker!
+    let userDao = CoreDao<User>(with: "User")
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,10 @@ class InitialScreenViewController: UIViewController{
         else {
             performSegue(withIdentifier: "segue", sender: nil)
             UserDefaultsManager.setUser(name: nameTextField.text, bornDate: bornDate?.date)
+            let user = userDao.new()
+            user.name = nameTextField.text
+            userDao.save()
+            
         }
     }
 }
