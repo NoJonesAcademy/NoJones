@@ -44,25 +44,25 @@ class OnBoardingViewController: UIViewController {
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
     
         if pageControl.currentPage == 2 {
-        nextButton.setTitle("Start", for: .normal)
+        nextButton.setTitle("Avançar", for: .normal)
         }
         else{
-            nextButton.setTitle("Next", for: .normal)
+            nextButton.setTitle("Avançar", for: .normal)
         }
     }
         
     @IBAction func nextPage(_ sender: Any) {
-        if nextButton.currentTitle == "Start" {
+        if nextButton.currentTitle == "Começar" {
 
             //  Foi criada uma segue na OnBoarding para a InitialScreen com o
             //  idenficador chamado segue
-           performSegue(withIdentifier: "segueStart", sender: nil)
+            performSegue(withIdentifier: SegueDestination.InitialScreen.rawValue, sender: nil)
         }
         else {
             pageControl.currentPage = pageControl.currentPage + 1
             scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
             if pageControl.currentPage == 2 {
-                nextButton.setTitle("Start", for: .normal)
+                nextButton.setTitle("Começar", for: .normal)
             }
         }
     }
@@ -71,7 +71,7 @@ class OnBoardingViewController: UIViewController {
         pageControl.currentPage = pageControl.currentPage - 1
         scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
         if pageControl.currentPage != 2 {
-            nextButton.setTitle("Next", for: .normal)
+            nextButton.setTitle("Próximo", for: .normal)
         }
     }
     
@@ -109,10 +109,10 @@ extension OnBoardingViewController: UIScrollViewDelegate {
         let page = (scrollView?.contentOffset.x)!/scrollWidth
         pageControl?.currentPage = Int(page)
         if pageControl.currentPage == 2 {
-            nextButton.setTitle("Start", for: .normal)
+            nextButton.setTitle("Começar", for: .normal)
         }
         else{
-            nextButton.setTitle("Next", for: .normal)
+            nextButton.setTitle("Próximo", for: .normal)
        }
     }
     
