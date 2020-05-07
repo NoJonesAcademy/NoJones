@@ -132,20 +132,9 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         guard let image = info[.editedImage] as? UIImage else { return }
         self.profileImage.image = image
         self.roundIcon.image = image
-
-        // Update user profile image
-        let user = userDao.new()
     
         if let currentUser = userDao.fetchAll().first {
-            user.name = currentUser.name
-            user.age = currentUser.age
-            user.habits = currentUser.habits
-            user.achievements = currentUser.achievements
-            user.profileImage = image.pngData()
-            
-            userDao.delete(object: currentUser)
-            userDao.save()
-            userDao.insert(object: user)
+            currentUser.profileImage = image.pngData()
             userDao.save()
         }
         

@@ -36,7 +36,6 @@ class InitialScreenViewController: UIViewController{
             let user = userDao.new()
             user.name = nameTextField.text
             userDao.save()
-           _ = userDao.new()
             
         }
     }

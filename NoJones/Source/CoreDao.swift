@@ -6,6 +6,7 @@
 //  Copyright © 2019 Vinicius Mangueira. All rights reserved.
 //
 import CoreData
+import UIKit
 
 public class CoreDao<Element: NSManagedObject>: ConfigurableDao {
     
@@ -13,13 +14,16 @@ public class CoreDao<Element: NSManagedObject>: ConfigurableDao {
     private var containerName: String
     
     init(with containerName: String) {
-        let coreStack = CoreStack(with: "NoJones")
+//        let coreStack = CoreStack(with: "NoJones")
         self.containerName = containerName
-        context = coreStack.persistentContainer.viewContext
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        context = appDelegate.persistentContainer.viewContext
+//        context = coreStack.persistentContainer.viewContext
     }
     
     public func new() -> Element {
-        return NSEntityDescription.insertNewObject(forEntityName: containerName, into: context) as! Element
+        return NSEntityDescription.insertNewObject(forEntityName: Element.className, into: context) as! Element
     }
     
     
@@ -34,7 +38,7 @@ public class CoreDao<Element: NSManagedObject>: ConfigurableDao {
     }
     
     public func fetchAll() -> [Element] {
-        let request = NSFetchRequest<Element>(entityName: containerName)
+        let request = NSFetchRequest<Element>(entityName: Element.className)
         let result = try! context.fetch(request)
         return result
     }
