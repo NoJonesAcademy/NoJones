@@ -13,6 +13,7 @@ class AddAddictionViewController: UIViewController {
     var delegate: HabitDelegate?
     let habitDao = CoreDao<Habit>(with: "Habit")
     let userDao =  CoreDao<User>(with: "User")
+    let habitDateDao = CoreDao<DateHabit>(with: "Date")
     let concurrentHabitDao =  CoreDao<ConcurrentHabit>(with: "ConcurrentHabit")
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -120,6 +121,7 @@ extension AddAddictionViewController {
         
         let habit = habitDao.new()
         let user = userDao.fetchAll().first
+        let habitDate = habitDateDao.new()
         
         var complete = true
         let textFieldColor = UIColor(named: "buttonColor")?.cgColor
@@ -164,6 +166,11 @@ extension AddAddictionViewController {
         
         if complete {
             habit.userOwner = user
+            habitDate.data = Date()
+            habitDate.done = false
+            habitDate.habitOwner = habit
+            habit.dates?.adding(habitDate)
+            
             delegate?.didCreateHabit(habit)
             dismissModal()
             habitDao.insert(object: habit)

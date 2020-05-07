@@ -21,7 +21,7 @@
         <attribute name="initialFelling" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="concurrent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConcurrentHabit"/>
-        <relationship name="dates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DateHabit" inverseName="habitOwner" inverseEntity="DateHabit"/>
+        <relationship name="dates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DateHabit" inverseName="habitOwner" inverseEntity="DateHabit"/>
         <relationship name="userOwner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="habits" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
@@ -33,7 +33,7 @@
     </entity>
     <elements>
         <element name="Achievements" positionX="-453.125" positionY="74.53515625" width="128" height="103"/>
-        <element name="ConcurrentHabit" positionX="-984.59375" positionY="74.66015625" width="128" height="88"/>
+        <element name="ConcurrentHabit" positionX="-935.59375" positionY="-56.28515625" width="128" height="88"/>
         <element name="DateHabit" positionX="-984.67578125" positionY="177.484375" width="128" height="88"/>
         <element name="Habit" positionX="-797.3046875" positionY="59.59765625" width="128" height="133"/>
         <element name="User" positionX="-625.5078125" positionY="74.34375" width="128" height="118"/>

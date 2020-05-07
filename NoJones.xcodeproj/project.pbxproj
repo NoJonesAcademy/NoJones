@@ -59,6 +59,7 @@
 		81DB9AE12462DFB200B45CF3 /* CoreDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AE02462DFB200B45CF3 /* CoreDao.swift */; };
 		81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AE22462DFC100B45CF3 /* CoreStack.swift */; };
 		81DB9AE52462DFD900B45CF3 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB9AE42462DFD900B45CF3 /* NSManagedObject+Extension.swift */; };
+		81F0B409246446C300A09D69 /* Date+Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F0B408246446C300A09D69 /* Date+Age.swift */; };
 		81F3A599245B262B008BE5F1 /* DayWeekCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */; };
 		AE3258AE24604FC70089FA35 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3258AD24604FC70089FA35 /* UserProfile.storyboard */; };
 		AE3258B0246055AE0089FA35 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3258AF246055AE0089FA35 /* UserProfileViewController.swift */; };
@@ -150,6 +151,7 @@
 		81DB9AE02462DFB200B45CF3 /* CoreDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDao.swift; sourceTree = "<group>"; };
 		81DB9AE22462DFC100B45CF3 /* CoreStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStack.swift; sourceTree = "<group>"; };
 		81DB9AE42462DFD900B45CF3 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
+		81F0B408246446C300A09D69 /* Date+Age.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Age.swift"; sourceTree = "<group>"; };
 		81F3A598245B262B008BE5F1 /* DayWeekCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeekCustomView.swift; sourceTree = "<group>"; };
 		A5A6303F83CAA6C2A5486C7A /* Pods-NoJonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoJonesTests.debug.xcconfig"; path = "Target Support Files/Pods-NoJonesTests/Pods-NoJonesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE3258AD24604FC70089FA35 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				AEE041A624619AD900187734 /* UIView+Blur.swift */,
+				81F0B408246446C300A09D69 /* Date+Age.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -646,8 +649,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81DB9AD32462300D00B45CF3 /* ConcurrentHabit+CoreDataClass.swift in Sources */,
 				819AD03524638753004C2A89 /* Habit+CoreDataClass.swift in Sources */,
+				81F0B409246446C300A09D69 /* Date+Age.swift in Sources */,
 				819AD03324638753004C2A89 /* Achievements+CoreDataClass.swift in Sources */,
 				81DB9AE32462DFC100B45CF3 /* CoreStack.swift in Sources */,
 				819AD03824638753004C2A89 /* User+CoreDataProperties.swift in Sources */,
@@ -685,7 +688,6 @@
 				AEE041A724619AD900187734 /* UIView+Blur.swift in Sources */,
 				819AD03424638753004C2A89 /* Achievements+CoreDataProperties.swift in Sources */,
 				81248660244E447C0091CFA4 /* ProgressViewController.swift in Sources */,
-				81DB9AD72462300D00B45CF3 /* Habit+CoreDataClass.swift in Sources */,
 				275C4F2624633D9F006065D4 /* InfoSitesViewController.swift in Sources */,
 				7C9D32A72463A5F000FE331C /* Slide.swift in Sources */,
 				275C4F1B24630021006065D4 /* AchievementCollectionViewCell.swift in Sources */,

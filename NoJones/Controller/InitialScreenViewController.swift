@@ -35,6 +35,7 @@ class InitialScreenViewController: UIViewController{
             UserDefaultsManager.setUser(name: nameTextField.text, bornDate: bornDate?.date)
             let user = userDao.new()
             user.name = nameTextField.text
+            user.age = Int32(bornDate.date.age)
             userDao.save()
             
         }

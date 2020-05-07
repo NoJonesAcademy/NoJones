@@ -12,6 +12,7 @@ class DashboardViewController: InitialScreenViewController {
     
     let userDashDao = CoreDao<User>(with: "User")
     let habitDao = CoreDao<Habit>(with: "Habit")
+    let habitDateDao = CoreDao<DateHabit>(with: "Date")
 //    let achievementsDao = CoreDao<Achievements>(with: "Achievements")
     
     //MARK: Collection and Table Data from Model
@@ -99,12 +100,16 @@ class DashboardViewController: InitialScreenViewController {
     }
     
     func setTitle() {
-        self.navigationItem.title = "Olá, \(self.userName!)"
+        let firstName = userName?.components(separatedBy: " ").first
+        self.navigationItem.title = "Olá, \(firstName == "" ? "Campeão" : firstName ?? "Campeão")"
         self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
             if let height = changes.newValue?.height {
                 if let username = self.userName, height > 44.0 {
                     //Large Title
-                    self.navigationItem.title = "Olá, \(username)"
+                    
+                    let firstName = username.components(separatedBy: " ").first
+                    
+                    self.navigationItem.title = "Olá, \(firstName == "" ? "Campeão" : firstName ?? "Campeão")"
                 } else {
                     //Small Title
                     self.navigationItem.title = "Dashboard"
@@ -266,23 +271,40 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+        let habit = habits[indexPath.row]
+        let date = habit.dates?.allObjects[0] as? DateHabit
+       
         let doneAction = UIContextualAction(style: .normal, title: "Feito"){ (_, _, success) in
+            date?.done = true
             success(true)
         }
         doneAction.backgroundColor = UIColor(named: "buttonColor")
-        let configure = UISwipeActionsConfiguration(actions: [doneAction])
+        
+        let doneActionAlreadyDone = UIContextualAction(style: .normal, title: "Desfazer"){ (_, _, success) in
+            date?.done = false
+            success(true)
+        }
+        doneActionAlreadyDone.backgroundColor = UIColor(named: "secondaryColor")
+        habit.addToDates(date!)
+        let configure: UISwipeActionsConfiguration
+        
+        if date?.done ?? false {
+            configure = UISwipeActionsConfiguration(actions: [doneActionAlreadyDone])
+        } else {
+            configure = UISwipeActionsConfiguration(actions: [doneAction])
+        }
         configure.performsFirstActionWithFullSwipe = false
         return configure
     }
     //Deleting Cells
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        habitDao.delete(object: habits[indexPath.row])
         return .delete
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
         habits.remove(at: indexPath.row)
+         habitDao.delete(object: habits[indexPath.row])
         tableView.deleteRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }
