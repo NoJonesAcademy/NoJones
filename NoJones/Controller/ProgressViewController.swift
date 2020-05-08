@@ -99,6 +99,16 @@ extension ProgressViewController: CalendarDelegates {
         guard let habits = habits else {
           return false
         }
+        
+        for habit in habits {
+            let dates = habit.dates?.allObjects as! [DateHabit]
+            
+            for date in dates {
+                if date.data == dayView.date.convertedDate(calendar: currentCalendar!) {
+                    return true
+                }
+            }
+        }
         return false
     }
 

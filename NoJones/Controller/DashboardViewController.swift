@@ -242,8 +242,8 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "addictionCell")
         
-        cell.textLabel?.text = habits[indexPath.row].name
-        cell.detailTextLabel?.text = habits[indexPath.row].concurrent?.name
+        cell.textLabel?.text = habits[indexPath.row].concurrent?.name
+        cell.detailTextLabel?.text = habits[indexPath.row].name
         cell.accessoryType = .disclosureIndicator
         
         return cell
