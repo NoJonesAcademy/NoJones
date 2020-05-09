@@ -102,9 +102,12 @@ extension ProgressViewController: CalendarDelegates {
         
         for habit in habits {
             let dates = habit.dates?.allObjects as! [DateHabit]
+            let dayViewDate = dayView.date.convertedDate(calendar: currentCalendar!)
             
             for date in dates {
-                if date.data == dayView.date.convertedDate(calendar: currentCalendar!) {
+                let result = currentCalendar?.compare(date.data!, to: dayViewDate!, toGranularity: .day)
+                let isSameDay = result == .orderedSame
+                if isSameDay {
                     return true
                 }
             }
