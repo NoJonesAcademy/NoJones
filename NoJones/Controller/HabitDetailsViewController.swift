@@ -37,7 +37,7 @@ class HabitDetailsViewController: UIViewController {
         let views = stackView.arrangedSubviews
         
         let date = CVDate(date: Date(), calendar: currentCalendar)
-        let habitDate = habit?.dates?.allObjects[0] as? DateHabit
+        let habitDates = habit?.dates?.allObjects as? [DateHabit]
         let daysWeek = currentCalendar.shortWeekdaySymbols
         
         for (index, day) in daysWeek.enumerated() {
@@ -57,11 +57,15 @@ class HabitDetailsViewController: UIViewController {
         }
         
         guard let dayWeek = date.weekDay()?.rawValue else { return }
-        if let date = habitDate {
+        if let dates = habitDates {
             
-            if date.done {
-                let customView = views[dayWeek - 1] as? DayWeekCustomView
-                customView?.imageMark.image =  UIImage(named: "checkmark")
+            dates.forEach { date in
+                
+                if date.done {
+                    let customView = views[dayWeek - 1] as? DayWeekCustomView
+                    customView?.imageMark.image =  UIImage(named: "checkmark")
+                }
+                
             }
             
 
